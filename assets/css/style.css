@@ -447,6 +447,14 @@ a:hover {
   font-weight: 600;
   white-space: nowrap;
 }
+a.finding-id, a.pattern-finding-id {
+  text-decoration: none;
+  color: inherit;
+}
+a.finding-id:hover, a.pattern-finding-id:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 
 .finding-text {
   max-width: 360px;

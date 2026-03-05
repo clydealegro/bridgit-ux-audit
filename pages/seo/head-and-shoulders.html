@@ -115,6 +115,85 @@
         </div>
       </div>
 
+      <!-- Funnel Journey Audit -->
+      <div class="card" style="margin-bottom:1.5rem">
+        <div class="finding-field-label" style="margin-bottom:0.5rem">🔄 Funnel Journey Audit</div>
+        <div style="font-size:12px;color:#6B7280;margin-bottom:1rem;line-height:1.5">The query this page targets — <em>"what is a bridging loan"</em> — is informational intent, placing it at <strong>TOFU (awareness)</strong> in the funnel. <strong>Important:</strong> funnel stage is determined by the page's <em>search query topic</em>, not by the template type. The same H&amp;S template could host MOFU pages ("how does a bridging loan work in practice?") or BOFU pages ("bridging loan rates comparison") — each would require a different journey architecture. For this specific page, the ideal journey is: <strong>Land &amp; Orient → Educate → Self-qualify → Guide to next step → Convert</strong>.</div>
+        <div style="overflow-x:auto">
+          <table style="width:100%;border-collapse:collapse;font-size:12px;min-width:500px">
+            <thead>
+              <tr style="background:#F9FAFB;border-bottom:2px solid #E5E7EB">
+                <th style="padding:8px 12px;text-align:left;font-weight:600;color:#374151;width:20%">Stage</th>
+                <th style="padding:8px 12px;text-align:left;font-weight:600;color:#374151;width:15%">Status</th>
+                <th style="padding:8px 12px;text-align:left;font-weight:600;color:#374151">Problem</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid #F3F4F6">
+                <td style="padding:8px 12px;font-weight:600;color:#374151;white-space:nowrap">Land &amp; Orient</td>
+                <td style="padding:8px 12px"><span style="background:#FEE2E2;color:#DC2626;padding:2px 8px;border-radius:4px;font-weight:600;font-size:11px;white-space:nowrap">❌ Broken</span></td>
+                <td style="padding:8px 12px;color:#6B7280;line-height:1.5">"Apply now" CTA immediately signals "we think you're ready to apply" — but the user came to learn what a bridging loan even is. Trust gap from word one.</td>
+              </tr>
+              <tr style="border-bottom:1px solid #F3F4F6;background:#FAFAFA">
+                <td style="padding:8px 12px;font-weight:600;color:#374151;white-space:nowrap">Educate</td>
+                <td style="padding:8px 12px"><span style="background:#D1FAE5;color:#065F46;padding:2px 8px;border-radius:4px;font-weight:600;font-size:11px;white-space:nowrap">✅ Good</span></td>
+                <td style="padding:8px 12px;color:#6B7280;line-height:1.5">Rich content exists and answers the question well. This is the page's strongest stage.</td>
+              </tr>
+              <tr style="border-bottom:1px solid #F3F4F6">
+                <td style="padding:8px 12px;font-weight:600;color:#374151;white-space:nowrap">Self-qualify</td>
+                <td style="padding:8px 12px"><span style="background:#FEF3C7;color:#92400E;padding:2px 8px;border-radius:4px;font-weight:600;font-size:11px;white-space:nowrap">⚠️ Weak</span></td>
+                <td style="padding:8px 12px;color:#6B7280;line-height:1.5">7 scenario cards exist but Hick's Law kills it — no decision help, no "not sure?" exit. Users who don't immediately see themselves in a card bounce.</td>
+              </tr>
+              <tr style="border-bottom:1px solid #F3F4F6;background:#FAFAFA">
+                <td style="padding:8px 12px;font-weight:600;color:#374151;white-space:nowrap">Guide to next step</td>
+                <td style="padding:8px 12px"><span style="background:#FEE2E2;color:#DC2626;padding:2px 8px;border-radius:4px;font-weight:600;font-size:11px;white-space:nowrap">❌ Missing</span></td>
+                <td style="padding:8px 12px;color:#6B7280;line-height:1.5">No progressive CTA after the education section. After reading "what is a bridging loan", the page doesn't say "now check if you qualify" or "now calculate your costs" — it presents 7 undifferentiated options and hopes.</td>
+              </tr>
+              <tr>
+                <td style="padding:8px 12px;font-weight:600;color:#374151;white-space:nowrap">Convert</td>
+                <td style="padding:8px 12px"><span style="background:#FEE2E2;color:#DC2626;padding:2px 8px;border-radius:4px;font-weight:600;font-size:11px;white-space:nowrap">❌ Buried</span></td>
+                <td style="padding:8px 12px;color:#6B7280;line-height:1.5">Calculator is at 70–80% scroll depth. The one interactive conversion tool is the furthest thing from the user.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:1rem;padding:0.75rem 1rem;background:#FEF2F2;border-radius:6px;border-left:3px solid #EF4444;font-size:12px;line-height:1.6;color:#7F1D1D">
+          <strong>Core funnel problem:</strong> The page educates well but then drops the user off a cliff. There's no guided handoff from "I now understand bridging loans" to "here's my specific next step."
+        </div>
+      </div>
+
+      <!-- Target State -->
+      <div class="card" style="margin-bottom:1.5rem">
+        <div class="finding-field-label" style="margin-bottom:0.5rem">🎯 Target State — Optimised Page Architecture</div>
+        <div style="font-size:12px;color:#6B7280;margin-bottom:1rem;line-height:1.5">The page architecture required to deliver a complete education → conversion journey for visitors searching <em>"what is a bridging loan"</em>:</div>
+        <div style="display:flex;flex-direction:column;gap:0.625rem">
+          <div style="display:flex;gap:0.75rem;align-items:flex-start;font-size:12px;line-height:1.6;color:#374151">
+            <span style="background:#3B82F6;color:#fff;border-radius:50%;min-width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:10px;margin-top:1px">1</span>
+            <div><strong>Hero</strong> — Benefit headline + intent-matched CTA: "Check if I qualify" or "See my options". Not "Apply now". Remove hardcoded campaign UTMs from CTA href.</div>
+          </div>
+          <div style="display:flex;gap:0.75rem;align-items:flex-start;font-size:12px;line-height:1.6;color:#374151">
+            <span style="background:#3B82F6;color:#fff;border-radius:50%;min-width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:10px;margin-top:1px">2</span>
+            <div><strong>Education section</strong> — "What is a Bridging Loan?" with clear, keyword-matched H2 (not wordplay). ✅ Rich content already works well here.</div>
+          </div>
+          <div style="display:flex;gap:0.75rem;align-items:flex-start;font-size:12px;line-height:1.6;color:#374151">
+            <span style="background:#3B82F6;color:#fff;border-radius:50%;min-width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:10px;margin-top:1px">3</span>
+            <div><strong>Post-education handoff CTA</strong> — Immediately after the education block: "Now you know what it is — find out if you qualify →" linking to the Eligibility page. This is the critical missing bridge between awareness and consideration.</div>
+          </div>
+          <div style="display:flex;gap:0.75rem;align-items:flex-start;font-size:12px;line-height:1.6;color:#374151">
+            <span style="background:#3B82F6;color:#fff;border-radius:50%;min-width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:10px;margin-top:1px">4</span>
+            <div><strong>Scenario selector (reduced)</strong> — 3 most common scenarios visible, "See all 7 options" expansion. Add "Not sure which fits you? Use the calculator →" fallback to eliminate dead ends.</div>
+          </div>
+          <div style="display:flex;gap:0.75rem;align-items:flex-start;font-size:12px;line-height:1.6;color:#374151">
+            <span style="background:#3B82F6;color:#fff;border-radius:50%;min-width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:10px;margin-top:1px">5</span>
+            <div><strong>Calculator surfaced earlier</strong> — Move or deep-link to calculator directly after the scenario section. Add a sticky "Calculate my costs" CTA that appears once the user has scrolled past the education section.</div>
+          </div>
+          <div style="display:flex;gap:0.75rem;align-items:flex-start;font-size:12px;line-height:1.6;color:#374151">
+            <span style="background:#3B82F6;color:#fff;border-radius:50%;min-width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:10px;margin-top:1px">6</span>
+            <div><strong>FAQ (top 3 expanded)</strong> — Show first 3 FAQ answers in open state to satisfy FAQPage schema requirements and enable rich snippet extraction. Remaining questions collapsed.</div>
+          </div>
+        </div>
+      </div>
+
       <div data-tabs>
         <div class="tabs">
           <button class="tab-btn active" data-tab="desktop">Desktop Findings</button>
@@ -136,6 +215,8 @@
               <span class="badge badge-effort-low">Effort: Low</span>
               <span class="badge badge-persona">All Personas</span>
               <span class="badge" style="background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA">🧩 Template scope</span>
+              <span class="badge" style="background:#EEF2FF;color:#3730A3;border:1px solid #C7D2FE">Stage: Land &amp; Orient</span>
+              <span class="badge" style="background:#EEF2FF;color:#3730A3;border:1px solid #C7D2FE">Stage: Convert</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">
@@ -172,6 +253,7 @@
               <span class="badge badge-effort-medium">Effort: Medium</span>
               <span class="badge badge-persona">All Personas</span>
               <span class="badge" style="background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA">🧩 Template scope</span>
+              <span class="badge" style="background:#EEF2FF;color:#3730A3;border:1px solid #C7D2FE">Stage: Guide to next step</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">
@@ -203,6 +285,7 @@
               <span class="badge badge-quickwin">Quick Win</span>
               <span class="badge badge-effort-low">Effort: Low</span>
               <span class="badge badge-persona">All Personas</span>
+              <span class="badge" style="background:#EEF2FF;color:#3730A3;border:1px solid #C7D2FE">Stage: Land &amp; Orient</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">
@@ -235,6 +318,7 @@
               <span class="badge badge-effort-medium">Effort: Medium</span>
               <span class="badge badge-persona">All Personas</span>
               <span class="badge" style="background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA">🧩 Template scope</span>
+              <span class="badge" style="background:#EEF2FF;color:#3730A3;border:1px solid #C7D2FE">Stage: Convert</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">
@@ -267,6 +351,7 @@
               <span class="badge badge-effort-low">Effort: Low</span>
               <span class="badge badge-persona">All Personas</span>
               <span class="badge" style="background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA">🧩 Template scope</span>
+              <span class="badge" style="background:#EEF2FF;color:#3730A3;border:1px solid #C7D2FE">Stage: Educate</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">
@@ -299,6 +384,7 @@
               <span class="badge badge-effort-low">Effort: Low</span>
               <span class="badge badge-persona">All Personas</span>
               <span class="badge" style="background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA">🧩 Template scope</span>
+              <span class="badge" style="background:#EEF2FF;color:#3730A3;border:1px solid #C7D2FE">Stage: Educate</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">
@@ -335,6 +421,7 @@
               <span class="badge badge-effort-low">Effort: Low</span>
               <span class="badge badge-persona">All Personas</span>
               <span class="badge" style="background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA">🧩 Template scope</span>
+              <span class="badge" style="background:#EEF2FF;color:#3730A3;border:1px solid #C7D2FE">Stage: Land &amp; Orient</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">
@@ -367,6 +454,7 @@
               <span class="badge badge-effort-medium">Effort: Medium</span>
               <span class="badge badge-persona">All Personas</span>
               <span class="badge" style="background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA">🧩 Template scope</span>
+              <span class="badge" style="background:#EEF2FF;color:#3730A3;border:1px solid #C7D2FE">Stage: Guide to next step</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">

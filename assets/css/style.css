@@ -1007,6 +1007,17 @@ a:hover {
   color: var(--color-accent);
 }
 
+.tier-phase-label {
+  margin-bottom: 20px;
+}
+
+.tier-item {
+  display: flex;
+  gap: 0px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
 /* ------------------------------------------------------------
    24. Week Group (A/B Tests)
    ------------------------------------------------------------ */
@@ -1337,6 +1348,10 @@ a:hover {
   font-weight: 600;
   color: var(--color-text-primary);
   margin: 2rem 0 0.75rem;
+}
+.section-subheading {
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 .section-body {
   font-size: 0.875rem;

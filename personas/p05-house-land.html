@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P05 House &amp; Land Builder — Bridgit UX Audit</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <button class="mobile-nav-toggle" id="sidebarToggle" aria-label="Toggle navigation">☰</button>
+  <div class="sidebar-overlay"></div>
+  <nav class="sidebar">
+    <a href="../index.html" class="sidebar-brand">
+      <div class="sidebar-brand-icon">B</div>
+      <div class="sidebar-brand-text">
+        <span class="sidebar-brand-name">Bridgit UX Audit</span>
+        <span class="sidebar-brand-sub">Final Report 2026</span>
+      </div>
+    </a>
+    <div class="sidebar-health">
+      <div class="sidebar-health-label">Conversion Health</div>
+      <div class="sidebar-health-score">5.2<span style="font-size:14px;font-weight:400;color:#6B7280">/10</span></div>
+      <div class="sidebar-health-sub">71 findings across 3 phases</div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Overview</div>
+      <ul class="sidebar-nav">
+        <li><a href="../index.html"><span class="nav-icon">📊</span> Executive Summary</a></li>
+        <li><a href="../navigation.html"><span class="nav-icon">🗺️</span> Navigation &amp; IA</a></li>
+        <li><a href="../recommendations.html"><span class="nav-icon">📋</span> All Findings <span class="nav-badge">71</span></a></li>
+        <li><a href="../ab-tests.html"><span class="nav-icon">🧪</span> A/B Tests <span class="nav-badge">10</span></a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Personas</div>
+      <ul class="sidebar-nav">
+        <li><a href="../personas/p01-upsizer.html"><span class="nav-icon">🏠</span> P01 — Upsizer</a></li>
+        <li><a href="../personas/p02-downsizer.html"><span class="nav-icon">🌿</span> P02 — Downsizer</a></li>
+        <li><a href="../personas/p03-renovator.html"><span class="nav-icon">🔨</span> P03 — Renovator</a></li>
+        <li><a href="../personas/p04-separating.html"><span class="nav-icon">💙</span> P04 — Separating</a></li>
+        <li><a href="../personas/p05-house-land.html" class="active"><span class="nav-icon">🏗️</span> P05 — Builder</a></li>
+        <li><a href="../personas/p06-investor.html"><span class="nav-icon">📈</span> P06 — Investor</a></li>
+        <li><a href="../personas/p07-broker.html"><span class="nav-icon">🤝</span> P07 — Broker</a></li>
+        <li><a href="../personas/p08-regional.html"><span class="nav-icon">🌏</span> P08 — Regional</a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="../pages/homepage.html"><span class="nav-icon">🏡</span> Homepage</a></li>
+        <li><a href="../pages/bridging-loan.html"><span class="nav-icon">🔗</span> Bridging Loan</a></li>
+        <li><a href="../pages/eligibility.html"><span class="nav-icon">✅</span> Eligibility</a></li>
+        <li><a href="../pages/calculator.html"><span class="nav-icon">🧮</span> Calculator</a></li>
+        <li><a href="../pages/rates-and-fees.html"><span class="nav-icon">💰</span> Rates &amp; Fees</a></li>
+        <li><a href="../pages/partners.html"><span class="nav-icon">🤝</span> Partners</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Solution Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="../pages/solutions/upsize.html">↳ Upsize</a></li>
+        <li><a href="../pages/solutions/downsize.html">↳ Downsize</a></li>
+        <li><a href="../pages/solutions/renovate.html">↳ Renovate</a></li>
+        <li><a href="../pages/solutions/retire.html">↳ Retire</a></li>
+        <li><a href="../pages/solutions/separate.html">↳ Separate</a></li>
+        <li><a href="../pages/solutions/invest.html">↳ Invest</a></li>
+        <li><a href="../pages/solutions/house-and-land.html">↳ House &amp; Land</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="page-header">
+      <div class="page-header-eyebrow">Persona Analysis</div>
+      <h1>🏗️ P05 — The House &amp; Land Builder</h1>
+      <div class="page-header-meta">
+        <span>34M, project engineer, on-site mobile researcher, build delay concern</span>
+        <span>11 findings · Conversion path: Partial</span>
+      </div>
+    </div>
+    <div class="content">
+
+      <div class="persona-header">
+        <div class="persona-avatar">🏗️</div>
+        <div class="persona-info">
+          <div class="persona-id">P05</div>
+          <div class="persona-name">The House &amp; Land Builder</div>
+          <div class="persona-desc">34M, project engineer. Wants to settle a new build on time while selling an existing home without a forced rushed sale. Researches on-site on mobile with variable connectivity. Primary concern is build delay risk.</div>
+          <div>
+            <span class="persona-conversion-badge conversion-partial">
+              ● Conversion Path: Partial
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-grid card-grid-2">
+          <div>
+            <div class="finding-field-label">Primary Pages</div>
+            <div class="finding-field-value">House &amp; Land page → Calculator → Eligibility → Apply</div>
+          </div>
+          <div>
+            <div class="finding-field-label">Conversion Goal</div>
+            <div class="finding-field-value">Settle new build on time; sell existing home without forced rushed sale; understand build delay coverage</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-heading">Critical Gaps</h2>
+
+      <div class="callout callout-critical">
+        <div class="callout-icon">🚧</div>
+        <div class="callout-body">
+          <strong>Builder delay risk unaddressed</strong>
+          The H&amp;L page does not explicitly address "What happens if my build is delayed?" Without assurance that loan terms can flex or extend, P05 self-excludes at the consideration stage — the very question that differentiates bridging products for builders. Finding: <span class="badge badge-medium">F-SOL-HL-01</span>
+        </div>
+      </div>
+
+      <div class="callout callout-critical">
+        <div class="callout-icon">📱</div>
+        <div class="callout-body">
+          <strong>Mobile is critical and currently under-served</strong>
+          Multiple mobile findings indicate above-fold navigation and clarity are blocked on 390px. P05 researches during on-site visits with patchy mobile signal, making fast above-fold loading essential. Findings: <span class="badge badge-high">F-SOL-HL-M01</span> <span class="badge badge-high">F-SOL-HL-M02</span> <span class="badge badge-high">F-SOL-HL-M03</span> <span class="badge badge-high">F-SOL-HL-M04</span>
+        </div>
+      </div>
+
+      <div class="callout callout-high">
+        <div class="callout-icon">💰</div>
+        <div class="callout-body">
+          <strong>Cost modelling friction</strong>
+          No worked cost example on Rates &amp; Fees, and a blank-slate calculator without defaults mean P05 must hunt for information to model the monthly overlap cost between build settlement and existing home sale. Finding: <span class="badge badge-medium">F-RF-03</span>
+        </div>
+      </div>
+
+      <div class="callout callout-high">
+        <div class="callout-icon">🎯</div>
+        <div class="callout-body">
+          <strong>Generic CTA on scenario-specific page</strong>
+          "Apply now" does not confirm P05 is in the right place for a house and land package scenario. A scenario-specific CTA ("Start my house &amp; land bridge") would reduce hesitation. Finding: <span class="badge badge-high">F-NAV-01</span>
+        </div>
+      </div>
+
+      <h2 class="section-heading">What the Site Does Well</h2>
+      <div class="card">
+        <ul style="font-size:14px;line-height:1.7;color:#374151">
+          <li>A dedicated House &amp; Land Packages page exists, signalling product-market fit for the builder scenario.</li>
+          <li>"Connect with an expert" CTA is available for discussing builder delay scenarios directly with a specialist.</li>
+          <li>Mobile nav passes the 2-tap test, making core pages accessible quickly.</li>
+        </ul>
+      </div>
+
+      <h2 class="section-heading">Findings Affecting This Persona</h2>
+      <div class="flex flex-wrap gap-sm" style="margin-bottom:1rem">
+        <span class="badge badge-high">F-NAV-01</span>
+        <span class="badge badge-medium">F-CALC-01</span>
+        <span class="badge badge-medium">F-HP-05</span>
+        <span class="badge badge-high">F-ELG-01</span>
+        <span class="badge badge-medium">F-RF-03</span>
+        <span class="badge badge-medium">F-SOL-HL-01</span>
+        <span class="badge badge-medium">F-SOL-HL-02</span>
+        <span class="badge badge-high">F-SOL-HL-M01</span>
+        <span class="badge badge-high">F-SOL-HL-M02</span>
+        <span class="badge badge-high">F-SOL-HL-M03</span>
+        <span class="badge badge-high">F-SOL-HL-M04</span>
+      </div>
+      <p class="section-body">
+        <a href="../recommendations.html?persona=P05" style="font-size:13px">
+          → View all findings for this persona in the filterable database
+        </a>
+      </p>
+
+      <h2 class="section-heading">Emotional Journey Map — Simplified</h2>
+      <div class="journey-steps">
+        <div class="journey-step">
+          <div class="journey-step-num">Step 1</div>
+          <div class="journey-step-page">H&amp;L Page</div>
+          <div class="journey-step-emotion emotion-3">😐 3/5</div>
+          <div class="journey-step-findings">F-SOL-HL-01, F-SOL-HL-M01, F-SOL-HL-M02, F-NAV-01</div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-step-num">Step 2</div>
+          <div class="journey-step-page">Calculator</div>
+          <div class="journey-step-emotion emotion-2">😟 2/5</div>
+          <div class="journey-step-findings">F-CALC-01, F-SOL-HL-M03, F-RF-03</div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-step-num">Step 3</div>
+          <div class="journey-step-page">Eligibility</div>
+          <div class="journey-step-emotion emotion-3">😐 3/5</div>
+          <div class="journey-step-findings">F-ELG-01, F-HP-05</div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-step-num">Step 4</div>
+          <div class="journey-step-page">Apply</div>
+          <div class="journey-step-emotion emotion-3">😐 3/5</div>
+          <div class="journey-step-findings">Confidence limited by unresolved delay question</div>
+        </div>
+      </div>
+      <div class="card section-body">
+        <p>P05 arrives at the H&amp;L page on mobile, often from a job site with variable connectivity. He lands on a page that confirms the product exists but doesn't address his primary anxiety: "What happens if the builder takes longer than expected?" Without a visible build delay FAQ or extension assurance, he cannot qualify the product against his specific scenario risk. He proceeds to the Calculator but finds blank fields with no builder-scenario defaults.</p>
+        <p>P05 reaches the Eligibility page and checks criteria, then proceeds to Apply with moderate confidence — but a lingering unresolved question about build delay risk. The page exists and is discoverable, but critical content gaps and mobile friction reduce conversion velocity. P05's estimated conversion rate is 20–30% lower than it could be with targeted content additions.</p>
+      </div>
+
+      <h2 class="section-heading">Highest-ROI Quick Win</h2>
+      <div class="callout callout-success">
+        <div class="callout-icon">⚡</div>
+        <div class="callout-body">
+          <strong>Add build delay FAQ visible above fold on H&amp;L page</strong>
+          <span class="badge badge-medium">F-SOL-HL-01</span> — Expected impact: +15–20% page engagement; reduces self-exclusion from delay-anxious builders. Suggested FAQ entry: "What if my build is delayed? Bridgit loan terms can flex — speak to an expert about extension options." Surface this above the primary CTA at 390px viewport.
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="../assets/js/filters.js"></script>
+</body>
+</html>

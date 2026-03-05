@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A/B Tests — Bridgit UX Audit</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    /* ---- Sequencing timeline ---- */
+    .sequence-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin: 1.25rem 0 2rem;
+    }
+    .sequence-week {
+      background: var(--c-white);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .sequence-week-header {
+      padding: .6rem 1rem;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      border-bottom: 1px solid var(--c-border-light);
+    }
+    .week-1 .sequence-week-header { background: #EFF6FF; color: #1D4ED8; }
+    .week-2 .sequence-week-header { background: #F0FDF4; color: #15803D; }
+    .week-4 .sequence-week-header { background: #FFFBEB; color: #92400E; }
+    .week-6 .sequence-week-header { background: #F5F3FF; color: #5B21B6; }
+    .sequence-week-body { padding: .75rem 1rem; }
+    .sequence-test-item {
+      display: flex;
+      align-items: flex-start;
+      gap: .5rem;
+      font-size: 12px;
+      padding: .3rem 0;
+      border-bottom: 1px solid var(--c-border-light);
+      line-height: 1.45;
+    }
+    .sequence-test-item:last-child { border-bottom: none; }
+    .sequence-test-num {
+      width: 18px; height: 18px;
+      background: #F3F4F6;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 10px; font-weight: 800;
+      color: var(--c-text-secondary);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .sequence-test-label { flex: 1; color: var(--c-text); }
+    .sequence-test-id { font-family: monospace; font-size: 10px; color: var(--c-text-secondary); }
+
+    /* ---- AB card enhancements ---- */
+    .ab-card { border-left: 4px solid var(--c-border); }
+    .ab-card.priority-high { border-left-color: var(--c-high); }
+    .ab-card.priority-medium { border-left-color: var(--c-medium); }
+    .ab-card.priority-strategic { border-left-color: var(--c-strategic); }
+
+    .ab-card-header {
+      background: #FAFAFA;
+      gap: .75rem;
+      flex-wrap: wrap;
+    }
+    .ab-rank-circle {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--c-nav-bg);
+      color: white;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 800;
+      flex-shrink: 0;
+    }
+    .ab-card-page {
+      font-size: 12px;
+      color: var(--c-text-secondary);
+      background: #F3F4F6;
+      padding: 2px 8px;
+      border-radius: 99px;
+    }
+    .ab-card-title { font-size: 14px; font-weight: 600; flex: 1; min-width: 200px; }
+
+    .ab-field-grid {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: .4rem .75rem;
+      font-size: 13px;
+    }
+    .ab-field-label {
+      font-size: 10px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .06em; color: var(--c-text-secondary);
+      padding-top: 3px;
+    }
+    .ab-field-value { color: var(--c-text); line-height: 1.55; }
+    .ab-field-full { grid-column: 1 / -1; }
+    .ab-divider { grid-column: 1 / -1; border: none; border-top: 1px solid var(--c-border-light); margin: .35rem 0; }
+
+    .ab-state-box {
+      background: #F9FAFB;
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius-sm);
+      padding: .5rem .75rem;
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--c-text-secondary);
+    }
+    .ab-state-box strong { color: var(--c-text); }
+
+    .ab-proposed-box {
+      background: #EFF6FF;
+      border: 1px solid #BFDBFE;
+      border-radius: var(--radius-sm);
+      padding: .5rem .75rem;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #1E3A5F;
+    }
+    .ab-proposed-box strong { color: #1D4ED8; }
+
+    .ab-metric-primary {
+      font-weight: 600;
+      color: var(--c-text);
+    }
+    .ab-metric-secondary {
+      color: var(--c-text-secondary);
+    }
+
+    .persona-tags { display: flex; gap: .3rem; flex-wrap: wrap; }
+
+    @media (max-width: 700px) {
+      .sequence-grid { grid-template-columns: 1fr 1fr; }
+      .ab-field-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .sequence-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<button class="mobile-nav-toggle" id="sidebarToggle" aria-label="Toggle navigation">&#9776;</button>
+<div class="sidebar-overlay"></div>
+
+<nav class="sidebar">
+  <a href="../index.html" class="sidebar-brand">
+    <div class="sidebar-brand-icon">B</div>
+    <div class="sidebar-brand-text">
+      <span class="sidebar-brand-name">Bridgit UX Audit</span>
+      <span class="sidebar-brand-sub">Final Report 2026</span>
+    </div>
+  </a>
+  <div class="sidebar-health">
+    <div class="sidebar-health-label">Conversion Health</div>
+    <div class="sidebar-health-score">5.2<span style="font-size:14px;font-weight:400;color:#6B7280">/10</span></div>
+    <div class="sidebar-health-sub">71 findings across 3 phases</div>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">Overview</div>
+    <ul class="sidebar-nav">
+      <li><a href="../index.html"><span class="nav-icon">📊</span> Executive Summary</a></li>
+      <li><a href="../navigation.html"><span class="nav-icon">🗺️</span> Navigation &amp; IA</a></li>
+      <li><a href="../recommendations.html"><span class="nav-icon">📋</span> All Findings <span class="nav-badge">71</span></a></li>
+      <li><a href="../ab-tests.html" class="active"><span class="nav-icon">🧪</span> A/B Tests <span class="nav-badge">10</span></a></li>
+    </ul>
+  </div>
+  <hr class="sidebar-divider">
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">Personas</div>
+    <ul class="sidebar-nav">
+      <li><a href="../personas/p01-upsizer.html"><span class="nav-icon">🏠</span> P01 — Upsizer</a></li>
+      <li><a href="../personas/p02-downsizer.html"><span class="nav-icon">🌿</span> P02 — Downsizer</a></li>
+      <li><a href="../personas/p03-renovator.html"><span class="nav-icon">🔨</span> P03 — Renovator</a></li>
+      <li><a href="../personas/p04-separating.html"><span class="nav-icon">💙</span> P04 — Separating</a></li>
+      <li><a href="../personas/p05-house-land.html"><span class="nav-icon">🏗️</span> P05 — Builder</a></li>
+      <li><a href="../personas/p06-investor.html"><span class="nav-icon">📈</span> P06 — Investor</a></li>
+      <li><a href="../personas/p07-broker.html"><span class="nav-icon">🤝</span> P07 — Broker</a></li>
+      <li><a href="../personas/p08-regional.html"><span class="nav-icon">🌏</span> P08 — Regional</a></li>
+    </ul>
+  </div>
+  <hr class="sidebar-divider">
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">Pages</div>
+    <ul class="sidebar-nav">
+      <li><a href="../pages/homepage.html"><span class="nav-icon">🏡</span> Homepage</a></li>
+      <li><a href="../pages/bridging-loan.html"><span class="nav-icon">🔗</span> Bridging Loan</a></li>
+      <li><a href="../pages/eligibility.html"><span class="nav-icon">✅</span> Eligibility</a></li>
+      <li><a href="../pages/calculator.html"><span class="nav-icon">🧮</span> Calculator</a></li>
+      <li><a href="../pages/rates-and-fees.html"><span class="nav-icon">💰</span> Rates &amp; Fees</a></li>
+      <li><a href="../pages/partners.html"><span class="nav-icon">🤝</span> Partners</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">Solution Pages</div>
+    <ul class="sidebar-nav">
+      <li><a href="../pages/solutions/upsize.html">↳ Upsize</a></li>
+      <li><a href="../pages/solutions/downsize.html">↳ Downsize</a></li>
+      <li><a href="../pages/solutions/renovate.html">↳ Renovate</a></li>
+      <li><a href="../pages/solutions/retire.html">↳ Retire</a></li>
+      <li><a href="../pages/solutions/separate.html">↳ Separate</a></li>
+      <li><a href="../pages/solutions/invest.html">↳ Invest</a></li>
+      <li><a href="../pages/solutions/house-and-land.html">↳ House &amp; Land</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="main">
+  <div class="page-header">
+    <div class="page-header-eyebrow">CRO Testing</div>
+    <h1>A/B Test Priority Queue</h1>
+    <div class="page-header-meta">
+      <span>10 tests &middot; 6-week sequence</span>
+      <span>Ordered by impact &times; ease</span>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- Intro callout -->
+    <div class="callout callout-info">
+      <span class="callout-icon">🧪</span>
+      <div class="callout-body">
+        <strong>How to read this queue</strong>
+        Tests are ranked by expected impact (traffic volume &times; estimated conversion lift) weighted against implementation effort. All 10 tests require no new form logic or back-end integration. Tests 1–9 require only copy edits, link additions, or minor layout changes. Run all tests at a 50/50 split unless noted. Minimum detectable effect: 5% relative uplift. Recommended sample size: 1,000 sessions per variant before reading results.
+      </div>
+    </div>
+
+    <!-- Sequencing timeline -->
+    <h2 class="section-heading">Test Sequencing</h2>
+    <p class="section-body">Structured to avoid test interference. Week 1 targets high-traffic, low-effort changes to establish baseline uplift data before layering more complex tests.</p>
+
+    <div class="sequence-grid">
+
+      <div class="sequence-week week-1">
+        <div class="sequence-week-header">Week 1 — Launch</div>
+        <div class="sequence-week-body">
+          <div class="sequence-test-item">
+            <div class="sequence-test-num">1</div>
+            <div class="sequence-test-label">
+              <span class="sequence-test-id">F-NAV-01</span><br>
+              Scenario CTA copy vs "Apply now"
+            </div>
+          </div>
+          <div class="sequence-test-item">
+            <div class="sequence-test-num">2</div>
+            <div class="sequence-test-label">
+              <span class="sequence-test-id">F-NAV-05/10</span><br>
+              "Check eligibility" CTA on Calculator
+            </div>
+          </div>
+          <div class="sequence-test-item">
+            <div class="sequence-test-num">4a</div>
+            <div class="sequence-test-label">
+              <span class="sequence-test-id">F-HP-01</span><br>
+              ACL badge in hero vs footer-only
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sequence-week week-2">
+        <div class="sequence-week-header">Weeks 2–3</div>
+        <div class="sequence-week-body">
+          <div class="sequence-test-item">
+            <div class="sequence-test-num">3</div>
+            <div class="sequence-test-label">
+              <span class="sequence-test-id">F-NAV-04</span><br>
+              Email CTA alongside phone
+            </div>
+          </div>
+          <div class="sequence-test-item">
+            <div class="sequence-test-num">4b</div>
+            <div class="sequence-test-label">
+              <span class="sequence-test-id">F-HP-02</span><br>
+              Scenario-labelled testimonials
+            </div>
+          </div>
+          <div class="sequence-test-item">
+            <div class="sequence-test-num">5</div>
+            <div class="sequence-test-label">
+              <span class="sequence-test-id">F-NAV-06</span><br>
+              Empathy-led H1 on Separate
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sequence-week week-4">
+        <div class="sequence-week-header">Weeks 4–5</div>
+        <div class="sequence-week-body">
+          <div class="sequence-test-item">
+            <div class="sequence-test-num">6</div>
+            <div class="sequence-test-label">
+              <span class="sequence-test-id">F-RF-02</span><br>
+              Plain-language LVR + cost example
+            </div>
+          </div>
+          <div class="sequence-test-item">
+            <div class="sequence-test-num">7</div>
+            <div class="sequence-test-label">
+              <span class="sequence-test-id">F-SOL-ALL-01</span><br>
+              Scenario-matched testimonials
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sequence-week week-6">
+        <div class="sequence-week-header">Week 6+</div>
+        <div class="sequence-week-body">
+          <div class="sequence-test-item">
+            <div class="sequence-test-num">8</div>
+            <div class="sequence-test-label">
+              <span class="sequence-test-id">F-SOL-DN-M01</span><br>
+              Tap-to-call above fold (mobile)
+            </div>
+          </div>
+          <div class="sequence-test-item">
+            <div class="sequence-test-num">9</div>
+            <div class="sequence-test-label">
+              <span class="sequence-test-id">F-ELG-02</span><br>
+              Separation FAQ on Eligibility
+            </div>
+          </div>
+          <div class="sequence-test-item">
+            <div class="sequence-test-num">10</div>
+            <div class="sequence-test-label">
+              <span class="sequence-test-id">F-HP-M01</span><br>
+              Email CTA on mobile homepage
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /sequence-grid -->
+
+    <!-- ===================== TEST 1 ===================== -->
+    <h2 class="section-heading">Test Cards</h2>
+
+    <div class="ab-card priority-high">
+      <div class="ab-card-header">
+        <div class="ab-rank-circle">1</div>
+        <div class="ab-card-title">Scenario-specific CTA copy vs generic "Apply now"</div>
+        <span class="badge badge-phase">F-NAV-01</span>
+        <span class="ab-card-page">All 7 solution pages</span>
+        <span class="badge badge-effort-low">Low effort</span>
+        <span class="badge badge-high">High priority</span>
+      </div>
+      <div class="ab-card-body">
+        <div class="ab-field-grid">
+
+          <div class="ab-field-label">Current state</div>
+          <div class="ab-field-value">
+            <div class="ab-state-box">Every solution page uses <strong>"Apply now"</strong> linking to apply.bridgit.com.au — identical across all 7 scenarios and all 8 personas.</div>
+          </div>
+
+          <div class="ab-field-label">Proposed change</div>
+          <div class="ab-field-value">
+            <div class="ab-proposed-box">
+              Replace with scenario-specific labels:<br>
+              <strong>Upsize</strong> → "Start my upsize application" &bull;
+              <strong>Downsize</strong> → "Check if I'm eligible to downsize" &bull;
+              <strong>Renovate</strong> → "Start my renovation bridge" &bull;
+              <strong>Retire</strong> → "Speak to a retirement specialist" &bull;
+              <strong>Separate</strong> → "Get a confidential assessment" &bull;
+              <strong>Invest</strong> → "Get investor pricing" &bull;
+              <strong>House &amp; Land</strong> → "Start my house &amp; land bridge"
+            </div>
+          </div>
+
+          <hr class="ab-divider">
+
+          <div class="ab-field-label">Hypothesis</div>
+          <div class="ab-field-value">
+            <div class="ab-hypothesis-box">
+              Changing the primary CTA from "Apply now" to a scenario-specific label will increase CTA click-through rate across all solution pages because users feel confirmed they are in the right place for their specific situation, reducing the hesitation that comes from generic transactional language on high-consideration financial pages.
+            </div>
+          </div>
+
+          <div class="ab-field-label">Primary metric</div>
+          <div class="ab-field-value ab-metric-primary">CTA click-through rate (solution page → apply.bridgit.com.au)</div>
+
+          <div class="ab-field-label">Secondary metric</div>
+          <div class="ab-field-value ab-metric-secondary">Time on page; scroll depth per solution page</div>
+
+          <div class="ab-field-label">Effort</div>
+          <div class="ab-field-value"><span class="badge badge-effort-low">Low — copy change only, no dev required</span></div>
+
+          <div class="ab-field-label">Personas</div>
+          <div class="ab-field-value">
+            <div class="persona-tags">
+              <span class="badge badge-persona">P01</span>
+              <span class="badge badge-persona">P02</span>
+              <span class="badge badge-persona">P03</span>
+              <span class="badge badge-persona">P04</span>
+              <span class="badge badge-persona">P05</span>
+              <span class="badge badge-persona">P06</span>
+              <span class="badge badge-persona">P07</span>
+              <span class="badge badge-persona">P08</span>
+            </div>
+          </div>
+
+          <div class="ab-field-label">Test type</div>
+          <div class="ab-field-value">A/B 50/50 — run independently per solution page; aggregate for overall signal</div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== TEST 2 ===================== -->
+    <div class="ab-card priority-high">
+      <div class="ab-card-header">
+        <div class="ab-rank-circle">2</div>
+        <div class="ab-card-title">"Check my eligibility" secondary CTA on Calculator result</div>
+        <span class="badge badge-phase">F-NAV-05/10</span>
+        <span class="ab-card-page">Calculator result</span>
+        <span class="badge badge-effort-low">Low effort</span>
+        <span class="badge badge-high">High-intent</span>
+      </div>
+      <div class="ab-card-body">
+        <div class="ab-field-grid">
+
+          <div class="ab-field-label">Current state</div>
+          <div class="ab-field-value">
+            <div class="ab-state-box">Post-calculation CTA is <strong>"Get a quote"</strong> linking directly to apply.bridgit.com.au/customer-quote. There is no path from calculator result to the Eligibility checker, breaking journey J1 (P01: Calculator → Eligibility → Apply).</div>
+          </div>
+
+          <div class="ab-field-label">Proposed change</div>
+          <div class="ab-field-value">
+            <div class="ab-proposed-box">Add <strong>"Check my eligibility first"</strong> as a secondary CTA below "Get a quote" in the calculator result state. Control: "Get a quote" only. Variant: "Get a quote" + "Check my eligibility".</div>
+          </div>
+
+          <hr class="ab-divider">
+
+          <div class="ab-field-label">Hypothesis</div>
+          <div class="ab-field-value">
+            <div class="ab-hypothesis-box">
+              Adding "Check my eligibility" as a secondary CTA on calculator results will increase Eligibility page visits from Calculator and downstream apply rate, because users who self-qualify through the Eligibility checker convert at a higher rate than those pushed directly to a quote form before they have confirmed their own readiness.
+            </div>
+          </div>
+
+          <div class="ab-field-label">Primary metric</div>
+          <div class="ab-field-value ab-metric-primary">Eligibility page visits attributed to Calculator; Apply conversion rate (calculator entrants)</div>
+
+          <div class="ab-field-label">Secondary metric</div>
+          <div class="ab-field-value ab-metric-secondary">Funnel completion rate: Calculator → Eligibility → Apply (J1 journey)</div>
+
+          <div class="ab-field-label">Effort</div>
+          <div class="ab-field-value"><span class="badge badge-effort-low">Low — single secondary CTA addition in calculator widget</span></div>
+
+          <div class="ab-field-label">Personas</div>
+          <div class="ab-field-value">
+            <div class="persona-tags">
+              <span class="badge badge-persona">P01</span>
+              <span class="badge badge-persona">P03</span>
+              <span class="badge badge-persona">P05</span>
+              <span class="badge badge-persona">P08</span>
+            </div>
+          </div>
+
+          <div class="ab-field-label">Test type</div>
+          <div class="ab-field-value">A/B 50/50 on calculator result state</div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== TEST 3 ===================== -->
+    <div class="ab-card priority-medium">
+      <div class="ab-card-header">
+        <div class="ab-rank-circle">3</div>
+        <div class="ab-card-title">Email CTA alongside phone for async-preferring users</div>
+        <span class="badge badge-phase">F-NAV-04</span>
+        <span class="ab-card-page">Homepage, Bridging Loan, Eligibility</span>
+        <span class="badge badge-effort-medium">Medium effort</span>
+        <span class="badge badge-medium">Persona-specific</span>
+      </div>
+      <div class="ab-card-body">
+        <div class="ab-field-grid">
+
+          <div class="ab-field-label">Current state</div>
+          <div class="ab-field-value">
+            <div class="ab-state-box">All contact routes through <strong>phone (tel:1300141161)</strong> or <strong>"Connect with an expert"</strong> (schedule-a-call). Zero <code>mailto:</code> links across all 13 pages confirmed. P08 and P06 cannot initiate contact outside business hours without committing to a callback.</div>
+          </div>
+
+          <div class="ab-field-label">Proposed change</div>
+          <div class="ab-field-value">
+            <div class="ab-proposed-box">Add a visible <strong>email CTA</strong> (mailto:hello@bridgit.com.au or async inquiry form) alongside the phone number on Homepage contact block, Bridging Loan page, and Eligibility page bottom. Control: phone + schedule-a-call only. Variant: phone + schedule-a-call + email CTA.</div>
+          </div>
+
+          <hr class="ab-divider">
+
+          <div class="ab-field-label">Hypothesis</div>
+          <div class="ab-field-value">
+            <div class="ab-hypothesis-box">
+              Surfacing an async email contact option alongside phone will increase total contact conversion rate for Regional Relocators (P08) and time-poor Investors (P06) because it removes the barrier of committing to a synchronous phone call, recovering abandonment from users who research outside business hours or in low-connectivity regional environments.
+            </div>
+          </div>
+
+          <div class="ab-field-label">Primary metric</div>
+          <div class="ab-field-value ab-metric-primary">Contact conversion rate — schedule-a-call + email combined vs schedule-a-call alone</div>
+
+          <div class="ab-field-label">Secondary metric</div>
+          <div class="ab-field-value ab-metric-secondary">Contacts initiated outside 9am–5:30pm AEDT (proxy for async preference); contact channel split</div>
+
+          <div class="ab-field-label">Effort</div>
+          <div class="ab-field-value"><span class="badge badge-effort-medium">Medium — design + mailto link or simple inquiry form integration</span></div>
+
+          <div class="ab-field-label">Personas</div>
+          <div class="ab-field-value">
+            <div class="persona-tags">
+              <span class="badge badge-persona">P08</span>
+              <span class="badge badge-persona">P06</span>
+            </div>
+          </div>
+
+          <div class="ab-field-label">Test type</div>
+          <div class="ab-field-value">A/B 50/50 across Homepage, Bridging Loan, and Eligibility pages simultaneously</div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== TEST 4a ===================== -->
+    <div class="ab-card priority-high">
+      <div class="ab-card-header">
+        <div class="ab-rank-circle">4a</div>
+        <div class="ab-card-title">ACL badge in homepage hero vs footer-only</div>
+        <span class="badge badge-phase">F-HP-01</span>
+        <span class="ab-card-page">Homepage hero</span>
+        <span class="badge badge-effort-low">Low effort</span>
+        <span class="badge badge-high">First-touch</span>
+      </div>
+      <div class="ab-card-body">
+        <div class="ab-field-grid">
+
+          <div class="ab-field-label">Current state</div>
+          <div class="ab-field-value">
+            <div class="ab-state-box">ACL 532542 licence number appears <strong>only in the footer</strong>. The homepage hero trust bar contains no regulatory credibility signal. For a first-time visitor considering a regulated financial product, this creates a trust gap at the highest-impact page location.</div>
+          </div>
+
+          <div class="ab-field-label">Proposed change</div>
+          <div class="ab-field-value">
+            <div class="ab-proposed-box">Add <strong>"Australian Credit Licence 532542"</strong> (with ASIC link) to the homepage hero trust bar, alongside the Trustpilot rating. Control: ACL in footer only. Variant: ACL in hero trust bar + footer.</div>
+          </div>
+
+          <hr class="ab-divider">
+
+          <div class="ab-field-label">Hypothesis</div>
+          <div class="ab-field-value">
+            <div class="ab-hypothesis-box">
+              Displaying the ACL badge in the homepage hero trust bar rather than the footer alone will increase hero CTA click-through rate and reduce bounce rate, because regulatory credibility visible at first touch shortens trust formation for visitors evaluating a financial product for the first time.
+            </div>
+          </div>
+
+          <div class="ab-field-label">Primary metric</div>
+          <div class="ab-field-value ab-metric-primary">Hero CTA click-through rate; homepage bounce rate</div>
+
+          <div class="ab-field-label">Secondary metric</div>
+          <div class="ab-field-value ab-metric-secondary">Time on homepage; scroll depth past hero</div>
+
+          <div class="ab-field-label">Effort</div>
+          <div class="ab-field-value"><span class="badge badge-effort-low">Low — microcopy addition with ASIC hyperlink in hero trust bar</span></div>
+
+          <div class="ab-field-label">Personas</div>
+          <div class="ab-field-value">
+            <div class="persona-tags">
+              <span class="badge badge-persona">P01</span>
+              <span class="badge badge-persona">P02</span>
+              <span class="badge badge-persona">P03</span>
+              <span class="badge badge-persona">P04</span>
+              <span class="badge badge-persona">P05</span>
+              <span class="badge badge-persona">P06</span>
+              <span class="badge badge-persona">P07</span>
+              <span class="badge badge-persona">P08</span>
+            </div>
+          </div>
+
+          <div class="ab-field-label">Test type</div>
+          <div class="ab-field-value">A/B 50/50 on homepage hero section</div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== TEST 4b ===================== -->
+    <div class="ab-card priority-high">
+      <div class="ab-card-header">
+        <div class="ab-rank-circle">4b</div>
+        <div class="ab-card-title">Scenario-labelled testimonials vs generic carousel</div>
+        <span class="badge badge-phase">F-HP-02</span>
+        <span class="ab-card-page">Homepage testimonials</span>
+        <span class="badge badge-effort-low">Low effort</span>
+        <span class="badge badge-high">All-persona</span>
+      </div>
+      <div class="ab-card-body">
+        <div class="ab-field-grid">
+
+          <div class="ab-field-label">Current state</div>
+          <div class="ab-field-value">
+            <div class="ab-state-box">Trustpilot carousel on homepage shows testimonials <strong>without scenario labels</strong>. A P01 Upsizer may read a Downsizer testimonial; P04 may see an investor testimonial. No persona-to-review match signal.</div>
+          </div>
+
+          <div class="ab-field-label">Proposed change</div>
+          <div class="ab-field-value">
+            <div class="ab-proposed-box">Add scenario labels to each testimonial: <strong>"Sarah — Upsizing, Sydney"</strong>, <strong>"James — Downsizing, Melbourne"</strong>, etc. Control: unlabelled carousel. Variant: scenario-labelled carousel.</div>
+          </div>
+
+          <hr class="ab-divider">
+
+          <div class="ab-field-label">Hypothesis</div>
+          <div class="ab-field-value">
+            <div class="ab-hypothesis-box">
+              Adding scenario and location labels to homepage testimonials will increase testimonial carousel engagement and downstream CTA click-through rate because visitors who recognise their own scenario in a testimonial will trust the product more, confirming it is the right solution for their specific situation.
+            </div>
+          </div>
+
+          <div class="ab-field-label">Primary metric</div>
+          <div class="ab-field-value ab-metric-primary">Carousel engagement (clicks, swipes, pause events); CTA CTR post-testimonial scroll</div>
+
+          <div class="ab-field-label">Secondary metric</div>
+          <div class="ab-field-value ab-metric-secondary">Apply rate from homepage visitors; time-on-section</div>
+
+          <div class="ab-field-label">Effort</div>
+          <div class="ab-field-value"><span class="badge badge-effort-low">Low — copy-only addition to existing testimonial cards</span></div>
+
+          <div class="ab-field-label">Personas</div>
+          <div class="ab-field-value">
+            <div class="persona-tags">
+              <span class="badge badge-persona">P01</span>
+              <span class="badge badge-persona">P02</span>
+              <span class="badge badge-persona">P03</span>
+              <span class="badge badge-persona">P04</span>
+              <span class="badge badge-persona">P05</span>
+              <span class="badge badge-persona">P06</span>
+              <span class="badge badge-persona">P07</span>
+              <span class="badge badge-persona">P08</span>
+            </div>
+          </div>
+
+          <div class="ab-field-label">Test type</div>
+          <div class="ab-field-value">A/B 50/50 on homepage testimonials carousel</div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== TEST 5 ===================== -->
+    <div class="ab-card priority-medium">
+      <div class="ab-card-header">
+        <div class="ab-rank-circle">5</div>
+        <div class="ab-card-title">Empathy-led H1 vs transactional headline on Separate page</div>
+        <span class="badge badge-phase">F-NAV-06</span>
+        <span class="ab-card-page">Solution: Separate</span>
+        <span class="badge badge-effort-low">Low effort</span>
+        <span class="badge badge-medium">Emotional engagement</span>
+      </div>
+      <div class="ab-card-body">
+        <div class="ab-field-grid">
+
+          <div class="ab-field-label">Current state</div>
+          <div class="ab-field-value">
+            <div class="ab-state-box"><strong>H1:</strong> "Move on without finance holding you back" — frames separation as a finance problem rather than a life event. Does not acknowledge the emotional reality of separation before presenting the product solution.</div>
+          </div>
+
+          <div class="ab-field-label">Proposed change</div>
+          <div class="ab-field-value">
+            <div class="ab-proposed-box">Replace H1 with an empathy-first headline, e.g. <strong>"When life changes, your next step shouldn't have to wait"</strong> — leading with acknowledgment of the life event, followed by the financial solution as a subhead.</div>
+          </div>
+
+          <hr class="ab-divider">
+
+          <div class="ab-field-label">Hypothesis</div>
+          <div class="ab-field-value">
+            <div class="ab-hypothesis-box">
+              An emotionally-led H1 on the Separate page will increase scroll depth and "Connect with an expert" click rate from P04 (Separating Homeowner) vs. the current transactional framing, because P04 needs to feel understood and respected before they are willing to share their financial situation with a lender.
+            </div>
+          </div>
+
+          <div class="ab-field-label">Primary metric</div>
+          <div class="ab-field-value ab-metric-primary">"Connect with an expert" CTA click-through rate on Separate page</div>
+
+          <div class="ab-field-label">Secondary metric</div>
+          <div class="ab-field-value ab-metric-secondary">Scroll depth past hero; bounce rate from Separate page</div>
+
+          <div class="ab-field-label">Effort</div>
+          <div class="ab-field-value"><span class="badge badge-effort-low">Low — H1 copy change only, no dev required</span></div>
+
+          <div class="ab-field-label">Personas</div>
+          <div class="ab-field-value">
+            <div class="persona-tags">
+              <span class="badge badge-persona">P04</span>
+            </div>
+          </div>
+
+          <div class="ab-field-label">Test type</div>
+          <div class="ab-field-value">A/B 50/50 on Separate page hero H1</div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== TEST 6 ===================== -->
+    <div class="ab-card priority-medium">
+      <div class="ab-card-header">
+        <div class="ab-rank-circle">6</div>
+        <div class="ab-card-title">LVR plain language + worked cost example on Rates &amp; Fees</div>
+        <span class="badge badge-phase">F-RF-02</span>
+        <span class="ab-card-page">Rates &amp; Fees</span>
+        <span class="badge badge-effort-medium">Medium effort</span>
+        <span class="badge badge-medium">Consideration-stage</span>
+      </div>
+      <div class="ab-card-body">
+        <div class="ab-field-grid">
+
+          <div class="ab-field-label">Current state</div>
+          <div class="ab-field-value">
+            <div class="ab-state-box">Rates &amp; Fees page presents LVR and fee data in technical format without plain-language definitions or a worked cost example. P03 (Renovator) and P06 (Investor) must manually calculate total loan cost, introducing decision friction at the consideration stage.</div>
+          </div>
+
+          <div class="ab-field-label">Proposed change</div>
+          <div class="ab-field-value">
+            <div class="ab-proposed-box">Add: (1) <strong>LVR plain-language tooltip/inline definition</strong> ("LVR = loan amount ÷ property value. At 60% LVR on a $600K property, you can borrow $360K.") and (2) a <strong>worked cost example</strong> showing a representative scenario (e.g. $300K bridge, 6 months, 7.5% p.a., total cost breakdown). Control: current page. Variant: page + LVR definition + worked example.</div>
+          </div>
+
+          <hr class="ab-divider">
+
+          <div class="ab-field-label">Hypothesis</div>
+          <div class="ab-field-value">
+            <div class="ab-hypothesis-box">
+              Adding LVR plain-language explanation and a worked cost example to Rates &amp; Fees will increase apply rate from cost-researching personas, because reducing the mental effort required to calculate total loan cost removes the primary decision barrier for research-driven and cost-comparison-focused borrowers at the consideration stage.
+            </div>
+          </div>
+
+          <div class="ab-field-label">Primary metric</div>
+          <div class="ab-field-value ab-metric-primary">Apply rate from Rates &amp; Fees page visitors; CTA click-through from R&amp;F page</div>
+
+          <div class="ab-field-label">Secondary metric</div>
+          <div class="ab-field-value ab-metric-secondary">Time-on-page; scroll depth; exit rate from Rates &amp; Fees</div>
+
+          <div class="ab-field-label">Effort</div>
+          <div class="ab-field-value"><span class="badge badge-effort-medium">Medium — content design + inline tooltip or expandable definition component</span></div>
+
+          <div class="ab-field-label">Personas</div>
+          <div class="ab-field-value">
+            <div class="persona-tags">
+              <span class="badge badge-persona">P03</span>
+              <span class="badge badge-persona">P06</span>
+              <span class="badge badge-persona">P01</span>
+            </div>
+          </div>
+
+          <div class="ab-field-label">Test type</div>
+          <div class="ab-field-value">A/B 50/50 on Rates &amp; Fees page</div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== TEST 7 ===================== -->
+    <div class="ab-card priority-strategic">
+      <div class="ab-card-header">
+        <div class="ab-rank-circle">7</div>
+        <div class="ab-card-title">Scenario-matched testimonials vs generic carousel across all solution pages</div>
+        <span class="badge badge-phase">F-SOL-ALL-01</span>
+        <span class="ab-card-page">All 7 solution pages</span>
+        <span class="badge badge-effort-high">High effort</span>
+        <span class="badge badge-high">7-page reach</span>
+      </div>
+      <div class="ab-card-body">
+        <div class="ab-field-grid">
+
+          <div class="ab-field-label">Current state</div>
+          <div class="ab-field-value">
+            <div class="ab-state-box">All 7 solution pages display the same <strong>generic Trustpilot testimonial carousel</strong>, not filtered or matched by scenario. A P01 Upsizer on the Upsize page may read a testimonial from a Downsizer. No scenario or persona matching exists.</div>
+          </div>
+
+          <div class="ab-field-label">Proposed change</div>
+          <div class="ab-field-value">
+            <div class="ab-proposed-box">Source and display <strong>scenario-matched testimonials</strong> on each solution page. Each page shows 3–5 testimonials from borrowers who completed the same scenario (e.g. Upsize page shows upsizers, Retire page shows retirees). Control: generic carousel. Variant: scenario-matched set.</div>
+          </div>
+
+          <hr class="ab-divider">
+
+          <div class="ab-field-label">Hypothesis</div>
+          <div class="ab-field-value">
+            <div class="ab-hypothesis-box">
+              Displaying scenario-matched testimonials on each solution page will increase apply rate per solution page, because social proof that mirrors the visitor's exact situation ("a customer just like me did this") builds significantly stronger conversion intent than generic reviews that may belong to a different borrower profile.
+            </div>
+          </div>
+
+          <div class="ab-field-label">Primary metric</div>
+          <div class="ab-field-value ab-metric-primary">Apply rate per solution page; testimonial section engagement (scroll, clicks)</div>
+
+          <div class="ab-field-label">Secondary metric</div>
+          <div class="ab-field-value ab-metric-secondary">Time-on-solution-page; CTA click-through rate per page</div>
+
+          <div class="ab-field-label">Effort</div>
+          <div class="ab-field-value"><span class="badge badge-effort-high">High — testimonial sourcing, CMS/Webflow component redesign across 7 pages</span></div>
+
+          <div class="ab-field-label">Personas</div>
+          <div class="ab-field-value">
+            <div class="persona-tags">
+              <span class="badge badge-persona">P01</span>
+              <span class="badge badge-persona">P02</span>
+              <span class="badge badge-persona">P03</span>
+              <span class="badge badge-persona">P04</span>
+              <span class="badge badge-persona">P05</span>
+              <span class="badge badge-persona">P06</span>
+              <span class="badge badge-persona">P08</span>
+            </div>
+          </div>
+
+          <div class="ab-field-label">Test type</div>
+          <div class="ab-field-value">A/B 50/50 per solution page; roll up for combined signal</div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== TEST 8 ===================== -->
+    <div class="ab-card priority-strategic">
+      <div class="ab-card-header">
+        <div class="ab-rank-circle">8</div>
+        <div class="ab-card-title">Tap-to-call CTA above fold vs below fold on Downsize (mobile)</div>
+        <span class="badge badge-phase">F-SOL-DN-M01</span>
+        <span class="ab-card-page">Solution: Downsize (mobile)</span>
+        <span class="badge badge-effort-high">High effort</span>
+        <span class="badge badge-high">High-intent</span>
+      </div>
+      <div class="ab-card-body">
+        <div class="ab-field-grid">
+
+          <div class="ab-field-label">Current state</div>
+          <div class="ab-field-value">
+            <div class="ab-state-box">On the Downsize page at 390px viewport, the phone tap-to-call CTA is <strong>not visible above the fold</strong>. P02 (Downsizing Empty Nester, 62F, phone-primary) must scroll to access the primary conversion path. Estimated 40–50% mobile conversion rate reduction for this persona.</div>
+          </div>
+
+          <div class="ab-field-label">Proposed change</div>
+          <div class="ab-field-value">
+            <div class="ab-proposed-box">Restructure the Downsize mobile hero to place a large, prominent <strong>tap-to-call button</strong> above the fold alongside or beneath the H1 at 390px. Control: current layout (phone below fold). Variant: phone CTA above fold.</div>
+          </div>
+
+          <hr class="ab-divider">
+
+          <div class="ab-field-label">Hypothesis</div>
+          <div class="ab-field-value">
+            <div class="ab-hypothesis-box">
+              Placing the tap-to-call phone CTA above the fold on the Downsize mobile page will increase mobile phone call conversion rate from P02, because P02's primary conversion path is phone-first and the current design requires scroll before they can act on their primary intent, causing abandonment from low-digital-confidence users.
+            </div>
+          </div>
+
+          <div class="ab-field-label">Primary metric</div>
+          <div class="ab-field-value ab-metric-primary">Mobile phone CTA clicks (tel: link clicks) from Downsize page</div>
+
+          <div class="ab-field-label">Secondary metric</div>
+          <div class="ab-field-value ab-metric-secondary">Mobile bounce rate on Downsize; mobile session depth</div>
+
+          <div class="ab-field-label">Effort</div>
+          <div class="ab-field-value"><span class="badge badge-effort-high">High — mobile hero layout redesign; requires design + dev</span></div>
+
+          <div class="ab-field-label">Personas</div>
+          <div class="ab-field-value">
+            <div class="persona-tags">
+              <span class="badge badge-persona">P02</span>
+            </div>
+          </div>
+
+          <div class="ab-field-label">Test type</div>
+          <div class="ab-field-value">A/B 50/50 on mobile only (&lt;768px viewport), Downsize page</div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== TEST 9 ===================== -->
+    <div class="ab-card priority-medium">
+      <div class="ab-card-header">
+        <div class="ab-rank-circle">9</div>
+        <div class="ab-card-title">Separation FAQ + explicit entry on Eligibility page</div>
+        <span class="badge badge-phase">F-ELG-02</span>
+        <span class="ab-card-page">Eligibility</span>
+        <span class="badge badge-effort-low">Low effort</span>
+        <span class="badge badge-medium">Anxiety persona</span>
+      </div>
+      <div class="ab-card-body">
+        <div class="ab-field-grid">
+
+          <div class="ab-field-label">Current state</div>
+          <div class="ab-field-value">
+            <div class="ab-state-box">The Eligibility page uses <strong>generic criteria lists</strong> with no specific FAQ entry for borrowers going through separation. P04 (Separating Homeowner) cannot confirm whether they are eligible without reading through full criteria that were not written for their scenario.</div>
+          </div>
+
+          <div class="ab-field-label">Proposed change</div>
+          <div class="ab-field-value">
+            <div class="ab-proposed-box">Add a <strong>Separation scenario FAQ entry</strong>: "Am I eligible if I'm going through a separation? Yes — if the property is in your name or jointly owned, you can still apply. We handle separation scenarios discreetly." Alongside this, add an <strong>explicit entry point</strong> ("Separating? Start here") linking to the Separate solution page. Control: current generic criteria. Variant: criteria + separation FAQ + explicit CTA.</div>
+          </div>
+
+          <hr class="ab-divider">
+
+          <div class="ab-field-label">Hypothesis</div>
+          <div class="ab-field-value">
+            <div class="ab-hypothesis-box">
+              Adding a separation-specific FAQ entry and explicit entry point to the Eligibility page will increase "Connect with an expert" CTA click-through rate from P04 visitors, because explicitly confirming eligibility for their specific scenario reduces anxiety and removes the primary barrier to engagement for the highest-anxiety persona in the audit.
+            </div>
+          </div>
+
+          <div class="ab-field-label">Primary metric</div>
+          <div class="ab-field-value ab-metric-primary">"Connect with an expert" CTA CTR from Eligibility page (P04 proxy: visitors from Separate page or separation-related search terms)</div>
+
+          <div class="ab-field-label">Secondary metric</div>
+          <div class="ab-field-value ab-metric-secondary">Eligibility page exit rate; Separate page visits from Eligibility</div>
+
+          <div class="ab-field-label">Effort</div>
+          <div class="ab-field-value"><span class="badge badge-effort-low">Low — FAQ copy addition and single CTA link to Separate page</span></div>
+
+          <div class="ab-field-label">Personas</div>
+          <div class="ab-field-value">
+            <div class="persona-tags">
+              <span class="badge badge-persona">P04</span>
+            </div>
+          </div>
+
+          <div class="ab-field-label">Test type</div>
+          <div class="ab-field-value">A/B 50/50 on Eligibility page; segment P04 via traffic source or page referrer</div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== TEST 10 ===================== -->
+    <div class="ab-card priority-medium">
+      <div class="ab-card-header">
+        <div class="ab-rank-circle">10</div>
+        <div class="ab-card-title">Email CTA visible on mobile homepage vs phone-only</div>
+        <span class="badge badge-phase">F-HP-M01</span>
+        <span class="ab-card-page">Homepage (mobile)</span>
+        <span class="badge badge-effort-low">Low effort</span>
+        <span class="badge badge-medium">Mobile P08</span>
+      </div>
+      <div class="ab-card-body">
+        <div class="ab-field-grid">
+
+          <div class="ab-field-label">Current state</div>
+          <div class="ab-field-value">
+            <div class="ab-state-box">Homepage mobile contact block shows <strong>phone CTA only</strong> (tel: link). No email or async contact option exists. P08 Regional Relocator researching after hours on mobile has no way to initiate contact without committing to a phone call.</div>
+          </div>
+
+          <div class="ab-field-label">Proposed change</div>
+          <div class="ab-field-value">
+            <div class="ab-proposed-box">Add a <strong>visible email contact CTA</strong> ("Email us: hello@bridgit.com.au" or "Send a message") to the Homepage mobile contact block, placed directly below the phone link. Control: phone-only. Variant: phone + email CTA (mobile viewport).</div>
+          </div>
+
+          <hr class="ab-divider">
+
+          <div class="ab-field-label">Hypothesis</div>
+          <div class="ab-field-value">
+            <div class="ab-hypothesis-box">
+              Making an email CTA visible on the homepage mobile contact block will increase async contact initiation rate from mobile-first, after-hours visitors, because Regional Relocators and other async-preferring personas who will not call during business hours need an alternative low-commitment contact channel to begin the conversion journey.
+            </div>
+          </div>
+
+          <div class="ab-field-label">Primary metric</div>
+          <div class="ab-field-value ab-metric-primary">Contact conversion rate on mobile (email + phone combined vs phone alone)</div>
+
+          <div class="ab-field-label">Secondary metric</div>
+          <div class="ab-field-value ab-metric-secondary">Email contact initiations; after-hours contact rate (outside 9am–5:30pm AEDT)</div>
+
+          <div class="ab-field-label">Effort</div>
+          <div class="ab-field-value"><span class="badge badge-effort-low">Low — one-liner mailto link addition in mobile contact block</span></div>
+
+          <div class="ab-field-label">Personas</div>
+          <div class="ab-field-value">
+            <div class="persona-tags">
+              <span class="badge badge-persona">P08</span>
+              <span class="badge badge-persona">P06</span>
+            </div>
+          </div>
+
+          <div class="ab-field-label">Test type</div>
+          <div class="ab-field-value">A/B 50/50 on mobile only (&lt;768px viewport), Homepage</div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary callout -->
+    <div class="callout callout-success" style="margin-top:2rem;">
+      <span class="callout-icon">&#10003;</span>
+      <div class="callout-body">
+        <strong>Implementation note</strong>
+        Tests 1, 2, 4a, 4b, 5, 9, and 10 require only copy edits or single-line link additions — no design or development sprint needed. These 7 tests can be queued in GA4 Experiments or a third-party CRO tool (e.g. VWO, Optimizely) within one sprint. Tests 3 and 6 require a design pass; test 7 and 8 require development work and should be scoped in a dedicated sprint.
+      </div>
+    </div>
+
+  </div><!-- /content -->
+</div><!-- /main -->
+
+<script src="../assets/js/filters.js"></script>
+</body>
+</html>

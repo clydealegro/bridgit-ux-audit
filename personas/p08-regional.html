@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P08 Regional Relocator — Bridgit UX Audit</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <button class="mobile-nav-toggle" id="sidebarToggle" aria-label="Toggle navigation">☰</button>
+  <div class="sidebar-overlay"></div>
+  <nav class="sidebar">
+    <a href="../index.html" class="sidebar-brand">
+      <div class="sidebar-brand-icon">B</div>
+      <div class="sidebar-brand-text">
+        <span class="sidebar-brand-name">Bridgit UX Audit</span>
+        <span class="sidebar-brand-sub">Final Report 2026</span>
+      </div>
+    </a>
+    <div class="sidebar-health">
+      <div class="sidebar-health-label">Conversion Health</div>
+      <div class="sidebar-health-score">5.2<span style="font-size:14px;font-weight:400;color:#6B7280">/10</span></div>
+      <div class="sidebar-health-sub">71 findings across 3 phases</div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Overview</div>
+      <ul class="sidebar-nav">
+        <li><a href="../index.html"><span class="nav-icon">📊</span> Executive Summary</a></li>
+        <li><a href="../navigation.html"><span class="nav-icon">🗺️</span> Navigation &amp; IA</a></li>
+        <li><a href="../recommendations.html"><span class="nav-icon">📋</span> All Findings <span class="nav-badge">71</span></a></li>
+        <li><a href="../ab-tests.html"><span class="nav-icon">🧪</span> A/B Tests <span class="nav-badge">10</span></a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Personas</div>
+      <ul class="sidebar-nav">
+        <li><a href="../personas/p01-upsizer.html"><span class="nav-icon">🏠</span> P01 — Upsizer</a></li>
+        <li><a href="../personas/p02-downsizer.html"><span class="nav-icon">🌿</span> P02 — Downsizer</a></li>
+        <li><a href="../personas/p03-renovator.html"><span class="nav-icon">🔨</span> P03 — Renovator</a></li>
+        <li><a href="../personas/p04-separating.html"><span class="nav-icon">💙</span> P04 — Separating</a></li>
+        <li><a href="../personas/p05-house-land.html"><span class="nav-icon">🏗️</span> P05 — Builder</a></li>
+        <li><a href="../personas/p06-investor.html"><span class="nav-icon">📈</span> P06 — Investor</a></li>
+        <li><a href="../personas/p07-broker.html"><span class="nav-icon">🤝</span> P07 — Broker</a></li>
+        <li><a href="../personas/p08-regional.html" class="active"><span class="nav-icon">🌏</span> P08 — Regional</a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="../pages/homepage.html"><span class="nav-icon">🏡</span> Homepage</a></li>
+        <li><a href="../pages/bridging-loan.html"><span class="nav-icon">🔗</span> Bridging Loan</a></li>
+        <li><a href="../pages/eligibility.html"><span class="nav-icon">✅</span> Eligibility</a></li>
+        <li><a href="../pages/calculator.html"><span class="nav-icon">🧮</span> Calculator</a></li>
+        <li><a href="../pages/rates-and-fees.html"><span class="nav-icon">💰</span> Rates &amp; Fees</a></li>
+        <li><a href="../pages/partners.html"><span class="nav-icon">🤝</span> Partners</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Solution Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="../pages/solutions/upsize.html">↳ Upsize</a></li>
+        <li><a href="../pages/solutions/downsize.html">↳ Downsize</a></li>
+        <li><a href="../pages/solutions/renovate.html">↳ Renovate</a></li>
+        <li><a href="../pages/solutions/retire.html">↳ Retire</a></li>
+        <li><a href="../pages/solutions/separate.html">↳ Separate</a></li>
+        <li><a href="../pages/solutions/invest.html">↳ Invest</a></li>
+        <li><a href="../pages/solutions/house-and-land.html">↳ House &amp; Land</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="page-header">
+      <div class="page-header-eyebrow">Persona Analysis</div>
+      <h1>🌏 P08 — The Regional Relocator</h1>
+      <div class="page-header-meta">
+        <span>36M, remote developer, async-preferring, email over phone</span>
+        <span>12 findings · Conversion path: Blocked</span>
+      </div>
+    </div>
+    <div class="content">
+
+      <div class="persona-header">
+        <div class="persona-avatar">🌏</div>
+        <div class="persona-info">
+          <div class="persona-id">P08</div>
+          <div class="persona-name">The Regional Relocator</div>
+          <div class="persona-desc">36M, remote software developer. Wants to secure a regional property before listing his Sydney home, avoiding double ownership or forced sale pressure. Researches async, prefers email over phone, may have limited mobile connectivity.</div>
+          <div>
+            <span class="persona-conversion-badge conversion-blocked">
+              ● Conversion Path: Blocked
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-grid card-grid-2">
+          <div>
+            <div class="finding-field-label">Primary Pages</div>
+            <div class="finding-field-value">Homepage → Eligibility → Calculator → Email/async contact (Journey J6)</div>
+          </div>
+          <div>
+            <div class="finding-field-label">Conversion Goal</div>
+            <div class="finding-field-value">Secure regional property before listing Sydney home; avoid double ownership or forced sale pressure</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-heading">Critical Gaps</h2>
+
+      <div class="callout callout-critical">
+        <div class="callout-icon">✉️</div>
+        <div class="callout-body">
+          <strong>No async contact option anywhere on site — complete journey blocker</strong>
+          P08 explicitly prefers email and may research from regional areas with poor voice connectivity. The complete absence of a mailto: link or email inquiry form on any of the site's pages is a Critical blocker. Every contact path forces a phone call. Findings: <span class="badge badge-critical">F-NAV-04</span> <span class="badge badge-high">F-HP-M01</span> <span class="badge badge-high">F-BL-M01</span> <span class="badge badge-high">F-ELG-M01</span>
+        </div>
+      </div>
+
+      <div class="callout callout-critical">
+        <div class="callout-icon">📍</div>
+        <div class="callout-body">
+          <strong>Regional property eligibility is opaque</strong>
+          The Eligibility page states "some regional areas excluded" without listing which regions. P08 cannot confirm whether his target area (e.g. Orange, NSW) qualifies and abandons rather than calling to find out. Finding: <span class="badge badge-medium">F-ELG-05</span>
+        </div>
+      </div>
+
+      <div class="callout callout-high">
+        <div class="callout-icon">🧮</div>
+        <div class="callout-body">
+          <strong>Calculator confusion on mobile</strong>
+          The results modal uses jargon ("LVR") without inline explanation and a misleading label ("Refinance existing mortgage") rather than bridging-specific language. On mobile in a regional area with low signal, P08 abandons after encountering unexplained terminology. Findings: <span class="badge badge-high">F-CALC-M02</span> <span class="badge badge-high">F-CALC-M03</span>
+        </div>
+      </div>
+
+      <div class="callout callout-high">
+        <div class="callout-icon">🗺️</div>
+        <div class="callout-body">
+          <strong>No regional property scenario examples</strong>
+          The calculator and Rates &amp; Fees page use no regional property examples. P08 cannot see himself reflected in the product at any point in the research journey. Finding: <span class="badge badge-medium">F-RF-03</span>
+        </div>
+      </div>
+
+      <h2 class="section-heading">What the Site Does Well</h2>
+      <div class="card">
+        <ul style="font-size:14px;line-height:1.7;color:#374151">
+          <li>Comprehensive FAQ and detail pages (Eligibility, Rates &amp; Fees, Calculator) support deep self-serve research without calling.</li>
+          <li>Eligibility page opening ("Every property owner's situation is unique") signals non-standard scenarios are considered.</li>
+          <li>Site loads quickly and is responsive, supporting research in areas with variable mobile connectivity.</li>
+        </ul>
+      </div>
+
+      <h2 class="section-heading">Findings Affecting This Persona</h2>
+      <div class="flex flex-wrap gap-sm" style="margin-bottom:1rem">
+        <span class="badge badge-critical">F-NAV-04</span>
+        <span class="badge badge-medium">F-ELG-05</span>
+        <span class="badge badge-medium">F-CALC-01</span>
+        <span class="badge badge-medium">F-HP-05</span>
+        <span class="badge badge-medium">F-RF-02</span>
+        <span class="badge badge-medium">F-RF-03</span>
+        <span class="badge badge-high">F-HP-M01</span>
+        <span class="badge badge-high">F-BL-M01</span>
+        <span class="badge badge-high">F-ELG-M01</span>
+        <span class="badge badge-high">F-CALC-M02</span>
+        <span class="badge badge-high">F-CALC-M03</span>
+        <span class="badge badge-high">F-SOL-UP-M03</span>
+      </div>
+      <p class="section-body">
+        <a href="../recommendations.html?persona=P08" style="font-size:13px">
+          → View all findings for this persona in the filterable database
+        </a>
+      </p>
+
+      <h2 class="section-heading">Emotional Journey Map — J6: Remote Research</h2>
+      <div class="journey-steps">
+        <div class="journey-step">
+          <div class="journey-step-num">Step 1</div>
+          <div class="journey-step-page">Homepage</div>
+          <div class="journey-step-emotion emotion-3">😐 3/5</div>
+          <div class="journey-step-findings">F-HP-M01, F-HP-05</div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-step-num">Step 2</div>
+          <div class="journey-step-page">Eligibility</div>
+          <div class="journey-step-emotion emotion-2">😟 2/5</div>
+          <div class="journey-step-findings">F-ELG-05, F-ELG-M01, F-ELG-03</div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-step-num">Step 3</div>
+          <div class="journey-step-page">Calculator</div>
+          <div class="journey-step-emotion emotion-2">😟 2/5</div>
+          <div class="journey-step-findings">F-CALC-01, F-CALC-M02, F-CALC-M03, F-BL-M01</div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-step-num">Step 4</div>
+          <div class="journey-step-page">Contact</div>
+          <div class="journey-step-emotion emotion-1">😰 1/5</div>
+          <div class="journey-step-findings">F-NAV-04 — abandonment</div>
+        </div>
+      </div>
+      <div class="card section-body">
+        <p>P08 arrives hopeful that there's a lender who understands regional relocators. He reviews Eligibility and is concerned to read "some regional areas excluded" — he cannot confirm his region qualifies without calling, which conflicts with his async preference. He moves to the Calculator but encounters blank fields with no regional examples. He calculates his loan amount and sees "LVR 78%" (no tooltip on tap). He reviews the label "Refinance existing mortgage" and pauses — is he supposed to refinance his Sydney mortgage?</p>
+        <p>He now has three compounding blockers: (1) Cannot confirm his region qualifies, (2) Does not understand the calculator results, (3) Has no way to ask via email. He closes the browser and contacts a competitor lender who offers chat or email contact. Bridgit loses this deal entirely due to a complete contact-path gap. P08 has the highest unmet need on the current site, with an estimated 70–80% abandonment rate before any contact is initiated.</p>
+      </div>
+
+      <h2 class="section-heading">Highest-ROI Quick Win</h2>
+      <div class="callout callout-success">
+        <div class="callout-icon">⚡</div>
+        <div class="callout-body">
+          <strong>Add visible email contact option to Eligibility, Homepage, and Bridging Loan pages</strong>
+          <span class="badge badge-critical">F-NAV-04</span> <span class="badge badge-high">F-ELG-M01</span> <span class="badge badge-high">F-HP-M01</span> — Expected impact: +40–50% contact initiation rate from async-preferring users; unblocks the J6 journey entirely. One-liner fix: add <code>mailto:hello@bridgit.com.au</code> as a visible contact option alongside the phone number on all key pages. This single fix resolves 4 confirmed findings across 2 audit phases.
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="../assets/js/filters.js"></script>
+</body>
+</html>

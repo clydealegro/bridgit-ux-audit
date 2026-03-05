@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator Audit — Bridgit UX Audit</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <button class="mobile-nav-toggle" id="sidebarToggle" aria-label="Toggle navigation">☰</button>
+  <div class="sidebar-overlay"></div>
+  <nav class="sidebar">
+    <a href="../index.html" class="sidebar-brand">
+      <div class="sidebar-brand-icon">B</div>
+      <div class="sidebar-brand-text">
+        <span class="sidebar-brand-name">Bridgit UX Audit</span>
+        <span class="sidebar-brand-sub">Final Report 2026</span>
+      </div>
+    </a>
+    <div class="sidebar-health">
+      <div class="sidebar-health-label">Conversion Health</div>
+      <div class="sidebar-health-score">5.2<span style="font-size:14px;font-weight:400;color:#6B7280">/10</span></div>
+      <div class="sidebar-health-sub">71 findings across 3 phases</div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Overview</div>
+      <ul class="sidebar-nav">
+        <li><a href="../index.html"><span class="nav-icon">📊</span> Executive Summary</a></li>
+        <li><a href="../navigation.html"><span class="nav-icon">🗺️</span> Navigation &amp; IA</a></li>
+        <li><a href="../recommendations.html"><span class="nav-icon">📋</span> All Findings <span class="nav-badge">71</span></a></li>
+        <li><a href="../ab-tests.html"><span class="nav-icon">🧪</span> A/B Tests <span class="nav-badge">10</span></a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Personas</div>
+      <ul class="sidebar-nav">
+        <li><a href="../personas/p01-upsizer.html"><span class="nav-icon">🏠</span> P01 — Upsizer</a></li>
+        <li><a href="../personas/p02-downsizer.html"><span class="nav-icon">🌿</span> P02 — Downsizer</a></li>
+        <li><a href="../personas/p03-renovator.html"><span class="nav-icon">🔨</span> P03 — Renovator</a></li>
+        <li><a href="../personas/p04-separating.html"><span class="nav-icon">💙</span> P04 — Separating</a></li>
+        <li><a href="../personas/p05-house-land.html"><span class="nav-icon">🏗️</span> P05 — Builder</a></li>
+        <li><a href="../personas/p06-investor.html"><span class="nav-icon">📈</span> P06 — Investor</a></li>
+        <li><a href="../personas/p07-broker.html"><span class="nav-icon">🤝</span> P07 — Broker</a></li>
+        <li><a href="../personas/p08-regional.html"><span class="nav-icon">🌏</span> P08 — Regional</a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="./homepage.html"><span class="nav-icon">🏡</span> Homepage</a></li>
+        <li><a href="./bridging-loan.html"><span class="nav-icon">🔗</span> Bridging Loan</a></li>
+        <li><a href="./eligibility.html"><span class="nav-icon">✅</span> Eligibility</a></li>
+        <li><a href="./calculator.html" class="active"><span class="nav-icon">🧮</span> Calculator</a></li>
+        <li><a href="./rates-and-fees.html"><span class="nav-icon">💰</span> Rates &amp; Fees</a></li>
+        <li><a href="./partners.html"><span class="nav-icon">🤝</span> Partners</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Solution Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="./solutions/upsize.html">↳ Upsize</a></li>
+        <li><a href="./solutions/downsize.html">↳ Downsize</a></li>
+        <li><a href="./solutions/renovate.html">↳ Renovate</a></li>
+        <li><a href="./solutions/retire.html">↳ Retire</a></li>
+        <li><a href="./solutions/separate.html">↳ Separate</a></li>
+        <li><a href="./solutions/invest.html">↳ Invest</a></li>
+        <li><a href="./solutions/house-and-land.html">↳ House &amp; Land</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="page-header">
+      <div class="page-header-eyebrow">Page Audit</div>
+      <h1>Calculator</h1>
+      <div class="page-header-meta">
+        <span>Personas: P01, P03, P05, P08</span>
+        <span>1 desktop finding · 2 mobile findings</span>
+      </div>
+    </div>
+    <div class="content">
+
+      <div class="severity-bar">
+        <span class="severity-pill medium">● 3 Medium</span>
+        <span class="severity-pill low">● 1 Low</span>
+      </div>
+
+      <div data-tabs>
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="desktop">Desktop Findings</button>
+          <button class="tab-btn" data-tab="mobile">Mobile Findings</button>
+        </div>
+
+        <div class="tab-panel active" data-panel="desktop">
+
+          <!-- F-CALC-01 -->
+          <div class="finding-card severity-low">
+            <div class="finding-card-header">
+              <span class="finding-id">F-CALC-01</span>
+              <span class="finding-title">No "how to use" guidance; blank-slate inputs with no defaults</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-low">Low</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">P01 — Upsizer</span>
+              <span class="badge badge-persona">P03 — Renovator</span>
+              <span class="badge badge-persona">P05 — Builder</span>
+              <span class="badge badge-persona">P08 — Regional</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The calculator has no "how to use this calculator" help section. Input field default values are unknown — if fields start empty, users face blank-slate paralysis (no sense of what a typical loan looks like). For P08 (Regional Relocator researching async) and P05 (House &amp; Land Builder with an unusual scenario), a pre-populated example ("e.g., $850,000 current home value") would reduce hesitation.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Pre-populate fields with representative default values (median Australian property price scenarios). Add a brief "How to use this calculator" tooltip or collapsed section.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — increases calculator → apply completion rate by surfacing next-step guidance post-calculation.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /desktop panel -->
+
+        <div class="tab-panel" data-panel="mobile">
+
+          <!-- F-CALC-M02 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-CALC-M02</span>
+              <span class="finding-title">"LVR" displayed in results modal without plain-language definition</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">P08 — Regional</span>
+              <span class="badge badge-persona">P02 — Downsizer</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The results modal shows "Your estimated principal is $7,494,000 (LVR 78%)" — "LVR" is displayed without a tooltip or inline definition. P08 (Regional Relocator, moderate financial literacy) and P02 (Empty Nester, non-financial background) are likely calculator users who will not know that LVR means Loan-to-Value Ratio. At the moment of highest intent (just calculated their loan), unexplained jargon introduces doubt and may trigger abandonment before tapping "Get a quote".</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Change "(LVR 78%)" to "(Loan-to-Value Ratio: 78%)" inline, or add a tappable ⓘ icon next to the LVR figure that shows a one-line tooltip: "LVR = your loan as a % of the property value".</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — reduces confusion in results modal by defining LVR in plain language at point of first use.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-CALC-M03 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-CALC-M03</span>
+              <span class="finding-title">"Refinance existing mortgage" label creates bridging loan confusion in results summary</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">All Personas</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The results modal summary table shows line items: "Purchase price / Refinance existing mortgage / Less your contribution / Total". The label "Refinance existing mortgage" is misleading in a bridging loan context — Bridgit is not refinancing the mortgage; the bridging loan sits alongside the existing mortgage until the current home sells. Users who read "refinance" may believe they need to refinance their home loan to qualify, which is incorrect and may cause pre-qualified users to self-exclude.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Rename the label to "Existing mortgage on property being sold" or "Current mortgage (to be settled at sale)" to accurately describe what the figure represents in a bridging loan scenario.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — reduces mortgage/bridge confusion in results summary by using bridging-specific label.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /mobile panel -->
+      </div><!-- /tabs -->
+
+    </div>
+  </div>
+  <script src="../assets/js/filters.js"></script>
+</body>
+</html>

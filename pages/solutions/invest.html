@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invest Audit — Bridgit UX Audit</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <button class="mobile-nav-toggle" id="sidebarToggle" aria-label="Toggle navigation">☰</button>
+  <div class="sidebar-overlay"></div>
+  <nav class="sidebar">
+    <a href="../../index.html" class="sidebar-brand">
+      <div class="sidebar-brand-icon">B</div>
+      <div class="sidebar-brand-text">
+        <span class="sidebar-brand-name">Bridgit UX Audit</span>
+        <span class="sidebar-brand-sub">Final Report 2026</span>
+      </div>
+    </a>
+    <div class="sidebar-health">
+      <div class="sidebar-health-label">Conversion Health</div>
+      <div class="sidebar-health-score">5.2<span style="font-size:14px;font-weight:400;color:#6B7280">/10</span></div>
+      <div class="sidebar-health-sub">71 findings across 3 phases</div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Overview</div>
+      <ul class="sidebar-nav">
+        <li><a href="../../index.html"><span class="nav-icon">📊</span> Executive Summary</a></li>
+        <li><a href="../../navigation.html"><span class="nav-icon">🗺️</span> Navigation &amp; IA</a></li>
+        <li><a href="../../recommendations.html"><span class="nav-icon">📋</span> All Findings <span class="nav-badge">71</span></a></li>
+        <li><a href="../../ab-tests.html"><span class="nav-icon">🧪</span> A/B Tests <span class="nav-badge">10</span></a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Personas</div>
+      <ul class="sidebar-nav">
+        <li><a href="../../personas/p01-upsizer.html"><span class="nav-icon">🏠</span> P01 — Upsizer</a></li>
+        <li><a href="../../personas/p02-downsizer.html"><span class="nav-icon">🌿</span> P02 — Downsizer</a></li>
+        <li><a href="../../personas/p03-renovator.html"><span class="nav-icon">🔨</span> P03 — Renovator</a></li>
+        <li><a href="../../personas/p04-separating.html"><span class="nav-icon">💙</span> P04 — Separating</a></li>
+        <li><a href="../../personas/p05-house-land.html"><span class="nav-icon">🏗️</span> P05 — Builder</a></li>
+        <li><a href="../../personas/p06-investor.html"><span class="nav-icon">📈</span> P06 — Investor</a></li>
+        <li><a href="../../personas/p07-broker.html"><span class="nav-icon">🤝</span> P07 — Broker</a></li>
+        <li><a href="../../personas/p08-regional.html"><span class="nav-icon">🌏</span> P08 — Regional</a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="../homepage.html"><span class="nav-icon">🏡</span> Homepage</a></li>
+        <li><a href="../bridging-loan.html"><span class="nav-icon">🔗</span> Bridging Loan</a></li>
+        <li><a href="../eligibility.html"><span class="nav-icon">✅</span> Eligibility</a></li>
+        <li><a href="../calculator.html"><span class="nav-icon">🧮</span> Calculator</a></li>
+        <li><a href="../rates-and-fees.html"><span class="nav-icon">💰</span> Rates &amp; Fees</a></li>
+        <li><a href="../partners.html"><span class="nav-icon">🤝</span> Partners</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Solution Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="./upsize.html">↳ Upsize</a></li>
+        <li><a href="./downsize.html">↳ Downsize</a></li>
+        <li><a href="./renovate.html">↳ Renovate</a></li>
+        <li><a href="./retire.html">↳ Retire</a></li>
+        <li><a href="./separate.html">↳ Separate</a></li>
+        <li><a href="./invest.html" class="active">↳ Invest</a></li>
+        <li><a href="./house-and-land.html">↳ House &amp; Land</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="page-header">
+      <div class="page-header-eyebrow">Page Audit</div>
+      <h1>Solution: Invest</h1>
+      <div class="page-header-meta">
+        <span>Personas: P06 — Property Investor</span>
+        <span>3 desktop findings · 3 mobile findings</span>
+      </div>
+    </div>
+    <div class="content">
+
+      <div class="severity-bar">
+        <span class="severity-pill high">● 5 High</span>
+        <span class="severity-pill medium">● 1 Medium</span>
+      </div>
+
+      <div data-tabs>
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="desktop">Desktop Findings</button>
+          <button class="tab-btn" data-tab="mobile">Mobile Findings</button>
+        </div>
+
+        <div class="tab-panel active" data-panel="desktop">
+
+          <!-- F-SOL-ALL-01 cross-cut -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-ALL-01</span>
+              <span class="finding-title">Testimonials are generic across all solution pages; not scenario-specific</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">All Personas</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">All 7 solution pages include a Trustpilot/testimonial widget section reused across pages without scenario-specific customisation. A user on the Invest page should see a testimonial from a property investor who used Bridgit to move quickly on a new acquisition — generic testimonials don't speak to P06's analytical mindset or portfolio context.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Source and display at least one scenario-specific testimonial per solution page. For Invest, format as: customer name, scenario label (e.g., "Alex, Property Investor — Perth"), 1–2 sentence quote referencing speed of approval and investor-specific outcome.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — increases apply rate across all solution pages by replacing generic testimonials with scenario-matched social proof.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-ALL-02 cross-cut -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-ALL-02</span>
+              <span class="finding-title">No worked examples with real dollar amounts on any solution page</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">All Personas</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">No solution page contains a worked scenario with concrete numbers. P06 (Property Investor, Financial Services background) is highly analytical and will not proceed without a worked cost model. The absence of investor-specific numbers is a primary conversion barrier for this persona.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add a worked investor-specific example: "You own an investment property worth $800K (owe $350K). You've found a new acquisition at $700K. Bridgit can bridge up to $290K at 7.54% p.a. — here's the cost breakdown." Include investor-specific rate, LVR, and total cost at settlement.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — reduces uncertainty-driven abandonment by grounding each solution in a concrete cost or outcome example.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-INV-01 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-INV-01</span>
+              <span class="finding-title">No investor vs. owner-occupier pricing distinction on Invest page</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">P06 — Investor</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The Invest page does not surface that investor property bridging loans have different pricing from owner-occupier loans (7.54% vs. 7.04% per annum confirmed on Rates &amp; Fees page). P06 (Property Investor, Financial Services background) is analytically driven and will want to understand their specific rate before committing. Without this signal, they must navigate to Rates &amp; Fees to determine the cost difference — or they may assume the headline PPOR rate applies.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add a rates callout on the Invest page: "Investor property bridging rates from 7.54% p.a. — view full rates." with link to /rates-and-fees.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — increases P06 apply rate by addressing rental income treatment and LVR specifics.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /desktop panel -->
+
+        <div class="tab-panel" data-panel="mobile">
+
+          <!-- F-SOL-INV-M01 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-INV-M01</span>
+              <span class="finding-title">Investor-specific rates and LVR information requires scrolling</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">P06 — Investor</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">P06 (time-poor, efficiency-focused) needs investor-specific criteria (LVR up to 80%, investor vs owner-occupier rate distinction) visible within the first scroll. This information is not confirmed above fold at 390px. P06 will not invest time scrolling to find basic eligibility data — they will abandon and search elsewhere.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Move a micro-section "Investor details" above the first scroll point (immediately post-hero): "LVR up to 80% | Investor rates available | [View Rates &amp; Fees →]". Keep it scannable — 2 lines max on mobile.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — increases P06 apply velocity by surfacing investor LVR and rate info without scrolling.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">A/B Hypothesis</div>
+                  <div class="finding-field-value">Surfacing investor LVR and rate info above fold will reduce scroll depth and increase time-to-apply velocity for P06.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-INV-M02 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-INV-M02</span>
+              <span class="finding-title">"Rates &amp; Fees" link not clearly accessible on mobile</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">P06 — Investor</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">No prominent "Investor Rates &amp; Fees" link is visible in the hero or immediate post-hero zone at 390px. P06 needs to verify investor-specific costs as part of their due diligence before applying. The absence of a visible rates link on a product page designed for the most financially sophisticated persona creates a trust gap.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add a "Investor Rates &amp; Fees" link (labelled specifically for investors, not the generic "Rates") in the hero section or the post-hero utility strip. Minimum 44px tap target.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Due diligence — enables P06 cost research without navigating away from solution page.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">A/B Hypothesis</div>
+                  <div class="finding-field-value">A visible investor-specific Rates &amp; Fees link above fold will increase click-through to the rates page and downstream application rate for P06.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-INV-M03 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-INV-M03</span>
+              <span class="finding-title">Primary CTA copy is generic ("Apply Now")</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">P06 — Investor</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The primary CTA reads "Apply Now" — generic across all solution pages. P06 operates with a portfolio mindset and responds to efficiency signals. Investor-specific CTA copy ("Apply as an investor" or "Fast-track investor application") reinforces that this product is for their use case. Cross-reference: F-NAV-01 (Phase 2).</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Change primary CTA on the Invest page to "Apply as an investor" or "Start investor application".</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">CTA conversion — increases P06 click-through by making CTA copy specific to the investor scenario.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">A/B Hypothesis</div>
+                  <div class="finding-field-value">"Apply as an investor" will increase CTA click-through rate vs "Apply Now" on the Invest page.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /mobile panel -->
+      </div><!-- /tabs -->
+
+    </div>
+  </div>
+  <script src="../../assets/js/filters.js"></script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retire Audit — Bridgit UX Audit</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <button class="mobile-nav-toggle" id="sidebarToggle" aria-label="Toggle navigation">☰</button>
+  <div class="sidebar-overlay"></div>
+  <nav class="sidebar">
+    <a href="../../index.html" class="sidebar-brand">
+      <div class="sidebar-brand-icon">B</div>
+      <div class="sidebar-brand-text">
+        <span class="sidebar-brand-name">Bridgit UX Audit</span>
+        <span class="sidebar-brand-sub">Final Report 2026</span>
+      </div>
+    </a>
+    <div class="sidebar-health">
+      <div class="sidebar-health-label">Conversion Health</div>
+      <div class="sidebar-health-score">5.2<span style="font-size:14px;font-weight:400;color:#6B7280">/10</span></div>
+      <div class="sidebar-health-sub">71 findings across 3 phases</div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Overview</div>
+      <ul class="sidebar-nav">
+        <li><a href="../../index.html"><span class="nav-icon">📊</span> Executive Summary</a></li>
+        <li><a href="../../navigation.html"><span class="nav-icon">🗺️</span> Navigation &amp; IA</a></li>
+        <li><a href="../../recommendations.html"><span class="nav-icon">📋</span> All Findings <span class="nav-badge">71</span></a></li>
+        <li><a href="../../ab-tests.html"><span class="nav-icon">🧪</span> A/B Tests <span class="nav-badge">10</span></a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Personas</div>
+      <ul class="sidebar-nav">
+        <li><a href="../../personas/p01-upsizer.html"><span class="nav-icon">🏠</span> P01 — Upsizer</a></li>
+        <li><a href="../../personas/p02-downsizer.html"><span class="nav-icon">🌿</span> P02 — Downsizer</a></li>
+        <li><a href="../../personas/p03-renovator.html"><span class="nav-icon">🔨</span> P03 — Renovator</a></li>
+        <li><a href="../../personas/p04-separating.html"><span class="nav-icon">💙</span> P04 — Separating</a></li>
+        <li><a href="../../personas/p05-house-land.html"><span class="nav-icon">🏗️</span> P05 — Builder</a></li>
+        <li><a href="../../personas/p06-investor.html"><span class="nav-icon">📈</span> P06 — Investor</a></li>
+        <li><a href="../../personas/p07-broker.html"><span class="nav-icon">🤝</span> P07 — Broker</a></li>
+        <li><a href="../../personas/p08-regional.html"><span class="nav-icon">🌏</span> P08 — Regional</a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="../homepage.html"><span class="nav-icon">🏡</span> Homepage</a></li>
+        <li><a href="../bridging-loan.html"><span class="nav-icon">🔗</span> Bridging Loan</a></li>
+        <li><a href="../eligibility.html"><span class="nav-icon">✅</span> Eligibility</a></li>
+        <li><a href="../calculator.html"><span class="nav-icon">🧮</span> Calculator</a></li>
+        <li><a href="../rates-and-fees.html"><span class="nav-icon">💰</span> Rates &amp; Fees</a></li>
+        <li><a href="../partners.html"><span class="nav-icon">🤝</span> Partners</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Solution Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="./upsize.html">↳ Upsize</a></li>
+        <li><a href="./downsize.html">↳ Downsize</a></li>
+        <li><a href="./renovate.html">↳ Renovate</a></li>
+        <li><a href="./retire.html" class="active">↳ Retire</a></li>
+        <li><a href="./separate.html">↳ Separate</a></li>
+        <li><a href="./invest.html">↳ Invest</a></li>
+        <li><a href="./house-and-land.html">↳ House &amp; Land</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="page-header">
+      <div class="page-header-eyebrow">Page Audit</div>
+      <h1>Solution: Retire</h1>
+      <div class="page-header-meta">
+        <span>Personas: P02 — Downsizing Empty Nester (retirement context)</span>
+        <span>4 desktop findings · 4 mobile findings</span>
+      </div>
+    </div>
+    <div class="content">
+
+      <div class="severity-bar">
+        <span class="severity-pill critical">● 1 Critical</span>
+        <span class="severity-pill high">● 4 High</span>
+        <span class="severity-pill medium">● 3 Medium</span>
+      </div>
+
+      <div data-tabs>
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="desktop">Desktop Findings</button>
+          <button class="tab-btn" data-tab="mobile">Mobile Findings</button>
+        </div>
+
+        <div class="tab-panel active" data-panel="desktop">
+
+          <!-- F-SOL-ALL-01 cross-cut -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-ALL-01</span>
+              <span class="finding-title">Testimonials are generic across all solution pages; not scenario-specific</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">All Personas</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">All 7 solution pages include a Trustpilot/testimonial widget section reused across pages without scenario-specific customisation. A user on the Retire page should see a testimonial from someone who used Bridgit to fund their retirement move — generic testimonials do not reinforce P02's decision at the point they need it most.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Source and display at least one scenario-specific testimonial per solution page, placed above the generic carousel. Format: customer name, scenario label (e.g., "Joan, Retiring Downsizer — Adelaide"), 1–2 sentence quote referencing their specific retirement scenario.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — increases apply rate across all solution pages by replacing generic testimonials with scenario-matched social proof.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-ALL-02 cross-cut -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-ALL-02</span>
+              <span class="finding-title">No worked examples with real dollar amounts on any solution page</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">All Personas</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">No solution page contains a worked scenario with concrete numbers. P02 (Downsizer) fears hidden costs and needs to see a plain-language worked example tailored to a retirement downsize scenario. Without it, P02 cannot self-assess affordability.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add a worked example specifically for retirement: show a typical property value, bridge amount, total cost at settlement (no monthly repayments), and contrast with "what if you had to rent while waiting to sell". Use plain language with no jargon.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — reduces uncertainty-driven abandonment by grounding each solution in a concrete cost or outcome example.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-RET-01 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-RET-01</span>
+              <span class="finding-title">"No income verification" not explicitly stated on Retire page (unlike Downsize)</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">P02 — Downsizer</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The Eligibility page and Downsize page both explicitly state that retirees do not need income verification. The Retire page — which is specifically for retirees — does not appear to carry this statement. This is the single most important qualifying message for a retiree considering a bridging loan: "My pension/superannuation won't count against me." Its absence on the most relevant page is a critical content gap.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add prominently to the Retire page hero or solutions section: "Retired? No income verification required — we assess your loan on your property equity and asset position."</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — increases P02 apply rate by making the no-income-verification benefit prominent.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-RET-02 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-RET-02</span>
+              <span class="finding-title">No plain-English interest cost explainer for retirees</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">P02 — Downsizer</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">P02 (Downsizing Empty Nester) is less financially literate and fears hidden costs. The Retire page does not appear to include a plain-English explanation of how interest works on a bridging loan (interest accrues during the loan period and is repaid at settlement — no monthly payments). Without this explanation, a retiree may assume monthly payments are required, triggering cost anxiety.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add a simple callout: "No monthly repayments. Interest builds up over your loan term and is paid out of your sale proceeds when your home sells — nothing comes out of your pocket in the meantime."</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — reduces P02 hesitation by clarifying repayment flexibility on downsize.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /desktop panel -->
+
+        <div class="tab-panel" data-panel="mobile">
+
+          <!-- F-SOL-RET-M01 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-RET-M01</span>
+              <span class="finding-title">Retirement-specific language not confirmed above fold</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">P02 — Downsizer</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The hero headline must immediately signal "this page is for retirement scenarios" to P02 in plain language. If the headline is generic or uses equity-unlock framing without explicitly referencing retirement, P02 may not confirm they are on the right page and will bounce. Evidence from schema confirms retirement context exists but hero copy clarity at 390px needs verification.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Confirm hero h1 contains explicit retirement language: e.g. "Move into retirement with confidence" or "Fund your next chapter without the rush". Avoid "equity unlock" in the primary headline for P02. Subhead should mention both retirement and aged-care options in plain language.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Emotional Arc → Consideration — reduces P02 bounce by confirming correct page context within initial viewport.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-RET-M02 -->
+          <div class="finding-card severity-critical">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-RET-M02</span>
+              <span class="finding-title">Phone CTA not prominent above fold; P02's primary conversion path blocked</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-critical">Critical</span>
+              <span class="badge badge-strategic">Strategic</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">P02 — Downsizer</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The Retire page is the highest-intent page for P02. P02 converts via phone call, not online application. Phone number is in schema but no large, tappable phone button is visible above fold. This is the same issue as F-SOL-DN-M01 but higher severity on the Retire page because Retire is the primary P02 destination — P02 lands here from scenario-specific routes (Google search for "bridging loan for retirement"). Without a prominent phone CTA, P02 has no visible next step.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Implement a sticky bottom bar on mobile with "Call us — 1300 141 161" (<code>tel:</code> link), minimum 48px height. Additionally, include a large phone CTA button in the hero (not just inline text). Label "Speak to a retirement specialist" for added context and specificity.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Call — restores P02's primary conversion path (phone) on the highest-intent P02 page.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">A/B Hypothesis</div>
+                  <div class="finding-field-value">A prominent sticky phone CTA will significantly increase phone contact rate from P02 on the Retire page, improving overall conversion for the retirement segment.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-RET-M03 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-RET-M03</span>
+              <span class="finding-title">Aged-care scenario not visible above fold; P02 sub-segment not reached</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">P02 — Downsizer</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">Schema confirms "Support your next move into retirement or aged care" exists in page content but this aged-care context is not confirmed visible above fold at 390px. P02 includes a sub-segment moving to aged care (not just retiring in place); if they see only generic retirement messaging, they may assume the page does not apply to them and bounce.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">In the post-hero section (immediately below fold), add a two-option scenario indicator: (A) "Retiring at home" / (B) "Moving to aged care" — using icon cards or simple callout text. This validates both sub-scenarios for P02 without requiring extensive scrolling.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Engagement — reduces P02 bounce by explicitly surfacing both retirement and aged-care scenarios above fold.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">A/B Hypothesis</div>
+                  <div class="finding-field-value">Explicitly surfacing both retirement and aged-care scenarios above the second fold will reduce bounce from the aged-care P02 sub-segment.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-RET-M04 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-RET-M04</span>
+              <span class="finding-title">No "Speak to specialist" soft CTA in post-hero section</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">P02 — Downsizer</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">P02 benefits from multiple low-commitment entry points before the hard Apply button. A secondary "Not ready yet? Speak to a specialist" CTA in the post-hero section is missing, leaving P02 with only the primary Apply path after the hero.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add a secondary CTA card immediately after the hero: "Not sure yet? Speak to a specialist — call 1300 141 161 or email us." This creates a visible soft-entry path for hesitant P02 users on mobile.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → CTA — captures P02 hesitancy by providing a softer "Speak to specialist" entry point post-hero.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /mobile panel -->
+      </div><!-- /tabs -->
+
+    </div>
+  </div>
+  <script src="../../assets/js/filters.js"></script>
+</body>
+</html>

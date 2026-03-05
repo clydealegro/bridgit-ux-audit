@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Findings — Bridgit UX Audit</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .rec-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+    .rec-table th {
+      text-align: left; padding: 0.5rem 0.75rem;
+      background: #f1f5f9; color: var(--color-text-secondary);
+      font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.05em; border-bottom: 2px solid var(--color-border);
+      white-space: nowrap; position: sticky; top: 0; z-index: 1;
+    }
+    .rec-table td {
+      padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border);
+      vertical-align: top; color: var(--color-text-primary); line-height: 1.4;
+    }
+    .rec-table tbody tr:hover td { background: #f8fafc; }
+    .rec-table tr.hidden { display: none; }
+    .rec-table .id-cell {
+      font-family: var(--font-mono); font-size: 0.7rem;
+      color: var(--color-accent); font-weight: 600; white-space: nowrap;
+    }
+    .rec-table .desc-cell { max-width: 320px; }
+    .rec-table .rec-cell  { max-width: 280px; color: var(--color-text-secondary); }
+    .rec-table .page-cell { white-space: nowrap; font-size: 0.75rem; }
+    .rec-table .persona-cell { white-space: nowrap; font-size: 0.72rem; color: var(--color-text-secondary); }
+    .filter-search {
+      flex: 1; min-width: 180px; font-size: 0.8rem;
+      padding: 0.3rem 0.6rem; border: 1px solid var(--color-border);
+      border-radius: 0.375rem; font-family: var(--font-sans);
+    }
+    .filter-reset {
+      font-size: 0.75rem; color: var(--color-accent); cursor: pointer;
+      background: none; border: none; padding: 0; font-family: var(--font-sans);
+    }
+    .filter-reset:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<button class="mobile-nav-toggle" id="sidebarToggle" aria-label="Toggle navigation">&#9776;</button>
+<div class="sidebar-overlay"></div>
+
+<nav class="sidebar" id="sidebar">
+  <a href="index.html" class="sidebar-brand">
+    <div class="sidebar-brand-icon">B</div>
+    <div class="sidebar-brand-text">
+      <span class="sidebar-brand-name">Bridgit UX Audit</span>
+      <span class="sidebar-brand-sub">Final Report 2026</span>
+    </div>
+  </a>
+  <div class="sidebar-health">
+    <div class="sidebar-health-label">Conversion Health</div>
+    <div class="sidebar-health-score">5.2<span style="font-size:14px;font-weight:400;color:#6B7280">/10</span></div>
+    <div class="sidebar-health-sub">71 findings across 3 phases</div>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">Overview</div>
+    <ul class="sidebar-nav">
+      <li><a href="index.html"><span class="nav-icon">📊</span> Executive Summary</a></li>
+      <li><a href="navigation.html"><span class="nav-icon">🗺️</span> Navigation &amp; IA</a></li>
+      <li><a href="recommendations.html" class="active"><span class="nav-icon">📋</span> All Findings <span class="nav-badge">71</span></a></li>
+      <li><a href="ab-tests.html"><span class="nav-icon">🧪</span> A/B Tests <span class="nav-badge">10</span></a></li>
+    </ul>
+  </div>
+  <hr class="sidebar-divider">
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">Personas</div>
+    <ul class="sidebar-nav">
+      <li><a href="personas/p01-upsizer.html"><span class="nav-icon">🏠</span> P01 — Upsizer</a></li>
+      <li><a href="personas/p02-downsizer.html"><span class="nav-icon">🌿</span> P02 — Downsizer</a></li>
+      <li><a href="personas/p03-renovator.html"><span class="nav-icon">🔨</span> P03 — Renovator</a></li>
+      <li><a href="personas/p04-separating.html"><span class="nav-icon">💙</span> P04 — Separating</a></li>
+      <li><a href="personas/p05-house-land.html"><span class="nav-icon">🏗️</span> P05 — Builder</a></li>
+      <li><a href="personas/p06-investor.html"><span class="nav-icon">📈</span> P06 — Investor</a></li>
+      <li><a href="personas/p07-broker.html"><span class="nav-icon">🤝</span> P07 — Broker</a></li>
+      <li><a href="personas/p08-regional.html"><span class="nav-icon">🌏</span> P08 — Regional</a></li>
+    </ul>
+  </div>
+  <hr class="sidebar-divider">
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">Pages</div>
+    <ul class="sidebar-nav">
+      <li><a href="pages/homepage.html"><span class="nav-icon">🏡</span> Homepage</a></li>
+      <li><a href="pages/bridging-loan.html"><span class="nav-icon">🔗</span> Bridging Loan</a></li>
+      <li><a href="pages/eligibility.html"><span class="nav-icon">✅</span> Eligibility</a></li>
+      <li><a href="pages/calculator.html"><span class="nav-icon">🧮</span> Calculator</a></li>
+      <li><a href="pages/rates-and-fees.html"><span class="nav-icon">💰</span> Rates &amp; Fees</a></li>
+      <li><a href="pages/partners.html"><span class="nav-icon">🤝</span> Partners</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">Solution Pages</div>
+    <ul class="sidebar-nav">
+      <li><a href="pages/solutions/upsize.html">↳ Upsize</a></li>
+      <li><a href="pages/solutions/downsize.html">↳ Downsize</a></li>
+      <li><a href="pages/solutions/renovate.html">↳ Renovate</a></li>
+      <li><a href="pages/solutions/retire.html">↳ Retire</a></li>
+      <li><a href="pages/solutions/separate.html">↳ Separate</a></li>
+      <li><a href="pages/solutions/invest.html">↳ Invest</a></li>
+      <li><a href="pages/solutions/house-and-land.html">↳ House &amp; Land</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="main">
+  <div class="page-header">
+    <div class="page-header-eyebrow">Filterable Database</div>
+    <h1>All Findings</h1>
+    <div class="page-header-meta">
+      <span>71 findings · Phases 2, 3, 4</span>
+      <span>4 Critical · 32 High · 28 Medium · 7 Low</span>
+      <span>37 Quick Wins · 24 Medium Effort · 10 Strategic</span>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- Filter bar -->
+    <div class="filter-bar" id="filterBar">
+      <div class="filter-group">
+        <label>Severity</label>
+        <select class="filter-select" id="fSeverity">
+          <option value="">All</option>
+          <option value="critical">Critical (4)</option>
+          <option value="high">High (32)</option>
+          <option value="medium">Medium (28)</option>
+          <option value="low">Low (7)</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Priority</label>
+        <select class="filter-select" id="fPriority">
+          <option value="">All</option>
+          <option value="quick-win">Quick Win (37)</option>
+          <option value="medium-effort">Medium Effort (24)</option>
+          <option value="strategic">Strategic (10)</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Phase</label>
+        <select class="filter-select" id="fPhase">
+          <option value="">All</option>
+          <option value="2">Phase 2 — IA (10)</option>
+          <option value="3">Phase 3 — Desktop (28)</option>
+          <option value="4">Phase 4 — Mobile (33)</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Persona</label>
+        <select class="filter-select" id="fPersona">
+          <option value="">All</option>
+          <option value="P01">P01 — Upsizer</option>
+          <option value="P02">P02 — Downsizer</option>
+          <option value="P03">P03 — Renovator</option>
+          <option value="P04">P04 — Separating</option>
+          <option value="P05">P05 — Builder</option>
+          <option value="P06">P06 — Investor</option>
+          <option value="P07">P07 — Broker</option>
+          <option value="P08">P08 — Regional</option>
+        </select>
+      </div>
+      <input type="search" class="filter-search" id="fSearch" placeholder="Search ID, finding, page…">
+      <span class="filter-count" id="filterCount">71 findings</span>
+      <button class="filter-reset" id="filterReset">Reset</button>
+    </div>
+
+    <!-- Findings table -->
+    <div class="table-wrapper">
+      <table class="rec-table" id="recTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Page</th>
+            <th>Personas</th>
+            <th>Finding</th>
+            <th>Recommendation</th>
+            <th>Severity</th>
+            <th>Priority</th>
+          </tr>
+        </thead>
+        <tbody id="recBody">
+
+          <!-- ============ PHASE 2 — IA & NAVIGATION (10) ============ -->
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="2" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="all-solutions">
+            <td class="id-cell">F-NAV-01</td>
+            <td class="page-cell">All Solutions</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">Primary CTA on every solution page is generic "Apply now" — not scenario- or persona-specific</td>
+            <td class="rec-cell">Rewrite per-page CTA: "Start my upsize application", "Get a confidential assessment", "Get investor pricing" etc.</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="quick-win" data-phase="2" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="all-solutions">
+            <td class="id-cell">F-NAV-02</td>
+            <td class="page-cell">All Solutions</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">Breadcrumbs exist in JSON-LD schema but are not visually rendered on any page</td>
+            <td class="rec-cell">Implement visible breadcrumb trail matching actual URL structure on all solution and detail pages</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="medium-effort" data-phase="2" data-personas="P01,P02,P03,P06,P08" data-page="homepage">
+            <td class="id-cell">F-NAV-03</td>
+            <td class="page-cell">Homepage / Solutions</td>
+            <td class="persona-cell">P01–P06, P08</td>
+            <td class="desc-cell">Rates &amp; Fees is nested under a secondary nav dropdown — no in-body link from homepage or most solution pages</td>
+            <td class="rec-cell">Add prominent in-body "Rates &amp; Fees" card or link on homepage and all solution pages at the consideration stage</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="medium-effort" data-phase="2" data-personas="P06,P08" data-page="site-wide">
+            <td class="id-cell">F-NAV-04</td>
+            <td class="page-cell">Site-wide</td>
+            <td class="persona-cell">P06, P08</td>
+            <td class="desc-cell">No email (mailto:) contact option exists anywhere on the site — all contact routes through phone or scheduled call</td>
+            <td class="rec-cell">Add mailto:hello@bridgit.com.au on Eligibility, Calculator, and Partners pages; consider async inquiry form</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="2" data-personas="P01,P03,P05,P08" data-page="calculator">
+            <td class="id-cell">F-NAV-05</td>
+            <td class="page-cell">Calculator</td>
+            <td class="persona-cell">P01, P03, P05, P08</td>
+            <td class="desc-cell">Post-result CTA is "Get a quote" — bypasses Eligibility checker and breaks documented J1 journey</td>
+            <td class="rec-cell">Add secondary CTA "Check my eligibility" from calculator result, before "Get a quote"</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="2" data-personas="P04" data-page="separate">
+            <td class="id-cell">F-NAV-06</td>
+            <td class="page-cell">Separate</td>
+            <td class="persona-cell">P04</td>
+            <td class="desc-cell">H1 "Move on without finance holding you back" frames separation as a finance problem — not emotionally-led</td>
+            <td class="rec-cell">Rewrite headline to lead with emotional acknowledgment: e.g. "When life changes, your next step shouldn't have to wait"</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="low" data-priority="quick-win" data-phase="2" data-personas="P07" data-page="global-nav">
+            <td class="id-cell">F-NAV-07</td>
+            <td class="page-cell">Global Nav</td>
+            <td class="persona-cell">P07</td>
+            <td class="desc-cell">Nav label is "Partners" rather than "Brokers" — a first-time broker may not immediately self-identify</td>
+            <td class="rec-cell">A/B test "Brokers" vs "Partners" as nav label; or add hover subtitle "Mortgage brokers &amp; referrers"</td>
+            <td><span class="badge badge-low">Low</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="low" data-priority="quick-win" data-phase="2" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="global-nav">
+            <td class="id-cell">F-NAV-08</td>
+            <td class="page-cell">Global Nav</td>
+            <td class="persona-cell">All (new visitors)</td>
+            <td class="desc-cell">"Log in" appears as secondary CTA alongside "Apply now" — new visitors may think login is required before applying</td>
+            <td class="rec-cell">Demote "Log in" to utility position; add microcopy near "Apply now" clarifying no account needed</td>
+            <td><span class="badge badge-low">Low</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="medium-effort" data-phase="2" data-personas="P02,P04" data-page="all-solutions">
+            <td class="id-cell">F-NAV-09</td>
+            <td class="page-cell">All Solutions</td>
+            <td class="persona-cell">P02, P04</td>
+            <td class="desc-cell">Solution pages contain no in-body links to related/adjacent solutions — Downsizer on Downsize has no prompt to check Retire</td>
+            <td class="rec-cell">Add "Related scenarios" section at bottom of each solution page linking to 1–2 adjacent solutions</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="2" data-personas="P01,P03" data-page="calculator">
+            <td class="id-cell">F-NAV-10</td>
+            <td class="page-cell">Calculator</td>
+            <td class="persona-cell">P01, P03</td>
+            <td class="desc-cell">No direct path from Calculator result to Eligibility — post-result CTA goes straight to apply, breaking J1 journey</td>
+            <td class="rec-cell">Add "Check my eligibility first" secondary CTA below "Get a quote" in calculator result state</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <!-- ============ PHASE 3 — DESKTOP (28) ============ -->
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="3" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="homepage">
+            <td class="id-cell">F-HP-01</td>
+            <td class="page-cell">Homepage</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">ACL 532542 visible only in footer — for a regulated financial product, this reduces first-touch trust credibility</td>
+            <td class="rec-cell">Add ACL 532542 to hero trust bar alongside Trustpilot, with ASIC register link</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="3" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="homepage">
+            <td class="id-cell">F-HP-02</td>
+            <td class="page-cell">Homepage</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">Testimonials are not scenario-labelled — a Confident Upsizer reading a retiree review cannot self-identify</td>
+            <td class="rec-cell">Label each testimonial with customer scenario/use case; source at least one per scenario on the carousel</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="medium-effort" data-phase="3" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="homepage">
+            <td class="id-cell">F-HP-03</td>
+            <td class="page-cell">Homepage</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">No macro credibility statistics visible — broker count, borrowers helped, approval time, total funded absent</td>
+            <td class="rec-cell">Add stats bar with 2–3 credibility figures: broker network size, borrowers helped, average approval time</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="quick-win" data-phase="3" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="homepage">
+            <td class="id-cell">F-HP-04</td>
+            <td class="page-cell">Homepage</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">"Find out more" sub-CTA is vague and adds friction to the primary apply conversion path</td>
+            <td class="rec-cell">Replace "Find out more" with an action-oriented label matching the user's next step; add privacy microcopy beneath CTAs</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="medium-effort" data-phase="3" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="homepage">
+            <td class="id-cell">F-HP-05</td>
+            <td class="page-cell">Homepage</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">No eligibility pre-screener on homepage — users must navigate to a separate page to check eligibility</td>
+            <td class="rec-cell">Embed a 3-question eligibility pre-screener on homepage to reduce navigation friction for consideration-stage visitors</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="quick-win" data-phase="3" data-personas="P01,P02,P03,P04,P05,P06,P08" data-page="bridging-loan">
+            <td class="id-cell">F-BL-01</td>
+            <td class="page-cell">Bridging Loan</td>
+            <td class="persona-cell">P01–P06, P08</td>
+            <td class="desc-cell">"How it works" steps are generic — not anchored in recognisable customer scenarios, reducing emotional connection</td>
+            <td class="rec-cell">Rewrite or expand "How it works" steps to reference real scenario examples (e.g., "Step 1: You find your dream home before selling…")</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="strategic" data-phase="3" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="eligibility">
+            <td class="id-cell">F-ELG-01</td>
+            <td class="page-cell">Eligibility</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">Eligibility criteria presented as jargon-dense paragraphs with no visual pass/fail indicator or self-serve pre-screener</td>
+            <td class="rec-cell">Build a self-serve eligibility checker form — guided qualification flow that pre-filters ineligible visitors before form submission</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-strategic">Strategic</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="3" data-personas="P04" data-page="eligibility">
+            <td class="id-cell">F-ELG-02</td>
+            <td class="page-cell">Eligibility</td>
+            <td class="persona-cell">P04</td>
+            <td class="desc-cell">No FAQ entry or scenario mention for separation borrowers on the Eligibility page — P04 must infer their eligibility</td>
+            <td class="rec-cell">Add explicit FAQ entry for separation scenario: "Can I use a bridging loan during a separation?" with clear answer</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="quick-win" data-phase="3" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="eligibility">
+            <td class="id-cell">F-ELG-03</td>
+            <td class="page-cell">Eligibility</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">No plain-language eligibility summary before the criteria list — users face jargon without context</td>
+            <td class="rec-cell">Add a plain-language summary section at the top of the Eligibility page before the detailed criteria list</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="quick-win" data-phase="3" data-personas="P03,P06" data-page="eligibility">
+            <td class="id-cell">F-ELG-04</td>
+            <td class="page-cell">Eligibility</td>
+            <td class="persona-cell">P03, P06</td>
+            <td class="desc-cell">ABN, YTD, BAS, LVR used in eligibility criteria without inline definitions — creates abandonment for non-standard borrowers</td>
+            <td class="rec-cell">Add inline tooltip or plain-language definitions for ABN, YTD, BAS, LVR in Eligibility criteria</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="quick-win" data-phase="3" data-personas="P08" data-page="eligibility">
+            <td class="id-cell">F-ELG-05</td>
+            <td class="page-cell">Eligibility</td>
+            <td class="persona-cell">P08</td>
+            <td class="desc-cell">Geographic eligibility exclusions are not explicitly stated — P08 (Regional) cannot confirm they are eligible without calling</td>
+            <td class="rec-cell">Add explicit geographic eligibility statement: which states and areas are included/excluded, with lender acceptance notes</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="medium-effort" data-phase="3" data-personas="P01,P03,P05,P08" data-page="calculator">
+            <td class="id-cell">F-CALC-01</td>
+            <td class="page-cell">Calculator</td>
+            <td class="persona-cell">P01, P03, P05, P08</td>
+            <td class="desc-cell">No next-step guidance after calculation — users are left without a clear path from result to application</td>
+            <td class="rec-cell">Add post-calculation guidance panel with links to Eligibility checker and Apply path; include LVR explanation</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="critical" data-priority="quick-win" data-phase="3" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="rates-fees">
+            <td class="id-cell">F-RF-01</td>
+            <td class="page-cell">Rates &amp; Fees</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell"><strong>CRITICAL:</strong> Comparison rate missing from rates disclosure — potential ASIC ACL compliance breach; all-persona abandonment risk</td>
+            <td class="rec-cell">Add comparison rate disclosure immediately per ASIC requirements; link to ASIC comparison rate definition</td>
+            <td><span class="badge badge-critical">Critical</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="3" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="rates-fees">
+            <td class="id-cell">F-RF-02</td>
+            <td class="page-cell">Rates &amp; Fees</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">LVR used in fee table without explanation — cost-researching personas cannot interpret total cost without domain knowledge</td>
+            <td class="rec-cell">Add LVR plain-language tooltip or inline explanation; make fee table scannable by total cost per scenario</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="medium-effort" data-phase="3" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="rates-fees">
+            <td class="id-cell">F-RF-03</td>
+            <td class="page-cell">Rates &amp; Fees</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">No worked cost example — users cannot model total cost without manual calculation, increasing abandonment from cost anxiety</td>
+            <td class="rec-cell">Add 2–3 worked cost examples with real numbers: e.g. "$600K bridge at 7.5% p.a., 3 months = $X total cost"</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="quick-win" data-phase="3" data-personas="P02,P04" data-page="rates-fees">
+            <td class="id-cell">F-RF-04</td>
+            <td class="page-cell">Rates &amp; Fees</td>
+            <td class="persona-cell">P02, P04</td>
+            <td class="desc-cell">Cost framing is transactional rather than reframing cost as certainty or reduced risk for anxious personas</td>
+            <td class="rec-cell">Add contextual framing: "Bridging loan cost vs. risk of losing your property" — reframe cost as an insurance investment</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="medium-effort" data-phase="3" data-personas="P07" data-page="partners">
+            <td class="id-cell">F-PTR-01</td>
+            <td class="page-cell">Partners</td>
+            <td class="persona-cell">P07</td>
+            <td class="desc-cell">No broker testimonials or partner proof on Partners page — P07 cannot confirm Bridgit is trusted by peers</td>
+            <td class="rec-cell">Source and display 2–3 broker testimonials with name, company, submission volume; partner logos if available</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="medium-effort" data-phase="3" data-personas="P07" data-page="partners">
+            <td class="id-cell">F-PTR-02</td>
+            <td class="page-cell">Partners</td>
+            <td class="persona-cell">P07</td>
+            <td class="desc-cell">No state-based BDM contact card; form friction on submission — P07 cannot find a local Bridgit contact</td>
+            <td class="rec-cell">Add state BDM contact card (name, phone, email) and reduce form fields for broker deal submissions</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="quick-win" data-phase="3" data-personas="P07" data-page="partners">
+            <td class="id-cell">F-PTR-03</td>
+            <td class="page-cell">Partners</td>
+            <td class="persona-cell">P07</td>
+            <td class="desc-cell">Partners page H1 is not benefit-led — P07 does not immediately understand what value Bridgit offers brokers</td>
+            <td class="rec-cell">Rewrite H1 to lead with broker benefit: e.g. "Settle deals faster with Bridgit's 24-hour approvals"</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="strategic" data-phase="3" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="all-solutions">
+            <td class="id-cell">F-SOL-ALL-01</td>
+            <td class="page-cell">All Solutions</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">Generic testimonials on solution pages are not scenario-matched — a Downsizer reading an Investor testimonial cannot self-identify</td>
+            <td class="rec-cell">Redesign testimonial sourcing and display: 1 scenario-matched testimonial per solution page minimum</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-strategic">Strategic</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="medium-effort" data-phase="3" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="all-solutions">
+            <td class="id-cell">F-SOL-ALL-02</td>
+            <td class="page-cell">All Solutions</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">No worked cost or outcome example on any of the 7 solution pages — cost anxiety goes unaddressed</td>
+            <td class="rec-cell">Add one worked cost/outcome example to each solution page (real loan amount, rate, term, total cost)</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="quick-win" data-phase="3" data-personas="P01" data-page="upsize">
+            <td class="id-cell">F-SOL-UP-01</td>
+            <td class="page-cell">Upsize</td>
+            <td class="persona-cell">P01</td>
+            <td class="desc-cell">Upsize page H1 does not quantify the upgrade benefit — vague headline reduces CTA confidence for P01</td>
+            <td class="rec-cell">Quantify benefit in H1: e.g. "Buy your $800K home before your $600K property sells — no monthly repayments"</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="medium-effort" data-phase="3" data-personas="P01" data-page="upsize">
+            <td class="id-cell">F-SOL-UP-02</td>
+            <td class="page-cell">Upsize</td>
+            <td class="persona-cell">P01</td>
+            <td class="desc-cell">No comparison to bank mortgage timeline — P01 cannot assess speed advantage of Bridgit vs traditional lenders</td>
+            <td class="rec-cell">Add comparison section: Bridgit (24-hour approval) vs bank (4–6 week approval) timeline side-by-side</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="medium-effort" data-phase="3" data-personas="P03" data-page="renovate">
+            <td class="id-cell">F-SOL-REN-01</td>
+            <td class="page-cell">Renovate</td>
+            <td class="persona-cell">P03</td>
+            <td class="desc-cell">No clarification on how Bridgit funds staged renovations vs construction loans — P03 may assume ineligibility</td>
+            <td class="rec-cell">Add FAQ or callout: "How does Bridgit work for staged renovations?" with worked example of draw-down structure</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="3" data-personas="P02" data-page="retire">
+            <td class="id-cell">F-SOL-RET-01</td>
+            <td class="page-cell">Retire</td>
+            <td class="persona-cell">P02</td>
+            <td class="desc-cell">"No income verification required" benefit not prominently displayed on Retire page — P02's highest reassurance factor is buried</td>
+            <td class="rec-cell">Add "no income verification" benefit callout above the fold on Retire page</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="quick-win" data-phase="3" data-personas="P02" data-page="retire">
+            <td class="id-cell">F-SOL-RET-02</td>
+            <td class="page-cell">Retire</td>
+            <td class="persona-cell">P02</td>
+            <td class="desc-cell">Repayment flexibility on downsizing not clearly explained — P02 hesitates due to uncertainty about repayment obligations</td>
+            <td class="rec-cell">Add explainer: "Repay from sale proceeds — no monthly payments required during your bridge period"</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="3" data-personas="P04" data-page="separate">
+            <td class="id-cell">F-SOL-SEP-02</td>
+            <td class="page-cell">Separate</td>
+            <td class="persona-cell">P04</td>
+            <td class="desc-cell">No explicit confidentiality or privacy assurance on Separate page — P04 (highest-anxiety persona) needs immediate reassurance</td>
+            <td class="rec-cell">Add explicit confidentiality assurance to hero: "Your privacy is protected — all assessments are completely confidential"</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="medium-effort" data-phase="3" data-personas="P06" data-page="invest">
+            <td class="id-cell">F-SOL-INV-01</td>
+            <td class="page-cell">Invest</td>
+            <td class="persona-cell">P06</td>
+            <td class="desc-cell">Rental income treatment and investor-specific LVR/pricing not addressed on Invest page — P06 cannot confirm eligibility</td>
+            <td class="rec-cell">Add investor pricing callout linking to Rates &amp; Fees; clarify rental income treatment in eligibility context</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="medium-effort" data-phase="3" data-personas="P05" data-page="house-land">
+            <td class="id-cell">F-SOL-HL-01</td>
+            <td class="page-cell">House &amp; Land</td>
+            <td class="persona-cell">P05</td>
+            <td class="desc-cell">No builder delay or construction extension messaging on H&L page — P05's primary risk concern goes unaddressed</td>
+            <td class="rec-cell">Add FAQ or callout: "What happens if the build is delayed?" with Bridgit's extension policy</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="medium-effort" data-phase="3" data-personas="P05" data-page="house-land">
+            <td class="id-cell">F-SOL-HL-02</td>
+            <td class="page-cell">House &amp; Land</td>
+            <td class="persona-cell">P05</td>
+            <td class="desc-cell">No worked cost example for H&L scenario — P05 cannot model total bridging cost over a construction timeline</td>
+            <td class="rec-cell">Add worked example: "$X bridge over 12-month build at Y% p.a. = $Z total — repaid from sale proceeds"</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <!-- ============ PHASE 4 — MOBILE (33) ============ -->
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="4" data-personas="P08" data-page="homepage">
+            <td class="id-cell">F-HP-M01</td>
+            <td class="page-cell">Homepage (M)</td>
+            <td class="persona-cell">P08</td>
+            <td class="desc-cell">No email / async contact path on Homepage mobile — P08 in low-connectivity areas cannot initiate contact without a phone call</td>
+            <td class="rec-cell">Add mailto:hello@bridgit.com.au in footer or contact block; label "Email us" with clear visibility on mobile</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="4" data-personas="P08" data-page="bridging-loan">
+            <td class="id-cell">F-BL-M01</td>
+            <td class="page-cell">Bridging Loan (M)</td>
+            <td class="persona-cell">P08</td>
+            <td class="desc-cell">No email CTA on Bridging Loan page — P08's contact path blocked on core product page on mobile</td>
+            <td class="rec-cell">Add email CTA to Bridging Loan page contact block alongside existing phone CTA</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="critical" data-priority="quick-win" data-phase="4" data-personas="P08" data-page="eligibility">
+            <td class="id-cell">F-ELG-M01</td>
+            <td class="page-cell">Eligibility (M)</td>
+            <td class="persona-cell">P08</td>
+            <td class="desc-cell">No async email contact path on Eligibility page — P08 cannot initiate async eligibility check from mobile</td>
+            <td class="rec-cell">Add prominent email CTA at bottom of Eligibility criteria: "Not sure? Email us at hello@bridgit.com.au"</td>
+            <td><span class="badge badge-critical">Critical</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="medium-effort" data-phase="4" data-personas="P02,P08" data-page="eligibility">
+            <td class="id-cell">F-ELG-M02</td>
+            <td class="page-cell">Eligibility (M)</td>
+            <td class="persona-cell">P02, P08</td>
+            <td class="desc-cell">Accordion toggle tap targets below 44px minimum — older/motor-impaired users mis-tap and trigger wrong sections</td>
+            <td class="rec-cell">Increase accordion toggle tap target to minimum 48×48px per WCAG 2.1 SC 2.5.5</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="quick-win" data-phase="4" data-personas="P02,P08" data-page="calculator">
+            <td class="id-cell">F-CALC-M02</td>
+            <td class="page-cell">Calculator (M)</td>
+            <td class="persona-cell">P02, P08</td>
+            <td class="desc-cell">LVR used in calculator results modal without definition — P02 and P08 cannot interpret their result without calling</td>
+            <td class="rec-cell">Add LVR plain-language definition inline in calculator results: "LVR (Loan-to-Value Ratio) = your loan as a % of property value"</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="quick-win" data-phase="4" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="calculator">
+            <td class="id-cell">F-CALC-M03</td>
+            <td class="page-cell">Calculator (M)</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">Calculator results summary uses "Refinance existing mortgage" label — incorrect for bridging loan context, causing confusion</td>
+            <td class="rec-cell">Replace "Refinance existing mortgage" with bridging-specific label: "Your bridging loan estimate" or "Bridging amount"</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="medium-effort" data-phase="4" data-personas="P01,P02" data-page="rates-fees">
+            <td class="id-cell">F-RF-M01</td>
+            <td class="page-cell">Rates &amp; Fees (M)</td>
+            <td class="persona-cell">P01, P02</td>
+            <td class="desc-cell">Fee table not optimised for 390px — horizontal scrolling required to read rates, causing abandonment</td>
+            <td class="rec-cell">Reformat fee table for mobile: collapsed/expandable rows or stacked card layout for key rate tiers</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="4" data-personas="P07" data-page="partners">
+            <td class="id-cell">F-PTR-M01</td>
+            <td class="page-cell">Partners (M)</td>
+            <td class="persona-cell">P07</td>
+            <td class="desc-cell">No email CTA on Partners page — P07 broker cannot send an async inquiry on mobile</td>
+            <td class="rec-cell">Add email CTA alongside phone CTA on Partners page; "Email our broker team: brokers@bridgit.com.au"</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="medium-effort" data-phase="4" data-personas="P07" data-page="partners">
+            <td class="id-cell">F-PTR-M02</td>
+            <td class="page-cell">Partners (M)</td>
+            <td class="persona-cell">P07</td>
+            <td class="desc-cell">BDM contact card tap targets too small for confident mobile interaction</td>
+            <td class="rec-cell">Increase BDM contact card tap target area; ensure phone and email links have min 44px vertical height</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="4" data-personas="P01" data-page="upsize">
+            <td class="id-cell">F-SOL-UP-M01</td>
+            <td class="page-cell">Upsize (M)</td>
+            <td class="persona-cell">P01</td>
+            <td class="desc-cell">Upsize hero extends beyond viewport at 390px — primary CTA not visible above fold, blocking P01's high-urgency mobile conversion</td>
+            <td class="rec-cell">Adjust hero height so headline + CTA are visible within the initial 390px viewport without scrolling</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="quick-win" data-phase="4" data-personas="P01" data-page="upsize">
+            <td class="id-cell">F-SOL-UP-M02</td>
+            <td class="page-cell">Upsize (M)</td>
+            <td class="persona-cell">P01</td>
+            <td class="desc-cell">No softer "Speak to an expert" secondary CTA on Upsize mobile — P01 considering a call before committing has no entry point</td>
+            <td class="rec-cell">Add "Speak to an expert" as secondary CTA below "Apply now" on Upsize mobile</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="quick-win" data-phase="4" data-personas="P01" data-page="upsize">
+            <td class="id-cell">F-SOL-UP-M03</td>
+            <td class="page-cell">Upsize (M)</td>
+            <td class="persona-cell">P01</td>
+            <td class="desc-cell">Generic "Apply now" CTA on Upsize mobile — no scenario confirmation for P01 before they commit to the apply flow</td>
+            <td class="rec-cell">Change CTA to "Start my upsize application" on Upsize mobile</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="critical" data-priority="strategic" data-phase="4" data-personas="P02" data-page="downsize">
+            <td class="id-cell">F-SOL-DN-M01</td>
+            <td class="page-cell">Downsize (M)</td>
+            <td class="persona-cell">P02</td>
+            <td class="desc-cell"><strong>CRITICAL:</strong> Phone tap-to-call CTA not prominent above fold on Downsize mobile — P02 (phone-primary, 60+) cannot find their primary conversion path without scrolling</td>
+            <td class="rec-cell">Restructure Downsize mobile hero to place tap-to-call phone CTA above fold — P02's primary conversion action</td>
+            <td><span class="badge badge-critical">Critical</span></td>
+            <td><span class="badge badge-strategic">Strategic</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="4" data-personas="P02" data-page="downsize">
+            <td class="id-cell">F-SOL-DN-M02</td>
+            <td class="page-cell">Downsize (M)</td>
+            <td class="persona-cell">P02</td>
+            <td class="desc-cell">Plain-language benefits not visible above fold on Downsize mobile — P02 sees hero without understanding what Bridgit does for downsizers</td>
+            <td class="rec-cell">Surface 2–3 plain-language benefits above fold before the first scroll on Downsize mobile</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="medium-effort" data-phase="4" data-personas="P02" data-page="downsize">
+            <td class="id-cell">F-SOL-DN-M03</td>
+            <td class="page-cell">Downsize (M)</td>
+            <td class="persona-cell">P02</td>
+            <td class="desc-cell">Jargon-heavy copy on Downsize mobile — P02 (low digital confidence, 60+) encounters financial terms without plain-language equivalents</td>
+            <td class="rec-cell">Full plain-language copy audit on Downsize mobile; replace financial jargon with plain-language equivalents throughout</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="4" data-personas="P03" data-page="renovate">
+            <td class="id-cell">F-SOL-REN-M01</td>
+            <td class="page-cell">Renovate (M)</td>
+            <td class="persona-cell">P03</td>
+            <td class="desc-cell">Rates &amp; Fees link not visible above fold on Renovate mobile — cost-researching P03 must scroll or navigate away to find rates</td>
+            <td class="rec-cell">Surface Rates &amp; Fees link or cost summary above fold on Renovate mobile</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="4" data-personas="P03" data-page="renovate">
+            <td class="id-cell">F-SOL-REN-M02</td>
+            <td class="page-cell">Renovate (M)</td>
+            <td class="persona-cell">P03</td>
+            <td class="desc-cell">Process timeline not visible without scrolling on Renovate mobile — P03 cannot see "how it works" at first view</td>
+            <td class="rec-cell">Move or abbreviate process timeline to be visible within first viewport on Renovate mobile</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="quick-win" data-phase="4" data-personas="P03" data-page="renovate">
+            <td class="id-cell">F-SOL-REN-M03</td>
+            <td class="page-cell">Renovate (M)</td>
+            <td class="persona-cell">P03</td>
+            <td class="desc-cell">Calculator link not visible above fold on Renovate mobile — P03 cannot easily model renovation bridge cost</td>
+            <td class="rec-cell">Surface Calculator link above fold on Renovate mobile: "Calculate your renovation bridge →"</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="quick-win" data-phase="4" data-personas="P02" data-page="retire">
+            <td class="id-cell">F-SOL-RET-M01</td>
+            <td class="page-cell">Retire (M)</td>
+            <td class="persona-cell">P02</td>
+            <td class="desc-cell">Retire page does not confirm correct scenario context within initial viewport — P02 may think they've landed on wrong page</td>
+            <td class="rec-cell">Ensure headline confirms "retirement downsizing" context within the first 390px viewport on Retire mobile</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="critical" data-priority="strategic" data-phase="4" data-personas="P02" data-page="retire">
+            <td class="id-cell">F-SOL-RET-M02</td>
+            <td class="page-cell">Retire (M)</td>
+            <td class="persona-cell">P02</td>
+            <td class="desc-cell"><strong>CRITICAL:</strong> Phone CTA not prominent above fold on Retire mobile — P02's highest-intent page blocks primary phone conversion path</td>
+            <td class="rec-cell">Restructure Retire mobile hero to place tap-to-call phone CTA above fold; this is P02's top conversion page</td>
+            <td><span class="badge badge-critical">Critical</span></td>
+            <td><span class="badge badge-strategic">Strategic</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="medium-effort" data-phase="4" data-personas="P02" data-page="retire">
+            <td class="id-cell">F-SOL-RET-M03</td>
+            <td class="page-cell">Retire (M)</td>
+            <td class="persona-cell">P02</td>
+            <td class="desc-cell">Retire page focuses on one retirement scenario but doesn't surface aged-care variant above fold — P02 with aged-care scenario may bounce</td>
+            <td class="rec-cell">Surface both retirement and aged-care downsizing scenarios above fold on Retire mobile</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="quick-win" data-phase="4" data-personas="P02" data-page="retire">
+            <td class="id-cell">F-SOL-RET-M04</td>
+            <td class="page-cell">Retire (M)</td>
+            <td class="persona-cell">P02</td>
+            <td class="desc-cell">No softer "Speak to a specialist" post-hero CTA on Retire mobile — P02 hesitating before calling has no lower-commitment path</td>
+            <td class="rec-cell">Add "Speak to a retirement specialist" softer CTA after the hero section on Retire mobile</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="medium-effort" data-phase="4" data-personas="P04" data-page="separate">
+            <td class="id-cell">F-SOL-SEP-M01</td>
+            <td class="page-cell">Separate (M)</td>
+            <td class="persona-cell">P04</td>
+            <td class="desc-cell">Apply CTA appears before empathy content on Separate mobile — P04 (highest-anxiety persona) faces a transactional ask before feeling understood</td>
+            <td class="rec-cell">Reorder Separate mobile content: empathy/scenario confirmation → confidentiality signal → CTA (never CTA-first)</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="4" data-personas="P04" data-page="separate">
+            <td class="id-cell">F-SOL-SEP-M02</td>
+            <td class="page-cell">Separate (M)</td>
+            <td class="persona-cell">P04</td>
+            <td class="desc-cell">No explicit confidentiality signal above fold on Separate mobile — P04 does not see privacy reassurance before deciding to engage</td>
+            <td class="rec-cell">Add confidentiality signal in hero area: "All enquiries are 100% confidential" with lock icon</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="low" data-priority="medium-effort" data-phase="4" data-personas="P04" data-page="separate">
+            <td class="id-cell">F-SOL-SEP-M03</td>
+            <td class="page-cell">Separate (M)</td>
+            <td class="persona-cell">P04</td>
+            <td class="desc-cell">No softer sticky CTA variant on Separate mobile — P04 may need a lower-commitment entry point to initiate contact</td>
+            <td class="rec-cell">Test "Speak to an expert" as a softer sticky CTA variant on Separate mobile vs "Apply now"</td>
+            <td><span class="badge badge-low">Low</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="4" data-personas="P06" data-page="invest">
+            <td class="id-cell">F-SOL-INV-M01</td>
+            <td class="page-cell">Invest (M)</td>
+            <td class="persona-cell">P06</td>
+            <td class="desc-cell">Investor LVR and rate information not visible above fold on Invest mobile — P06 must scroll to confirm eligibility parameters</td>
+            <td class="rec-cell">Surface investor-specific LVR (up to 80%) and indicative rate range above fold on Invest mobile</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="4" data-personas="P06" data-page="invest">
+            <td class="id-cell">F-SOL-INV-M02</td>
+            <td class="page-cell">Invest (M)</td>
+            <td class="persona-cell">P06</td>
+            <td class="desc-cell">No Rates &amp; Fees link on Invest mobile — P06 must navigate away from solution page to research cost of capital</td>
+            <td class="rec-cell">Add Rates &amp; Fees inline link on Invest mobile: "See investor rates →"</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="quick-win" data-phase="4" data-personas="P06" data-page="invest">
+            <td class="id-cell">F-SOL-INV-M03</td>
+            <td class="page-cell">Invest (M)</td>
+            <td class="persona-cell">P06</td>
+            <td class="desc-cell">Generic "Apply now" CTA on Invest mobile — no investor-specific confirmation for P06 before committing to apply</td>
+            <td class="rec-cell">Change CTA to "Get investor pricing" on Invest mobile</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="medium-effort" data-phase="4" data-personas="P05" data-page="house-land">
+            <td class="id-cell">F-SOL-HL-M01</td>
+            <td class="page-cell">H&amp;L (M)</td>
+            <td class="persona-cell">P05</td>
+            <td class="desc-cell">Build delay FAQ not visible above fold on H&L mobile — P05's primary risk concern requires scrolling to find</td>
+            <td class="rec-cell">Surface build delay FAQ above fold on H&L mobile: "What if my build is delayed?" as a prominent expandable</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="medium-effort" data-phase="4" data-personas="P05" data-page="house-land">
+            <td class="id-cell">F-SOL-HL-M02</td>
+            <td class="page-cell">H&amp;L (M)</td>
+            <td class="persona-cell">P05</td>
+            <td class="desc-cell">Build timeline not legible at 390px — P05 cannot understand their bridge duration without horizontal scrolling</td>
+            <td class="rec-cell">Reformat build timeline for mobile: vertical stacked steps or condensed table view at 390px</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="4" data-personas="P05" data-page="house-land">
+            <td class="id-cell">F-SOL-HL-M03</td>
+            <td class="page-cell">H&amp;L (M)</td>
+            <td class="persona-cell">P05</td>
+            <td class="desc-cell">Calculator link not visible above fold on H&L mobile — P05 cannot model their bridge cost without navigating away</td>
+            <td class="rec-cell">Surface Calculator link above fold on H&L mobile: "Calculate my H&L bridge →"</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="strategic" data-phase="4" data-personas="P05" data-page="house-land">
+            <td class="id-cell">F-SOL-HL-M04</td>
+            <td class="page-cell">H&amp;L (M)</td>
+            <td class="persona-cell">P05</td>
+            <td class="desc-cell">Layout shift and render issues in low-connectivity environments — P05 in regional/low-signal area may see broken layout</td>
+            <td class="rec-cell">Investigate and fix layout shift on H&L mobile; test performance in low-connectivity simulation (DevTools 3G throttle)</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-strategic">Strategic</span></td>
+          </tr>
+
+          <tr data-severity="low" data-priority="medium-effort" data-phase="4" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="mobile-nav">
+            <td class="id-cell">F-NAV-M07</td>
+            <td class="page-cell">Mobile Nav</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">Solutions sub-menu category labels ("Buy now, sell later" / "Unlock equity, sell later") may add cognitive load for first-time mobile users</td>
+            <td class="rec-cell">A/B test flat list vs. categorised sub-menu for Solutions; validate whether grouping aids or impedes discoverability</td>
+            <td><span class="badge badge-low">Low</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div><!-- /table-wrapper -->
+
+  </div><!-- /content -->
+</div><!-- /main -->
+
+<script src="assets/js/filters.js"></script>
+<script>
+(function() {
+  const body    = document.getElementById('recBody');
+  const fSev    = document.getElementById('fSeverity');
+  const fPri    = document.getElementById('fPriority');
+  const fPhase  = document.getElementById('fPhase');
+  const fPers   = document.getElementById('fPersona');
+  const fSearch = document.getElementById('fSearch');
+  const counter = document.getElementById('filterCount');
+  const reset   = document.getElementById('filterReset');
+
+  function applyFilters() {
+    const sev    = fSev.value.toLowerCase();
+    const pri    = fPri.value.toLowerCase();
+    const phase  = fPhase.value;
+    const pers   = fPers.value.toUpperCase();
+    const search = fSearch.value.toLowerCase();
+
+    let visible = 0;
+    body.querySelectorAll('tr').forEach(function(row) {
+      const rSev   = row.dataset.severity  || '';
+      const rPri   = row.dataset.priority  || '';
+      const rPhase = row.dataset.phase     || '';
+      const rPers  = row.dataset.personas  || '';
+      const rText  = row.textContent.toLowerCase();
+
+      const ok =
+        (!sev    || rSev === sev) &&
+        (!pri    || rPri === pri) &&
+        (!phase  || rPhase === phase) &&
+        (!pers   || rPers.indexOf(pers) !== -1) &&
+        (!search || rText.indexOf(search) !== -1);
+
+      row.classList.toggle('hidden', !ok);
+      if (ok) visible++;
+    });
+    counter.textContent = visible + ' finding' + (visible === 1 ? '' : 's');
+  }
+
+  [fSev, fPri, fPhase, fPers].forEach(function(el) {
+    el.addEventListener('change', applyFilters);
+  });
+  fSearch.addEventListener('input', applyFilters);
+  reset.addEventListener('click', function() {
+    fSev.value = ''; fPri.value = ''; fPhase.value = '';
+    fPers.value = ''; fSearch.value = '';
+    applyFilters();
+  });
+
+  // Handle ?priority= URL param for links from index.html
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('priority')) {
+    var map = { 'quick-win': 'quick-win', 'medium-effort': 'medium-effort', 'strategic': 'strategic' };
+    var v = map[params.get('priority')];
+    if (v) { fPri.value = v; applyFilters(); }
+  }
+  if (params.get('persona')) {
+    fPers.value = params.get('persona').toUpperCase();
+    applyFilters();
+  }
+})();
+</script>
+</body>
+</html>

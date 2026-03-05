@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Downsize Audit — Bridgit UX Audit</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <button class="mobile-nav-toggle" id="sidebarToggle" aria-label="Toggle navigation">☰</button>
+  <div class="sidebar-overlay"></div>
+  <nav class="sidebar">
+    <a href="../../index.html" class="sidebar-brand">
+      <div class="sidebar-brand-icon">B</div>
+      <div class="sidebar-brand-text">
+        <span class="sidebar-brand-name">Bridgit UX Audit</span>
+        <span class="sidebar-brand-sub">Final Report 2026</span>
+      </div>
+    </a>
+    <div class="sidebar-health">
+      <div class="sidebar-health-label">Conversion Health</div>
+      <div class="sidebar-health-score">5.2<span style="font-size:14px;font-weight:400;color:#6B7280">/10</span></div>
+      <div class="sidebar-health-sub">71 findings across 3 phases</div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Overview</div>
+      <ul class="sidebar-nav">
+        <li><a href="../../index.html"><span class="nav-icon">📊</span> Executive Summary</a></li>
+        <li><a href="../../navigation.html"><span class="nav-icon">🗺️</span> Navigation &amp; IA</a></li>
+        <li><a href="../../recommendations.html"><span class="nav-icon">📋</span> All Findings <span class="nav-badge">71</span></a></li>
+        <li><a href="../../ab-tests.html"><span class="nav-icon">🧪</span> A/B Tests <span class="nav-badge">10</span></a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Personas</div>
+      <ul class="sidebar-nav">
+        <li><a href="../../personas/p01-upsizer.html"><span class="nav-icon">🏠</span> P01 — Upsizer</a></li>
+        <li><a href="../../personas/p02-downsizer.html"><span class="nav-icon">🌿</span> P02 — Downsizer</a></li>
+        <li><a href="../../personas/p03-renovator.html"><span class="nav-icon">🔨</span> P03 — Renovator</a></li>
+        <li><a href="../../personas/p04-separating.html"><span class="nav-icon">💙</span> P04 — Separating</a></li>
+        <li><a href="../../personas/p05-house-land.html"><span class="nav-icon">🏗️</span> P05 — Builder</a></li>
+        <li><a href="../../personas/p06-investor.html"><span class="nav-icon">📈</span> P06 — Investor</a></li>
+        <li><a href="../../personas/p07-broker.html"><span class="nav-icon">🤝</span> P07 — Broker</a></li>
+        <li><a href="../../personas/p08-regional.html"><span class="nav-icon">🌏</span> P08 — Regional</a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="../homepage.html"><span class="nav-icon">🏡</span> Homepage</a></li>
+        <li><a href="../bridging-loan.html"><span class="nav-icon">🔗</span> Bridging Loan</a></li>
+        <li><a href="../eligibility.html"><span class="nav-icon">✅</span> Eligibility</a></li>
+        <li><a href="../calculator.html"><span class="nav-icon">🧮</span> Calculator</a></li>
+        <li><a href="../rates-and-fees.html"><span class="nav-icon">💰</span> Rates &amp; Fees</a></li>
+        <li><a href="../partners.html"><span class="nav-icon">🤝</span> Partners</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Solution Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="./upsize.html">↳ Upsize</a></li>
+        <li><a href="./downsize.html" class="active">↳ Downsize</a></li>
+        <li><a href="./renovate.html">↳ Renovate</a></li>
+        <li><a href="./retire.html">↳ Retire</a></li>
+        <li><a href="./separate.html">↳ Separate</a></li>
+        <li><a href="./invest.html">↳ Invest</a></li>
+        <li><a href="./house-and-land.html">↳ House &amp; Land</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="page-header">
+      <div class="page-header-eyebrow">Page Audit</div>
+      <h1>Solution: Downsize</h1>
+      <div class="page-header-meta">
+        <span>Personas: P02 — Downsizing Empty Nester</span>
+        <span>2 desktop findings · 3 mobile findings</span>
+      </div>
+    </div>
+    <div class="content">
+
+      <div class="severity-bar">
+        <span class="severity-pill critical">● 1 Critical</span>
+        <span class="severity-pill high">● 3 High</span>
+        <span class="severity-pill medium">● 1 Medium</span>
+      </div>
+
+      <div data-tabs>
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="desktop">Desktop Findings</button>
+          <button class="tab-btn" data-tab="mobile">Mobile Findings</button>
+        </div>
+
+        <div class="tab-panel active" data-panel="desktop">
+
+          <!-- F-SOL-ALL-01 cross-cut -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-ALL-01</span>
+              <span class="finding-title">Testimonials are generic across all solution pages; not scenario-specific</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">All Personas</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">All 7 solution pages include a Trustpilot/testimonial widget section. The same testimonial carousel component appears to be reused across pages without scenario-specific customisation. A user on the Downsize page should see a testimonial from someone who successfully downsized; generic testimonials do not reinforce the persona's decision at the point they need it most.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Source and display at least one scenario-specific testimonial per solution page, placed above the generic carousel. Format: customer name, scenario label (e.g., "Margaret, Downsizer — Brisbane"), 1–2 sentence quote referencing their specific downsizing situation.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — increases apply rate across all solution pages by replacing generic testimonials with scenario-matched social proof.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-ALL-02 cross-cut -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-ALL-02</span>
+              <span class="finding-title">No worked examples with real dollar amounts on any solution page</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">All Personas</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">No solution page contains a worked scenario with concrete numbers. P02 (Downsizer) cannot mentally model "what would this actually cost me?" without an example. This is one of the most common conversion blockers in high-consideration financial products.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add a scenario-specific worked example for the Downsize case. Show the bridge amount, interest cost, total cost, and the "no monthly repayments" benefit in plain language suited to P02's level of financial literacy.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — reduces uncertainty-driven abandonment by grounding each solution in a concrete cost or outcome example.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /desktop panel -->
+
+        <div class="tab-panel" data-panel="mobile">
+
+          <!-- F-SOL-DN-M01 -->
+          <div class="finding-card severity-critical">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-DN-M01</span>
+              <span class="finding-title">Phone CTA not prominent above fold; blocks P02's primary conversion path</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-critical">Critical</span>
+              <span class="badge badge-strategic">Strategic</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">P02 — Downsizer</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">P02 (62F, retired teacher) converts almost exclusively via phone. Phone number is in the schema but there is no large, tappable "Call us" button in the hero section or sticky header of the Downsize page. For this demographic, the phone CTA must be the most prominent element on mobile — not buried in navigation or visible only after scrolling. Without it above fold, P02's primary conversion path is effectively blocked.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add a sticky bottom bar or large hero-positioned button: "Call us — 1300 141 161" with <code>tel:1300141161</code>, minimum 48–56px height. Label it "Speak to a specialist" or "Call our team" (plain language, not CTA-jargon). Ensure it remains visible on scroll via <code>position: sticky; bottom: 0</code> or as a floating action button.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Call — restores P02's primary conversion path (phone) by making tap-to-call prominent above fold.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">A/B Hypothesis</div>
+                  <div class="finding-field-value">A sticky or above-fold phone CTA will significantly increase phone contact rate from P02 on the Downsize page.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-DN-M02 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-DN-M02</span>
+              <span class="finding-title">Plain-language benefits not visible before first scroll</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">P02 — Downsizer</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The hero section is substantial in height; the benefits/features section that speaks to P02's key concerns (simple process, no jargon, clear next steps) is pushed below fold. P02 needs immediate reassurance — a sense of "this is for me" — before they invest time scrolling. Without this, high bounce is likely.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Condense hero on mobile to ~60–70vh. Move a 3–5 bullet "Why Bridgit" callout (plain language: "One phone call to get started", "No monthly repayments", "Move at your own pace") immediately below the hero, above the fold on 390px.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Emotional Arc → Consideration — reduces P02 bounce by surfacing plain-language benefits before first scroll.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">A/B Hypothesis</div>
+                  <div class="finding-field-value">Surfacing plain-language benefits within the initial viewport will reduce bounce and increase scroll depth for P02 on mobile.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-DN-M03 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-DN-M03</span>
+              <span class="finding-title">Financial jargon may appear without plain-language tooltip on mobile</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">P02 — Downsizer</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">Page schema includes "LVR up to 80%" and possibly other finance terms. Tippy.js tooltips are loaded but tooltips activated by hover do not function on mobile touch interfaces. P02 (non-financial background) encountering "LVR", "residual balance", or "settlement period" without an explanation on mobile will either not understand or lose trust.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">(1) Replace jargon with plain language wherever possible on the Downsize page. (2) Where technical terms must be used, trigger Tippy tooltips on <code>click</code>/<code>tap</code> events, not <code>hover</code>. (3) Add a plain-language glossary link in the page footer.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Trust — reduces cognitive load and abandonment for P02 by replacing jargon with plain language.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /mobile panel -->
+      </div><!-- /tabs -->
+
+    </div>
+  </div>
+  <script src="../../assets/js/filters.js"></script>
+</body>
+</html>

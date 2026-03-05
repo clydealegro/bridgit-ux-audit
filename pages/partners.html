@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partners Audit — Bridgit UX Audit</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <button class="mobile-nav-toggle" id="sidebarToggle" aria-label="Toggle navigation">☰</button>
+  <div class="sidebar-overlay"></div>
+  <nav class="sidebar">
+    <a href="../index.html" class="sidebar-brand">
+      <div class="sidebar-brand-icon">B</div>
+      <div class="sidebar-brand-text">
+        <span class="sidebar-brand-name">Bridgit UX Audit</span>
+        <span class="sidebar-brand-sub">Final Report 2026</span>
+      </div>
+    </a>
+    <div class="sidebar-health">
+      <div class="sidebar-health-label">Conversion Health</div>
+      <div class="sidebar-health-score">5.2<span style="font-size:14px;font-weight:400;color:#6B7280">/10</span></div>
+      <div class="sidebar-health-sub">71 findings across 3 phases</div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Overview</div>
+      <ul class="sidebar-nav">
+        <li><a href="../index.html"><span class="nav-icon">📊</span> Executive Summary</a></li>
+        <li><a href="../navigation.html"><span class="nav-icon">🗺️</span> Navigation &amp; IA</a></li>
+        <li><a href="../recommendations.html"><span class="nav-icon">📋</span> All Findings <span class="nav-badge">71</span></a></li>
+        <li><a href="../ab-tests.html"><span class="nav-icon">🧪</span> A/B Tests <span class="nav-badge">10</span></a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Personas</div>
+      <ul class="sidebar-nav">
+        <li><a href="../personas/p01-upsizer.html"><span class="nav-icon">🏠</span> P01 — Upsizer</a></li>
+        <li><a href="../personas/p02-downsizer.html"><span class="nav-icon">🌿</span> P02 — Downsizer</a></li>
+        <li><a href="../personas/p03-renovator.html"><span class="nav-icon">🔨</span> P03 — Renovator</a></li>
+        <li><a href="../personas/p04-separating.html"><span class="nav-icon">💙</span> P04 — Separating</a></li>
+        <li><a href="../personas/p05-house-land.html"><span class="nav-icon">🏗️</span> P05 — Builder</a></li>
+        <li><a href="../personas/p06-investor.html"><span class="nav-icon">📈</span> P06 — Investor</a></li>
+        <li><a href="../personas/p07-broker.html"><span class="nav-icon">🤝</span> P07 — Broker</a></li>
+        <li><a href="../personas/p08-regional.html"><span class="nav-icon">🌏</span> P08 — Regional</a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="./homepage.html"><span class="nav-icon">🏡</span> Homepage</a></li>
+        <li><a href="./bridging-loan.html"><span class="nav-icon">🔗</span> Bridging Loan</a></li>
+        <li><a href="./eligibility.html"><span class="nav-icon">✅</span> Eligibility</a></li>
+        <li><a href="./calculator.html"><span class="nav-icon">🧮</span> Calculator</a></li>
+        <li><a href="./rates-and-fees.html"><span class="nav-icon">💰</span> Rates &amp; Fees</a></li>
+        <li><a href="./partners.html" class="active"><span class="nav-icon">🤝</span> Partners</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Solution Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="./solutions/upsize.html">↳ Upsize</a></li>
+        <li><a href="./solutions/downsize.html">↳ Downsize</a></li>
+        <li><a href="./solutions/renovate.html">↳ Renovate</a></li>
+        <li><a href="./solutions/retire.html">↳ Retire</a></li>
+        <li><a href="./solutions/separate.html">↳ Separate</a></li>
+        <li><a href="./solutions/invest.html">↳ Invest</a></li>
+        <li><a href="./solutions/house-and-land.html">↳ House &amp; Land</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="page-header">
+      <div class="page-header-eyebrow">Page Audit</div>
+      <h1>Partners</h1>
+      <div class="page-header-meta">
+        <span>Personas: P07 — Mortgage Broker</span>
+        <span>3 desktop findings · 2 mobile findings</span>
+      </div>
+    </div>
+    <div class="content">
+
+      <div class="severity-bar">
+        <span class="severity-pill high">● 3 High</span>
+        <span class="severity-pill medium">● 2 Medium</span>
+      </div>
+
+      <div data-tabs>
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="desktop">Desktop Findings</button>
+          <button class="tab-btn" data-tab="mobile">Mobile Findings</button>
+        </div>
+
+        <div class="tab-panel active" data-panel="desktop">
+
+          <!-- F-PTR-01 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-PTR-01</span>
+              <span class="finding-title">Social proof is customer testimonials, not broker testimonials</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">P07 — Broker</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The testimonials on the Partners page are from end customers (e.g., "The process was so quick and easy… I managed to sign my declaration between the 10th and 11th hole at my golf course" — Kay, Bridgit customer). Customer testimonials are the wrong social proof for a broker audience. Brokers need to see peer validation: other brokers praising Bridgit's speed, BDM responsiveness, and client outcomes.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Source 2–3 broker-specific testimonials (e.g., "As a broker, I refer bridging cases to Bridgit because their 24-hour approval means my clients don't miss out. And their BDMs actually pick up the phone."). Place these above the customer testimonials or as the primary social proof section.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Partner → Referral conversion — increases broker referral volume by demonstrating active lender-broker partnership.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-PTR-02 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-PTR-02</span>
+              <span class="finding-title">BDM locator requires a separate page visit; not integrated on Partners page</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">P07 — Broker</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">"Find your BDM" is a separate page (/find-your-bdm) accessible via the Partners nav dropdown. The Partners page itself does not appear to include an integrated BDM locator. For P07 (Mortgage Broker), who values low-friction access to a named BDM contact, requiring a separate page visit adds unnecessary steps to what should be the first interaction.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Embed a BDM finder card section directly on the Partners page — state selector → BDM name, photo, phone number, email. This mirrors what high-converting broker-facing lender pages do and immediately demonstrates Bridgit's commitment to broker relationships.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Partner → Submit — increases broker deal submissions by removing form friction and adding BDM direct contact.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-PTR-03 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-PTR-03</span>
+              <span class="finding-title">H1 "Partner with Bridgit" is functional, not benefit-led</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">P07 — Broker</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">"Partner with Bridgit" tells brokers what Bridgit wants (a partnership) rather than what brokers get. The schema description contains the genuine broker value: "24-hour approval, no clawbacks, broker fees paid upfront, trail available on 24-month loan terms." None of these differentiated benefits appear in the H1 or hero subhead.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Rewrite H1 to lead with broker benefit: "Give your clients 24-hour bridging approvals. No clawbacks. Fees paid upfront." — or use a benefit-led subheadline if the brand voice requires a softer H1.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Partner → Submit — reduces broker drop-off by clearly labelling submission path.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /desktop panel -->
+
+        <div class="tab-panel" data-panel="mobile">
+
+          <!-- F-PTR-M01 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-PTR-M01</span>
+              <span class="finding-title">BDM contact card has no email path; phone-only friction for brokers</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">P07 — Broker</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The <code>.bdm_card-information</code> component (confirmed in HTML, line 835) has a <code>tel:</code> link for phone contact but no <code>mailto:</code> for email. P07 (Mortgage Broker, efficiency-focused) may prefer to send an initial email query — especially when calling is not practical during client meetings. No email option means BDM contact is phone-only, increasing friction for the channel most critical to broker acquisition volume.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add a <code>mailto:</code> link to each BDM card alongside the phone number (e.g., <code>partnerships@bridgit.com.au</code> or BDM-specific email). Label it "Email [BDM Name]" with a 44px tap target.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Partner → Contact — increases broker async inquiries by providing email path alongside phone CTA.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">A/B Hypothesis</div>
+                  <div class="finding-field-value">Adding email contact alongside phone in BDM cards will increase broker inquiry rate from mobile users who are in client meetings or prefer async communication.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-PTR-M02 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-PTR-M02</span>
+              <span class="finding-title">BDM card may compress on small screens reducing tap accuracy</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">P07 — Broker</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The BDM card uses <code>flex: 1</code> layout. On 390px, flex items may stack vertically with tight spacing between BDM name, title, and phone number, making the phone number tap target less accurate. Mis-taps on a phone number that dial the wrong BDM create a poor first impression with a channel-critical persona.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Ensure BDM card on mobile has <code>min-height: 120px</code>; phone number element has <code>min-height: 44px</code> and adequate line-height (at least 1.5rem). Test card layout at 390px.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Usability — reduces mis-taps on BDM contact card for mobile brokers.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /mobile panel -->
+      </div><!-- /tabs -->
+
+    </div>
+  </div>
+  <script src="../assets/js/filters.js"></script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage Audit — Bridgit UX Audit</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <button class="mobile-nav-toggle" id="sidebarToggle" aria-label="Toggle navigation">☰</button>
+  <div class="sidebar-overlay"></div>
+  <nav class="sidebar">
+    <a href="../index.html" class="sidebar-brand">
+      <div class="sidebar-brand-icon">B</div>
+      <div class="sidebar-brand-text">
+        <span class="sidebar-brand-name">Bridgit UX Audit</span>
+        <span class="sidebar-brand-sub">Final Report 2026</span>
+      </div>
+    </a>
+    <div class="sidebar-health">
+      <div class="sidebar-health-label">Conversion Health</div>
+      <div class="sidebar-health-score">5.2<span style="font-size:14px;font-weight:400;color:#6B7280">/10</span></div>
+      <div class="sidebar-health-sub">71 findings across 3 phases</div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Overview</div>
+      <ul class="sidebar-nav">
+        <li><a href="../index.html"><span class="nav-icon">📊</span> Executive Summary</a></li>
+        <li><a href="../navigation.html"><span class="nav-icon">🗺️</span> Navigation &amp; IA</a></li>
+        <li><a href="../recommendations.html"><span class="nav-icon">📋</span> All Findings <span class="nav-badge">71</span></a></li>
+        <li><a href="../ab-tests.html"><span class="nav-icon">🧪</span> A/B Tests <span class="nav-badge">10</span></a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Personas</div>
+      <ul class="sidebar-nav">
+        <li><a href="../personas/p01-upsizer.html"><span class="nav-icon">🏠</span> P01 — Upsizer</a></li>
+        <li><a href="../personas/p02-downsizer.html"><span class="nav-icon">🌿</span> P02 — Downsizer</a></li>
+        <li><a href="../personas/p03-renovator.html"><span class="nav-icon">🔨</span> P03 — Renovator</a></li>
+        <li><a href="../personas/p04-separating.html"><span class="nav-icon">💙</span> P04 — Separating</a></li>
+        <li><a href="../personas/p05-house-land.html"><span class="nav-icon">🏗️</span> P05 — Builder</a></li>
+        <li><a href="../personas/p06-investor.html"><span class="nav-icon">📈</span> P06 — Investor</a></li>
+        <li><a href="../personas/p07-broker.html"><span class="nav-icon">🤝</span> P07 — Broker</a></li>
+        <li><a href="../personas/p08-regional.html"><span class="nav-icon">🌏</span> P08 — Regional</a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="./homepage.html" class="active"><span class="nav-icon">🏡</span> Homepage</a></li>
+        <li><a href="./bridging-loan.html"><span class="nav-icon">🔗</span> Bridging Loan</a></li>
+        <li><a href="./eligibility.html"><span class="nav-icon">✅</span> Eligibility</a></li>
+        <li><a href="./calculator.html"><span class="nav-icon">🧮</span> Calculator</a></li>
+        <li><a href="./rates-and-fees.html"><span class="nav-icon">💰</span> Rates &amp; Fees</a></li>
+        <li><a href="./partners.html"><span class="nav-icon">🤝</span> Partners</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Solution Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="./solutions/upsize.html">↳ Upsize</a></li>
+        <li><a href="./solutions/downsize.html">↳ Downsize</a></li>
+        <li><a href="./solutions/renovate.html">↳ Renovate</a></li>
+        <li><a href="./solutions/retire.html">↳ Retire</a></li>
+        <li><a href="./solutions/separate.html">↳ Separate</a></li>
+        <li><a href="./solutions/invest.html">↳ Invest</a></li>
+        <li><a href="./solutions/house-and-land.html">↳ House &amp; Land</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="page-header">
+      <div class="page-header-eyebrow">Page Audit</div>
+      <h1>Homepage</h1>
+      <div class="page-header-meta">
+        <span>Personas: All (first touch)</span>
+        <span>5 desktop findings · 1 mobile finding</span>
+      </div>
+    </div>
+    <div class="content">
+
+      <div class="severity-bar">
+        <span class="severity-pill high">● 2 High</span>
+        <span class="severity-pill medium">● 3 Medium</span>
+      </div>
+
+      <div data-tabs>
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="desktop">Desktop Findings</button>
+          <button class="tab-btn" data-tab="mobile">Mobile Findings</button>
+        </div>
+
+        <div class="tab-panel active" data-panel="desktop">
+
+          <!-- F-HP-01 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-HP-01</span>
+              <span class="finding-title">ACL number visible in footer only, not above the fold</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">All Personas</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">ACL 532542 is present only in the footer ("Australian Credit Licence Number 532542, ABN 16 644 588 161"). For a high-consideration financial product in a regulated category, relegating the licence number to the footer reduces immediate trust credibility — especially for first-time visitors who land mid-page via paid search.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add ACL 532542 to the hero section or the trust signal bar (alongside Trustpilot), with a link to the ASIC register. A small badge or one-line format is sufficient: "ACL 532542 | Regulated by ASIC".</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Regulatory trust — reduces ACL-related abandonment at first touch for all personas.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">A/B Hypothesis</div>
+                  <div class="finding-field-value">Adding ACL 532542 as a visible trust badge in the hero section will increase hero-to-CTA click rate because first-time visitors to a financial product site need to see regulatory legitimacy before engaging. Test: With ACL badge in hero vs. footer-only. Primary metric: Hero "Apply now" + "Connect with an expert" click-through rate. Secondary metric: Time on page, bounce rate.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-HP-02 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-HP-02</span>
+              <span class="finding-title">Testimonials are not scenario-labelled; personas cannot self-identify</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">All Personas</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The homepage Trustpilot/testimonial carousel exists and shows 5-star rated reviews. However, testimonials are not labelled with persona context (e.g., "Sarah — Upsizer, Sydney" or "Michael — renovated before selling"). A Confident Upsizer reading a review from a retiree downsizer cannot identify with the outcome. Generic testimonials are weaker social proof than scenario-matched ones.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Label each testimonial with the customer's scenario/use case. Source and display at least one testimonial per major scenario (upsize, downsize, renovate, separate) on the homepage carousel.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → CTA — increases hero CTA click-through by substantiating credibility at first scroll.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">A/B Hypothesis</div>
+                  <div class="finding-field-value">Scenario-labelled testimonials ("I was upsizing and...") will increase engagement with the testimonial section and downstream CTA click rate vs. generic testimonials because P01/P02/P03 each need to see someone like themselves succeeding. Test: Generic carousel vs. scenario-labelled carousel. Primary metric: CTA click-through rate from homepage. Secondary metric: Testimonial carousel engagement (swipe/scroll depth).</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-HP-03 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-HP-03</span>
+              <span class="finding-title">No macro credibility statistics visible on page</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">All Personas</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">No volume or scale statistics are visible on the homepage (e.g., "17,000+ accredited brokers", "Funded $XM+ in bridging loans", "X,000 homeowners helped"). Fintechs with traction use these numbers to shortcut trust. Bridgit has the assets (17,000+ broker network is cited in the Persona Library) but they do not appear to be surfaced on the homepage.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add a stat bar or social proof section with 2–3 credibility statistics. Suggested candidates: broker network size, number of borrowers helped, average approval time, total funded.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — increases return visits and direct apply rate by reducing broker dependency.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-HP-04 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-HP-04</span>
+              <span class="finding-title">No embedded eligibility entry point in the homepage body</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">All Personas</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">There is no embedded eligibility checker or "quick check" widget on the homepage. Users who want to self-qualify must navigate to a separate Eligibility page. For a product where the primary anxiety is "do I even qualify?", removing this step from the homepage increases drop-off before intent is formed.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Embed a 3-question eligibility pre-screener directly on the homepage (property value, mortgage balance, property type) that provides an instant directional answer and captures a lead.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">CTA conversion — increases Apply CTA clicks by removing vague "Find out more" friction.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-HP-05 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-HP-05</span>
+              <span class="finding-title">No privacy assurance near conversion CTAs</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">All Personas</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The "Apply now" and "Connect with an expert" CTAs have no privacy assurance copy adjacent to them (e.g., "No credit check. Your data is safe." or a privacy policy link). For a financial product, particularly for anxiety-prone personas (P04 Separating Homeowner, P02 Downsizer), assurance near the CTA reduces pre-click hesitation.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add 1-line microcopy beneath each primary CTA: "No credit check to get started. Privacy Policy." with link.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — increases self-service apply rate by signalling process transparency.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /desktop panel -->
+
+        <div class="tab-panel" data-panel="mobile">
+
+          <!-- F-HP-M01 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-HP-M01</span>
+              <span class="finding-title">No email / async contact path on Homepage</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">P08 — Regional</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">Homepage provides only <code>tel:</code> links for contact. No <code>mailto:</code> link exists anywhere on the page. P08 (Regional Relocator, async-preferring, often in low-connectivity areas) cannot initiate contact via email. On mobile, in a regional setting with poor signal, a phone call may not be possible. This is a complete contact path gap for P08's primary communication preference. Cross-reference: F-NAV-04 (Phase 2).</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add <code>mailto:hello@bridgit.com.au</code> as a contact option in the footer or contact section, clearly labelled "Email us". Consider a secondary CTA: "Prefer to email? hello@bridgit.com.au" near the phone number on mobile.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Lead generation — recovers async P08 abandonment on mobile by removing phone-call dependency.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">A/B Hypothesis</div>
+                  <div class="finding-field-value">Adding a visible email CTA alongside the phone number will increase contact initiation from async-preferring P08 and regional users, recovering abandonment from mobile users who cannot or will not call.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /mobile panel -->
+      </div><!-- /tabs -->
+
+    </div>
+  </div>
+  <script src="../assets/js/filters.js"></script>
+</body>
+</html>

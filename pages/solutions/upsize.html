@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upsize Audit — Bridgit UX Audit</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <button class="mobile-nav-toggle" id="sidebarToggle" aria-label="Toggle navigation">☰</button>
+  <div class="sidebar-overlay"></div>
+  <nav class="sidebar">
+    <a href="../../index.html" class="sidebar-brand">
+      <div class="sidebar-brand-icon">B</div>
+      <div class="sidebar-brand-text">
+        <span class="sidebar-brand-name">Bridgit UX Audit</span>
+        <span class="sidebar-brand-sub">Final Report 2026</span>
+      </div>
+    </a>
+    <div class="sidebar-health">
+      <div class="sidebar-health-label">Conversion Health</div>
+      <div class="sidebar-health-score">5.2<span style="font-size:14px;font-weight:400;color:#6B7280">/10</span></div>
+      <div class="sidebar-health-sub">71 findings across 3 phases</div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Overview</div>
+      <ul class="sidebar-nav">
+        <li><a href="../../index.html"><span class="nav-icon">📊</span> Executive Summary</a></li>
+        <li><a href="../../navigation.html"><span class="nav-icon">🗺️</span> Navigation &amp; IA</a></li>
+        <li><a href="../../recommendations.html"><span class="nav-icon">📋</span> All Findings <span class="nav-badge">71</span></a></li>
+        <li><a href="../../ab-tests.html"><span class="nav-icon">🧪</span> A/B Tests <span class="nav-badge">10</span></a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Personas</div>
+      <ul class="sidebar-nav">
+        <li><a href="../../personas/p01-upsizer.html"><span class="nav-icon">🏠</span> P01 — Upsizer</a></li>
+        <li><a href="../../personas/p02-downsizer.html"><span class="nav-icon">🌿</span> P02 — Downsizer</a></li>
+        <li><a href="../../personas/p03-renovator.html"><span class="nav-icon">🔨</span> P03 — Renovator</a></li>
+        <li><a href="../../personas/p04-separating.html"><span class="nav-icon">💙</span> P04 — Separating</a></li>
+        <li><a href="../../personas/p05-house-land.html"><span class="nav-icon">🏗️</span> P05 — Builder</a></li>
+        <li><a href="../../personas/p06-investor.html"><span class="nav-icon">📈</span> P06 — Investor</a></li>
+        <li><a href="../../personas/p07-broker.html"><span class="nav-icon">🤝</span> P07 — Broker</a></li>
+        <li><a href="../../personas/p08-regional.html"><span class="nav-icon">🌏</span> P08 — Regional</a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="../homepage.html"><span class="nav-icon">🏡</span> Homepage</a></li>
+        <li><a href="../bridging-loan.html"><span class="nav-icon">🔗</span> Bridging Loan</a></li>
+        <li><a href="../eligibility.html"><span class="nav-icon">✅</span> Eligibility</a></li>
+        <li><a href="../calculator.html"><span class="nav-icon">🧮</span> Calculator</a></li>
+        <li><a href="../rates-and-fees.html"><span class="nav-icon">💰</span> Rates &amp; Fees</a></li>
+        <li><a href="../partners.html"><span class="nav-icon">🤝</span> Partners</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Solution Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="./upsize.html" class="active">↳ Upsize</a></li>
+        <li><a href="./downsize.html">↳ Downsize</a></li>
+        <li><a href="./renovate.html">↳ Renovate</a></li>
+        <li><a href="./retire.html">↳ Retire</a></li>
+        <li><a href="./separate.html">↳ Separate</a></li>
+        <li><a href="./invest.html">↳ Invest</a></li>
+        <li><a href="./house-and-land.html">↳ House &amp; Land</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="page-header">
+      <div class="page-header-eyebrow">Page Audit</div>
+      <h1>Solution: Upsize</h1>
+      <div class="page-header-meta">
+        <span>Personas: P01 — Confident Upsizer</span>
+        <span>4 desktop findings · 3 mobile findings</span>
+      </div>
+    </div>
+    <div class="content">
+
+      <div class="severity-bar">
+        <span class="severity-pill high">● 3 High</span>
+        <span class="severity-pill medium">● 4 Medium</span>
+      </div>
+
+      <div data-tabs>
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="desktop">Desktop Findings</button>
+          <button class="tab-btn" data-tab="mobile">Mobile Findings</button>
+        </div>
+
+        <div class="tab-panel active" data-panel="desktop">
+
+          <!-- F-SOL-ALL-01 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-ALL-01</span>
+              <span class="finding-title">Testimonials are generic across all solution pages; not scenario-specific</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">All Personas</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">All 7 solution pages include a Trustpilot/testimonial widget section. Based on the HTML structure, the same testimonial carousel component appears to be reused across pages without scenario-specific customisation. A user on the Upsize page should see a testimonial from someone who successfully upsized; generic testimonials do not reinforce the persona's decision at the point they need it most.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Source and display at least one scenario-specific testimonial per solution page, placed above the generic carousel. Format: customer name, scenario label (e.g., "James, Upsizer — Melbourne"), 1–2 sentence quote referencing their specific situation.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — increases apply rate across all solution pages by replacing generic testimonials with scenario-matched social proof.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">A/B Hypothesis</div>
+                  <div class="finding-field-value">Scenario-specific testimonials on solution pages will increase "Apply now" / "Connect with an expert" click-through rates because visitors self-identify with peers who share their specific situation. Test: Generic carousel vs. scenario-specific testimonial + carousel (per page). Primary metric: Primary CTA click-through rate on solution pages. Secondary metric: Scroll depth past testimonial section.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-ALL-02 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-ALL-02</span>
+              <span class="finding-title">No worked examples with real dollar amounts on any solution page</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">All Personas</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">No solution page contains a worked scenario with concrete numbers. Analytical borrowers (P01 Upsizer, P03 Renovator, P06 Investor) cannot mentally model "what would this actually cost me?" without an example. This is one of the most common conversion blockers in high-consideration financial products — users need to see a real scenario before they commit to applying.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">For Upsize: "You own a $1.2M home (owe $500K). You want to buy a $1.75M home. Bridgit can bridge $700K — here's what it costs." Add this worked example as a callout card on the page.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — reduces uncertainty-driven abandonment by grounding each solution in a concrete cost or outcome example.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-UP-01 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-UP-01</span>
+              <span class="finding-title">H1 "Move up with Bridgit" is aspirational but not scenario-specific enough</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">P01 — Upsizer</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">P01's primary anxiety is "I might miss out on my dream home because I haven't sold yet." The H1 "Move up with Bridgit" doesn't address this fear directly. Compare to a more conversion-specific H1: "Found your dream home? Don't wait for your current one to sell." The current headline is an aspiration statement; the alternative speaks directly to the moment of decision.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">A/B test current H1 vs. fear-of-missing-out framing: "Don't let an unsold home stop you from buying the right one." or "Buy your next home before your current one sells."</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → CTA — increases P01 CTA clicks by quantifying the upgrade benefit in the headline.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-UP-02 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-UP-02</span>
+              <span class="finding-title">No bank timeline comparison; 24-hour advantage not dramatised</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">P01 — Upsizer</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">P01 (Confident Upsizer) has likely considered or been rejected by a bank. Bridgit's 24-hour approval vs. a bank's 2–4 week process is a decisive differentiator. This comparison is not visualised on the Upsize page. A simple side-by-side ("Bridgit: approval in 24 hours | Bank bridging: 2–4 weeks, often unavailable") would directly address P01's bank comparison frame.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add a comparison table or callout showing Bridgit approval time vs. traditional bank bridging timelines.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — increases P01 apply rate by addressing simultaneous mortgage concern.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /desktop panel -->
+
+        <div class="tab-panel" data-panel="mobile">
+
+          <!-- F-SOL-UP-M01 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-UP-M01</span>
+              <span class="finding-title">Hero content extends beyond initial mobile viewport</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">P01 — Upsizer</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">Screenshot shows the hero section extends beyond the initial 390px viewport. The primary CTA may not be fully visible without scrolling. For P01 (mobile-primary, high anxiety about missing out on a property), the CTA must be reachable immediately without scroll to capture high-intent visits.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Reduce hero section vertical height on mobile: set <code>max-height: 90vh</code> on <code>.section_hero-main</code> or reduce padding in the hero container to ensure headline + subhead + CTA are all visible at 390px without scrolling.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">CTA conversion — increases P01 apply clicks by surfacing headline and CTA within initial mobile viewport.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">A/B Hypothesis</div>
+                  <div class="finding-field-value">Reducing hero height to fit CTA above fold on mobile will increase immediate apply click-through for P01.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-UP-M02 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-UP-M02</span>
+              <span class="finding-title">No "Speak to Expert" or phone CTA visible above fold</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">P01 — Upsizer</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">While <code>tel:</code> links are present in the page, no prominent "Speak to a specialist" or tap-to-call button is visible in the above-fold hero. P01 may prefer a quick call to confirm speed and process before committing to an application; the absence of a softer CTA option above fold means those users must scroll or apply cold.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add a secondary CTA in the hero or sticky header: "Call us — 1300 141 161" with <code>tel:</code> href and a 44px minimum tap target. Alternatively, include "Speak to a specialist" as a text link below the primary Apply button.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → CTA — provides softer entry point for P01 considering a call before committing to apply.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">A/B Hypothesis</div>
+                  <div class="finding-field-value">Offering a visible phone CTA alongside Apply in the above-fold zone will capture hesitant P01 users and increase overall hero-to-contact conversion.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-UP-M03 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-UP-M03</span>
+              <span class="finding-title">Primary CTA copy is generic ("Apply Now")</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">P01 — Upsizer</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The primary CTA button reads "Apply Now" — identical to every other solution page. P01 is on a scenario-specific Upsize page under emotional pressure. Scenario-specific CTA copy ("Apply to upsize" or "Start my upsize application") increases confidence that the form is relevant to her situation. Cross-reference: F-NAV-01 (Phase 2).</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Change the primary CTA on the Upsize page from "Apply Now" to "Apply to upsize" or "Start upsizing".</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">CTA conversion — increases P01 click-through by making CTA copy specific to the upsize scenario.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">A/B Hypothesis</div>
+                  <div class="finding-field-value">"Apply to upsize" will increase CTA click-through rate vs generic "Apply Now" on the Upsize page, particularly for first-visit mobile users.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /mobile panel -->
+      </div><!-- /tabs -->
+
+    </div>
+  </div>
+  <script src="../../assets/js/filters.js"></script>
+</body>
+</html>

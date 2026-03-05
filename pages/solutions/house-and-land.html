@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>House &amp; Land Audit — Bridgit UX Audit</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <button class="mobile-nav-toggle" id="sidebarToggle" aria-label="Toggle navigation">☰</button>
+  <div class="sidebar-overlay"></div>
+  <nav class="sidebar">
+    <a href="../../index.html" class="sidebar-brand">
+      <div class="sidebar-brand-icon">B</div>
+      <div class="sidebar-brand-text">
+        <span class="sidebar-brand-name">Bridgit UX Audit</span>
+        <span class="sidebar-brand-sub">Final Report 2026</span>
+      </div>
+    </a>
+    <div class="sidebar-health">
+      <div class="sidebar-health-label">Conversion Health</div>
+      <div class="sidebar-health-score">5.2<span style="font-size:14px;font-weight:400;color:#6B7280">/10</span></div>
+      <div class="sidebar-health-sub">71 findings across 3 phases</div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Overview</div>
+      <ul class="sidebar-nav">
+        <li><a href="../../index.html"><span class="nav-icon">📊</span> Executive Summary</a></li>
+        <li><a href="../../navigation.html"><span class="nav-icon">🗺️</span> Navigation &amp; IA</a></li>
+        <li><a href="../../recommendations.html"><span class="nav-icon">📋</span> All Findings <span class="nav-badge">71</span></a></li>
+        <li><a href="../../ab-tests.html"><span class="nav-icon">🧪</span> A/B Tests <span class="nav-badge">10</span></a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Personas</div>
+      <ul class="sidebar-nav">
+        <li><a href="../../personas/p01-upsizer.html"><span class="nav-icon">🏠</span> P01 — Upsizer</a></li>
+        <li><a href="../../personas/p02-downsizer.html"><span class="nav-icon">🌿</span> P02 — Downsizer</a></li>
+        <li><a href="../../personas/p03-renovator.html"><span class="nav-icon">🔨</span> P03 — Renovator</a></li>
+        <li><a href="../../personas/p04-separating.html"><span class="nav-icon">💙</span> P04 — Separating</a></li>
+        <li><a href="../../personas/p05-house-land.html"><span class="nav-icon">🏗️</span> P05 — Builder</a></li>
+        <li><a href="../../personas/p06-investor.html"><span class="nav-icon">📈</span> P06 — Investor</a></li>
+        <li><a href="../../personas/p07-broker.html"><span class="nav-icon">🤝</span> P07 — Broker</a></li>
+        <li><a href="../../personas/p08-regional.html"><span class="nav-icon">🌏</span> P08 — Regional</a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="../homepage.html"><span class="nav-icon">🏡</span> Homepage</a></li>
+        <li><a href="../bridging-loan.html"><span class="nav-icon">🔗</span> Bridging Loan</a></li>
+        <li><a href="../eligibility.html"><span class="nav-icon">✅</span> Eligibility</a></li>
+        <li><a href="../calculator.html"><span class="nav-icon">🧮</span> Calculator</a></li>
+        <li><a href="../rates-and-fees.html"><span class="nav-icon">💰</span> Rates &amp; Fees</a></li>
+        <li><a href="../partners.html"><span class="nav-icon">🤝</span> Partners</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Solution Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="./upsize.html">↳ Upsize</a></li>
+        <li><a href="./downsize.html">↳ Downsize</a></li>
+        <li><a href="./renovate.html">↳ Renovate</a></li>
+        <li><a href="./retire.html">↳ Retire</a></li>
+        <li><a href="./separate.html">↳ Separate</a></li>
+        <li><a href="./invest.html">↳ Invest</a></li>
+        <li><a href="./house-and-land.html" class="active">↳ House &amp; Land</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="page-header">
+      <div class="page-header-eyebrow">Page Audit</div>
+      <h1>Solution: House &amp; Land</h1>
+      <div class="page-header-meta">
+        <span>Personas: P05 — House &amp; Land Builder</span>
+        <span>4 desktop findings · 4 mobile findings</span>
+      </div>
+    </div>
+    <div class="content">
+
+      <div class="severity-bar">
+        <span class="severity-pill high">● 5 High</span>
+        <span class="severity-pill medium">● 3 Medium</span>
+      </div>
+
+      <div data-tabs>
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="desktop">Desktop Findings</button>
+          <button class="tab-btn" data-tab="mobile">Mobile Findings</button>
+        </div>
+
+        <div class="tab-panel active" data-panel="desktop">
+
+          <!-- F-SOL-ALL-01 cross-cut -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-ALL-01</span>
+              <span class="finding-title">Testimonials are generic across all solution pages; not scenario-specific</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">All Personas</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">All 7 solution pages include a Trustpilot/testimonial widget section reused across pages without scenario-specific customisation. A user on the House &amp; Land page should see a testimonial from someone who navigated a build delay or H&amp;L package using Bridgit — generic testimonials don't address P05's specific fears about construction timelines.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Source and display at least one scenario-specific testimonial per solution page. For House &amp; Land, the testimonial should reference a build delay being managed successfully. Format: customer name, scenario label (e.g., "Ryan, H&amp;L Builder — Queensland"), 1–2 sentence quote referencing their build experience.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — increases apply rate across all solution pages by replacing generic testimonials with scenario-matched social proof.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-ALL-02 cross-cut -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-ALL-02</span>
+              <span class="finding-title">No worked examples with real dollar amounts on any solution page</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">All Personas</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">No solution page contains a worked scenario with concrete numbers. P05 (project engineer) is detail-oriented and needs a cost model before committing. Without a worked H&amp;L example, P05 cannot validate whether Bridgit is financially sensible vs. alternative holding strategies.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">For H&amp;L: "Own a $1M home (owe $350K). H&amp;L package = $750K. Bridge $450K for 18 months at 7.04% p.a. = approx. $47,520 interest + fees. Compare to: 18 months rent ($3,000/month) = $54,000 + double-move costs." Add this as a callout card on the page.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — reduces uncertainty-driven abandonment by grounding each solution in a concrete cost or outcome example.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-HL-01 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-HL-01</span>
+              <span class="finding-title">No mention of build delays or loan extension flexibility</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">P05 — Builder</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The #1 fear of a House &amp; Land buyer is: "What if my build is delayed?" Construction delays of 3–12 months are common in the current environment. The H&amp;L page does not address this at all — there is no mention of what happens if a build runs late, whether the bridging loan can be extended, or whether Bridgit has experience with delayed H&amp;L settlements. This omission is likely causing significant consideration-stage abandonment.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add a FAQ or callout: "What if my build is delayed? Our bridging loans offer flexible terms up to 24 months. If your build runs late, we work with you — contact your BDM to discuss."</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — increases P05 apply rate by explicitly addressing builder delay risk.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-HL-02 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-HL-02</span>
+              <span class="finding-title">No cost example specific to H&amp;L scenario</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">P05 — Builder</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">H&amp;L buyers need to compare bridging loan costs against the cost of maintaining two mortgages or paying temporary rent during the build period. No cost example is present on the page. Without one, P05 cannot determine if bridging is financially sensible vs. alternative holding strategies. (Note: This finding overlaps in scope with F-SOL-ALL-02 but applies specifically to the H&amp;L scenario calculation.)</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add a worked example as a standalone callout: "Own a $950K home (owe $400K). H&amp;L package = $750K. Bridge $450K for 18 months at 7.04% p.a. = approx. $47,520 interest + fees. Compare to: 18 months rent ($3,000/month) = $54,000 + double-move costs."</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — increases P05 apply rate by providing a worked cost example for the H&amp;L scenario.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /desktop panel -->
+
+        <div class="tab-panel" data-panel="mobile">
+
+          <!-- F-SOL-HL-M01 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-HL-M01</span>
+              <span class="finding-title">Build delay content not visible above fold; P05's primary concern unaddressed</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">P05 — Builder</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">P05 (project engineer, on-site phone research) lands on this page specifically to understand how Bridgit handles build delays — their primary risk. FAQ content addressing build delay scenarios ("What happens if my build is delayed?" and "Can I extend the bridge period?") is not confirmed above fold at 390px. P05 in a brief mobile session will not find the answer to their key question without scrolling, likely abandoning.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add a "Build Delay FAQ" accordion section immediately below the hero (before feature cards). Include 2 key Q&amp;As collapsed: "What if my build is delayed?" and "How long can I extend my bridge period?" Visible in full at 390px without scrolling.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Engagement — reduces P05 on-site bounce by surfacing build delay FAQ above fold.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">A/B Hypothesis</div>
+                  <div class="finding-field-value">Displaying a build-delay FAQ accordion above fold will reduce bounce and increase engagement from P05 who arrive with a specific delay-risk concern.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-HL-M02 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-HL-M02</span>
+              <span class="finding-title">"How it works" steps may be truncated or unclear at 390px</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">P05 — Builder</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">A "how it works" section with numbered steps is present on the page. On a 390px screen, multi-column step layouts can compress step labels, making sequencing unclear. P05 needs unambiguous process steps — build-and-bridge timeline must be scannable in under 30 seconds on a phone while on-site.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Audit the "how it works" section at 390px. Force a single-column vertical layout below 480px. Ensure each step number and title fits on a single line without truncation. Keep step descriptions to 2–3 lines.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Clarity → Engagement — improves P05 comprehension of build timeline on 390px screen.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-HL-M03 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-HL-M03</span>
+              <span class="finding-title">No cost example or calculator link accessible above fold</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">P05 — Builder</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">P05 needs concrete cost information (bridge cost during build delay, monthly bridge cost example) before committing to an application. No calculator link or cost example CTA is visible above fold at 390px. P05 in a brief on-site research session may not scroll to find this, leading to abandonment without the cost context needed to proceed. Cross-reference: Phase 3 F-SOL-HL-02.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add a secondary CTA in the hero or sticky header: "View cost example" (text link) or "Launch calculator" — linking to the Calculator page. Alternatively, embed a 2-field cost estimator widget in the post-hero section. Minimum 44px tap target.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Tool use — reduces P05 cost research friction by surfacing calculator link without scrolling.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">A/B Hypothesis</div>
+                  <div class="finding-field-value">Above-fold access to a cost calculator or example will increase engagement and reduce cost-anxiety abandonment for P05.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-SOL-HL-M04 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-SOL-HL-M04</span>
+              <span class="finding-title">Sticky/fixed CSS layout risk on low-connectivity mobile devices</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-strategic">Strategic</span>
+              <span class="badge badge-effort-high">Effort: High</span>
+              <span class="badge badge-persona">P05 — Builder</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">HTML source contains multiple <code>position: fixed</code> and <code>position: sticky</code> declarations (lines 673, 1358–1372) with inline comments referencing fixes for "flash" and "fixed height" rendering issues on the sticky navbar. On mobile with slow connectivity (P05 on a construction site, Slow 4G), these layout behaviours can produce Cumulative Layout Shift (CLS) or content momentarily obscuring below the fixed navbar. This creates visual noise that reduces trust for an already time-pressured persona.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">(1) Test sticky navbar on 390px with Chrome DevTools throttled to Slow 4G. (2) Verify no content is obscured by the fixed navbar (minimum 60px buffer). (3) Confirm CLS score ≤0.1 for the page. (4) If CLS issues are found, refactor fixed positioning to use <code>IntersectionObserver</code> instead.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Reliability — reduces layout shift and render issues for P05 in low-connectivity environments.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /mobile panel -->
+      </div><!-- /tabs -->
+
+    </div>
+  </div>
+  <script src="../../assets/js/filters.js"></script>
+</body>
+</html>

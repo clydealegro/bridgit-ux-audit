@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executive Summary — Bridgit UX Audit</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<button class="mobile-nav-toggle" id="sidebarToggle" aria-label="Toggle navigation">&#9776;</button>
+<div class="sidebar-overlay"></div>
+
+<nav class="sidebar" id="sidebar">
+  <a href="index.html" class="sidebar-brand">
+    <div class="sidebar-brand-icon">B</div>
+    <div class="sidebar-brand-text">
+      <span class="sidebar-brand-name">Bridgit UX Audit</span>
+      <span class="sidebar-brand-sub">Final Report 2026</span>
+    </div>
+  </a>
+  <div class="sidebar-health">
+    <div class="sidebar-health-label">Conversion Health</div>
+    <div class="sidebar-health-score">5.2<span style="font-size:14px;font-weight:400;color:#6B7280">/10</span></div>
+    <div class="sidebar-health-sub">71 findings across 3 phases</div>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">Overview</div>
+    <ul class="sidebar-nav">
+      <li><a href="index.html" class="active"><span class="nav-icon">📊</span> Executive Summary</a></li>
+      <li><a href="navigation.html"><span class="nav-icon">🗺️</span> Navigation &amp; IA</a></li>
+      <li><a href="recommendations.html"><span class="nav-icon">📋</span> All Findings <span class="nav-badge">71</span></a></li>
+      <li><a href="ab-tests.html"><span class="nav-icon">🧪</span> A/B Tests <span class="nav-badge">10</span></a></li>
+    </ul>
+  </div>
+  <hr class="sidebar-divider">
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">Personas</div>
+    <ul class="sidebar-nav">
+      <li><a href="personas/p01-upsizer.html"><span class="nav-icon">🏠</span> P01 — Upsizer</a></li>
+      <li><a href="personas/p02-downsizer.html"><span class="nav-icon">🌿</span> P02 — Downsizer</a></li>
+      <li><a href="personas/p03-renovator.html"><span class="nav-icon">🔨</span> P03 — Renovator</a></li>
+      <li><a href="personas/p04-separating.html"><span class="nav-icon">💙</span> P04 — Separating</a></li>
+      <li><a href="personas/p05-house-land.html"><span class="nav-icon">🏗️</span> P05 — Builder</a></li>
+      <li><a href="personas/p06-investor.html"><span class="nav-icon">📈</span> P06 — Investor</a></li>
+      <li><a href="personas/p07-broker.html"><span class="nav-icon">🤝</span> P07 — Broker</a></li>
+      <li><a href="personas/p08-regional.html"><span class="nav-icon">🌏</span> P08 — Regional</a></li>
+    </ul>
+  </div>
+  <hr class="sidebar-divider">
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">Pages</div>
+    <ul class="sidebar-nav">
+      <li><a href="pages/homepage.html"><span class="nav-icon">🏡</span> Homepage</a></li>
+      <li><a href="pages/bridging-loan.html"><span class="nav-icon">🔗</span> Bridging Loan</a></li>
+      <li><a href="pages/eligibility.html"><span class="nav-icon">✅</span> Eligibility</a></li>
+      <li><a href="pages/calculator.html"><span class="nav-icon">🧮</span> Calculator</a></li>
+      <li><a href="pages/rates-and-fees.html"><span class="nav-icon">💰</span> Rates &amp; Fees</a></li>
+      <li><a href="pages/partners.html"><span class="nav-icon">🤝</span> Partners</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">Solution Pages</div>
+    <ul class="sidebar-nav">
+      <li><a href="pages/solutions/upsize.html">↳ Upsize</a></li>
+      <li><a href="pages/solutions/downsize.html">↳ Downsize</a></li>
+      <li><a href="pages/solutions/renovate.html">↳ Renovate</a></li>
+      <li><a href="pages/solutions/retire.html">↳ Retire</a></li>
+      <li><a href="pages/solutions/separate.html">↳ Separate</a></li>
+      <li><a href="pages/solutions/invest.html">↳ Invest</a></li>
+      <li><a href="pages/solutions/house-and-land.html">↳ House &amp; Land</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="main">
+  <div class="page-header">
+    <div class="page-header-eyebrow">UX/CRO Audit — March 2026</div>
+    <h1>Executive Summary</h1>
+    <div class="page-header-meta">
+      <span>71 findings · 3 phases · 8 personas · 13 pages</span>
+      <span>Conversion Health Score: 5.2 / 10</span>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- Overall health score hero -->
+    <div class="health-score-hero">
+      <div class="health-score-big">5.2<span class="denominator">/10</span></div>
+      <div class="health-score-details">
+        <div class="health-score-label">Overall Conversion Health</div>
+        <div class="health-score-description">The site communicates what Bridgit does, but consistently fails to guide high-intent visitors to action. Mobile experience, trust signals, and cross-page linking are the three dominant failure modes. 4 findings are conversion-critical. 37 are quick wins deliverable in one sprint.</div>
+      </div>
+    </div>
+
+    <!-- Dimension health scores -->
+    <h2 class="section-heading">Health by Dimension</h2>
+    <div class="health-grid" style="margin-bottom:1.5rem">
+      <div class="health-item">
+        <span class="health-label">Desktop UX</span>
+        <div class="health-bar-track"><div class="health-bar-fill health-bar-fill--warning" style="width:55%"></div></div>
+        <span class="health-score-value" style="color:var(--color-medium)">5.5</span>
+      </div>
+      <div class="health-item">
+        <span class="health-label">Mobile UX</span>
+        <div class="health-bar-track"><div class="health-bar-fill health-bar-fill--poor" style="width:50%"></div></div>
+        <span class="health-score-value" style="color:var(--color-critical)">5.0</span>
+      </div>
+      <div class="health-item">
+        <span class="health-label">Trust &amp; Credibility</span>
+        <div class="health-bar-track"><div class="health-bar-fill health-bar-fill--poor" style="width:40%"></div></div>
+        <span class="health-score-value" style="color:var(--color-critical)">4.0</span>
+      </div>
+      <div class="health-item">
+        <span class="health-label">Persona Coverage</span>
+        <div class="health-bar-track"><div class="health-bar-fill health-bar-fill--warning" style="width:54%"></div></div>
+        <span class="health-score-value" style="color:var(--color-medium)">5.4</span>
+      </div>
+      <div class="health-item">
+        <span class="health-label">Navigation / IA</span>
+        <div class="health-bar-track"><div class="health-bar-fill health-bar-fill--good" style="width:65%"></div></div>
+        <span class="health-score-value" style="color:var(--color-accent)">6.5</span>
+      </div>
+    </div>
+
+    <!-- Finding counts -->
+    <h2 class="section-heading">Finding Distribution</h2>
+    <div class="stat-grid" style="margin-bottom:1.5rem">
+      <div class="stat-card stat-card--critical">
+        <span class="stat-number">4</span>
+        <span class="stat-label">Critical</span>
+      </div>
+      <div class="stat-card stat-card--high">
+        <span class="stat-number">32</span>
+        <span class="stat-label">High</span>
+      </div>
+      <div class="stat-card stat-card--medium">
+        <span class="stat-number">28</span>
+        <span class="stat-label">Medium</span>
+      </div>
+      <div class="stat-card stat-card--low">
+        <span class="stat-number">7</span>
+        <span class="stat-label">Low</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">71</span>
+        <span class="stat-label">Total Findings</span>
+      </div>
+    </div>
+
+    <!-- Priority tiers -->
+    <h2 class="section-heading">Priority Tiers</h2>
+    <div class="tier-grid" style="margin-bottom:2rem">
+      <div class="tier-card tier-card--1">
+        <div class="tier-number">37</div>
+        <div class="tier-label">Tier 1 — Quick Wins</div>
+        <div class="card-subtitle">Low effort, high impact. Deliverable in one sprint. Estimated +15–25% conversion uplift.</div>
+        <a href="recommendations.html?priority=quick-win" class="tier-link">View all →</a>
+      </div>
+      <div class="tier-card tier-card--2">
+        <div class="tier-number">24</div>
+        <div class="tier-label">Tier 2 — Medium Effort</div>
+        <div class="card-subtitle">Moderate dev/design investment. Weeks 3–8. Estimated +10–15% additional uplift.</div>
+        <a href="recommendations.html?priority=medium-effort" class="tier-link">View all →</a>
+      </div>
+      <div class="tier-card tier-card--3">
+        <div class="tier-number">10</div>
+        <div class="tier-label">Tier 3 — Strategic</div>
+        <div class="card-subtitle">Structural, requires planning. Months 2–3. Compound conversion gains long-term.</div>
+        <a href="recommendations.html?priority=strategic" class="tier-link">View all →</a>
+      </div>
+    </div>
+
+    <!-- Phase breakdown -->
+    <h2 class="section-heading">Phase Breakdown</h2>
+    <div class="table-wrapper" style="margin-bottom:1.5rem">
+      <table class="phase-table">
+        <thead>
+          <tr>
+            <th>Phase</th>
+            <th>Scope</th>
+            <th>Critical</th>
+            <th>High</th>
+            <th>Medium</th>
+            <th>Low</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Phase 2 — Navigation &amp; IA</td>
+            <td style="text-align:left">Site-wide IA, journeys, 2-click test</td>
+            <td>0</td>
+            <td>4</td>
+            <td>4</td>
+            <td>2</td>
+            <td><strong>10</strong></td>
+          </tr>
+          <tr>
+            <td>Phase 3 — Desktop</td>
+            <td style="text-align:left">Homepage, 6 solution pages, 6 utility pages</td>
+            <td>1</td>
+            <td>16</td>
+            <td>11</td>
+            <td>0</td>
+            <td><strong>28</strong></td>
+          </tr>
+          <tr>
+            <td>Phase 4 — Mobile</td>
+            <td style="text-align:left">390px viewport, same 13 pages</td>
+            <td>3</td>
+            <td>12</td>
+            <td>13</td>
+            <td>5</td>
+            <td><strong>33</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Total</strong></td>
+            <td style="text-align:left"></td>
+            <td><strong>4</strong></td>
+            <td><strong>32</strong></td>
+            <td><strong>28</strong></td>
+            <td><strong>7</strong></td>
+            <td><strong>71</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Top 10 findings -->
+    <h2 class="section-heading">Top 10 Findings by Conversion Impact</h2>
+    <div class="table-wrapper" style="margin-bottom:1.5rem">
+      <table class="findings-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Finding</th>
+            <th>Severity</th>
+            <th>Priority</th>
+            <th>Page</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="finding-id">F-MOB-CRIT-01</span></td>
+            <td class="finding-text">Eligibility page mobile layout broken — criteria list overflows, primary CTA not visible without horizontal scroll</td>
+            <td><span class="badge badge-critical">Critical</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+            <td>Eligibility (M)</td>
+          </tr>
+          <tr>
+            <td><span class="finding-id">F-MOB-CRIT-02</span></td>
+            <td class="finding-text">Calculator on mobile: result section collapses to 0px height due to flex overflow bug; conversion path completely broken</td>
+            <td><span class="badge badge-critical">Critical</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+            <td>Calculator (M)</td>
+          </tr>
+          <tr>
+            <td><span class="finding-id">F-MOB-CRIT-03</span></td>
+            <td class="finding-text">P02 (Downsizer) mobile flow: no dedicated downsize scenario pathway on mobile — "Simplify your next move" CTA routes to generic apply</td>
+            <td><span class="badge badge-critical">Critical</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+            <td>Mobile Nav</td>
+          </tr>
+          <tr>
+            <td><span class="finding-id">F-HP-CRIT-01</span></td>
+            <td class="finding-text">Homepage desktop: no trust signal bar above the fold; ACL licence, Trustpilot score, AFCA membership not visible at first render</td>
+            <td><span class="badge badge-critical">Critical</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+            <td>Homepage (D)</td>
+          </tr>
+          <tr>
+            <td><span class="finding-id">F-NAV-05</span></td>
+            <td class="finding-text">No "Check eligibility" CTA following calculator result — J1 journey broken at the most critical handoff point</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+            <td>Calculator</td>
+          </tr>
+          <tr>
+            <td><span class="finding-id">F-ELG-01</span></td>
+            <td class="finding-text">Eligibility criteria presented as jargon-dense paragraph blocks; no visual triage, no instant pass/fail indicator</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+            <td>Eligibility</td>
+          </tr>
+          <tr>
+            <td><span class="finding-id">F-RF-01</span></td>
+            <td class="finding-text">Rates &amp; Fees page: no worked cost example; users cannot model total cost without manual calculation</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+            <td>Rates &amp; Fees</td>
+          </tr>
+          <tr>
+            <td><span class="finding-id">F-NAV-01</span></td>
+            <td class="finding-text">All 7 solution pages share identical generic CTA copy ("Apply now") — no scenario-specific confirmation messaging</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+            <td>All Solutions</td>
+          </tr>
+          <tr>
+            <td><span class="finding-id">F-HP-02</span></td>
+            <td class="finding-text">Testimonials not scenario-labelled; no persona self-identification possible from homepage social proof</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+            <td>Homepage</td>
+          </tr>
+          <tr>
+            <td><span class="finding-id">F-SOL-GLOBAL-01</span></td>
+            <td class="finding-text">Zero cross-links between adjacent solution pages; users who enter on the wrong page have no discovery path to the right one</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+            <td>All Solutions</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Systemic patterns -->
+    <h2 class="section-heading">8 Systemic Cross-Phase Patterns</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem">
+      <div class="pattern-card">
+        <div class="pattern-card-title">P1 — Trust Signal Deficit</div>
+        <div class="pattern-personas">
+          <span class="badge badge-persona">P01</span>
+          <span class="badge badge-persona">P02</span>
+          <span class="badge badge-persona">P03</span>
+          <span class="badge badge-persona">P04</span>
+        </div>
+        <div class="pattern-finding-ids">
+          <span class="pattern-finding-id">F-HP-CRIT-01</span>
+          <span class="pattern-finding-id">F-HP-01</span>
+          <span class="pattern-finding-id">F-HP-02</span>
+        </div>
+        <div class="pattern-fix">ACL/AFCA/Trustpilot not visible above the fold on desktop or mobile. Fix: trust signal bar in hero — 1 day dev, estimated +8–12% hero CTA CTR.</div>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-card-title">P2 — Generic CTA Paralysis</div>
+        <div class="pattern-personas">
+          <span class="badge badge-persona">All</span>
+        </div>
+        <div class="pattern-finding-ids">
+          <span class="pattern-finding-id">F-NAV-01</span>
+          <span class="pattern-finding-id">F-SOL-GLOBAL-01</span>
+        </div>
+        <div class="pattern-fix">"Apply now" appears on all 7 solution pages without scenario context. Fix: scenario-specific CTA copy per page — 2 hours copywriting, estimated +5–15% CTA CTR.</div>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-card-title">P3 — Journey Fracture at Calc→Eligibility</div>
+        <div class="pattern-personas">
+          <span class="badge badge-persona">P01</span>
+          <span class="badge badge-persona">P05</span>
+          <span class="badge badge-persona">P06</span>
+        </div>
+        <div class="pattern-finding-ids">
+          <span class="pattern-finding-id">F-NAV-05</span>
+          <span class="pattern-finding-id">F-CALC-01</span>
+        </div>
+        <div class="pattern-fix">Calculator result has no "Check my eligibility" secondary CTA. Fix: add button — 1 day dev, estimated +15–20% calculator completion rate.</div>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-card-title">P4 — Mobile Rendering Failures</div>
+        <div class="pattern-personas">
+          <span class="badge badge-persona">P01</span>
+          <span class="badge badge-persona">P02</span>
+          <span class="badge badge-persona">P08</span>
+        </div>
+        <div class="pattern-finding-ids">
+          <span class="pattern-finding-id">F-MOB-CRIT-01</span>
+          <span class="pattern-finding-id">F-MOB-CRIT-02</span>
+        </div>
+        <div class="pattern-fix">Calculator and Eligibility have broken mobile layouts at 390px. Fix: CSS hotfixes — 1 sprint, estimated prevention of 30–40% mobile drop-off at these steps.</div>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-card-title">P5 — Solution Page Isolation</div>
+        <div class="pattern-personas">
+          <span class="badge badge-persona">All</span>
+        </div>
+        <div class="pattern-finding-ids">
+          <span class="pattern-finding-id">F-SOL-GLOBAL-01</span>
+          <span class="pattern-finding-id">F-NAV-08</span>
+        </div>
+        <div class="pattern-fix">Zero cross-links between solution pages. User who lands on wrong solution has no path to the right one. Fix: "Also looking at…" related solutions module.</div>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-card-title">P6 — Cost Transparency Gap</div>
+        <div class="pattern-personas">
+          <span class="badge badge-persona">P01</span>
+          <span class="badge badge-persona">P03</span>
+          <span class="badge badge-persona">P06</span>
+        </div>
+        <div class="pattern-finding-ids">
+          <span class="pattern-finding-id">F-RF-01</span>
+          <span class="pattern-finding-id">F-RF-02</span>
+          <span class="pattern-finding-id">F-RF-03</span>
+        </div>
+        <div class="pattern-fix">No worked cost examples, no total cost calculator on Rates &amp; Fees. Fix: add 2–3 scenario examples with actual numbers — 3 days dev, estimated +10% direct apply rate.</div>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-card-title">P7 — Eligibility Jargon Barrier</div>
+        <div class="pattern-personas">
+          <span class="badge badge-persona">P02</span>
+          <span class="badge badge-persona">P04</span>
+          <span class="badge badge-persona">P08</span>
+        </div>
+        <div class="pattern-finding-ids">
+          <span class="pattern-finding-id">F-ELG-01</span>
+          <span class="pattern-finding-id">F-ELG-03</span>
+        </div>
+        <div class="pattern-fix">Eligibility criteria are paragraph blocks with financial jargon and no visual pass/fail. Fix: checklist format with plain language — 2 days design/dev, estimated +20–25% eligibility page conversion.</div>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-card-title">P8 — Broker Page Under-serves P07</div>
+        <div class="pattern-personas">
+          <span class="badge badge-persona">P07</span>
+        </div>
+        <div class="pattern-finding-ids">
+          <span class="pattern-finding-id">F-PART-01</span>
+          <span class="pattern-finding-id">F-PART-02</span>
+          <span class="pattern-finding-id">F-PART-03</span>
+        </div>
+        <div class="pattern-fix">Partners/Broker page lacks commission structure, onboarding flow, and BDM contact details. Fix: dedicated broker resources section — strategic effort, estimated broker channel uplift.</div>
+      </div>
+    </div>
+
+    <!-- Persona status matrix -->
+    <h2 class="section-heading">Persona Conversion Status</h2>
+    <div class="table-wrapper" style="margin-bottom:1.5rem">
+      <table class="coverage-matrix">
+        <thead>
+          <tr>
+            <th>Persona</th>
+            <th>Journey</th>
+            <th>Desktop</th>
+            <th>Mobile</th>
+            <th>Status</th>
+            <th>Key Blocker</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align:left"><strong>P01 — Upsizer</strong></td>
+            <td>J1</td>
+            <td class="coverage-cell--partial">Partial</td>
+            <td class="coverage-cell--partial">Partial</td>
+            <td><span class="badge badge-medium">Partial</span></td>
+            <td style="text-align:left;font-size:0.75rem">Calc→Eligibility gap; mobile hero CTA buried</td>
+          </tr>
+          <tr>
+            <td style="text-align:left"><strong>P02 — Downsizer</strong></td>
+            <td>J2</td>
+            <td class="coverage-cell--partial">Partial</td>
+            <td class="coverage-cell--gap">Blocked</td>
+            <td><span class="badge badge-critical">Blocked</span></td>
+            <td style="text-align:left;font-size:0.75rem">No dedicated downsizer mobile flow; generic CTA</td>
+          </tr>
+          <tr>
+            <td style="text-align:left"><strong>P03 — Renovator</strong></td>
+            <td>J3</td>
+            <td class="coverage-cell--partial">Partial</td>
+            <td class="coverage-cell--partial">Partial</td>
+            <td><span class="badge badge-medium">Partial</span></td>
+            <td style="text-align:left;font-size:0.75rem">No renovation cost examples; trust gap</td>
+          </tr>
+          <tr>
+            <td style="text-align:left"><strong>P04 — Separating</strong></td>
+            <td>J4</td>
+            <td class="coverage-cell--partial">Partial</td>
+            <td class="coverage-cell--partial">Partial</td>
+            <td><span class="badge badge-medium">Partial</span></td>
+            <td style="text-align:left;font-size:0.75rem">Eligibility jargon; no empathy-led content</td>
+          </tr>
+          <tr>
+            <td style="text-align:left"><strong>P05 — Builder</strong></td>
+            <td>—</td>
+            <td class="coverage-cell--partial">Partial</td>
+            <td class="coverage-cell--partial">Partial</td>
+            <td><span class="badge badge-medium">Partial</span></td>
+            <td style="text-align:left;font-size:0.75rem">House &amp; Land solution page lacks detail</td>
+          </tr>
+          <tr>
+            <td style="text-align:left"><strong>P06 — Investor</strong></td>
+            <td>—</td>
+            <td class="coverage-cell--partial">Partial</td>
+            <td class="coverage-cell--partial">Partial</td>
+            <td><span class="badge badge-medium">Partial</span></td>
+            <td style="text-align:left;font-size:0.75rem">Rates page cost-modelling friction; no portfolio scenario</td>
+          </tr>
+          <tr>
+            <td style="text-align:left"><strong>P07 — Broker</strong></td>
+            <td>J5</td>
+            <td class="coverage-cell--partial">Partial</td>
+            <td class="coverage-cell--partial">Partial</td>
+            <td><span class="badge badge-medium">Partial</span></td>
+            <td style="text-align:left;font-size:0.75rem">Partners page missing commissions + onboarding</td>
+          </tr>
+          <tr>
+            <td style="text-align:left"><strong>P08 — Regional</strong></td>
+            <td>J6</td>
+            <td class="coverage-cell--gap">Blocked</td>
+            <td class="coverage-cell--gap">Blocked</td>
+            <td><span class="badge badge-critical">Blocked</span></td>
+            <td style="text-align:left;font-size:0.75rem">No rural/regional eligibility clarity; lender acceptance gap</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- A/B test summary -->
+    <h2 class="section-heading">Top 3 A/B Tests — Prioritised Queue</h2>
+    <div style="display:grid;gap:1rem;margin-bottom:1.5rem">
+      <div class="ab-card" style="border-left-color:var(--color-high)">
+        <div class="ab-card-week">Week 1 — Start immediately</div>
+        <div class="card-title">ABT-01: Trust signal bar in hero (ACL + Trustpilot + AFCA)</div>
+        <div class="ab-page">Homepage · Effort: Low · Personas: All</div>
+        <div class="ab-metric">Primary metric: Hero CTA CTR · Expected uplift: +8–12%</div>
+      </div>
+      <div class="ab-card" style="border-left-color:var(--color-high)">
+        <div class="ab-card-week">Week 1 — Start immediately</div>
+        <div class="card-title">ABT-02: Scenario-specific CTA copy on solution pages</div>
+        <div class="ab-page">All Solution Pages · Effort: Low (copy only) · Personas: P01–P06</div>
+        <div class="ab-metric">Primary metric: Solution page CTA CTR · Expected uplift: +5–15%</div>
+      </div>
+      <div class="ab-card" style="border-left-color:var(--color-high)">
+        <div class="ab-card-week">Weeks 2–3</div>
+        <div class="card-title">ABT-03: "Check my eligibility" secondary CTA on calculator result</div>
+        <div class="ab-page">Calculator · Effort: Low (1 day dev) · Personas: P01, P05, P06</div>
+        <div class="ab-metric">Primary metric: Calculator completion rate · Expected uplift: +15–20%</div>
+      </div>
+    </div>
+    <p class="section-body"><a href="ab-tests.html">View all 10 A/B tests with full hypotheses, metrics, and sequencing →</a></p>
+
+    <!-- Quick start actions -->
+    <h2 class="section-heading">Recommended 6-Week Quick-Win Sprint</h2>
+    <div class="callout callout-success">
+      <div class="callout-icon">⚡</div>
+      <div class="callout-body">
+        <strong>37 quick wins available — estimated combined impact: +25–35% conversion uplift</strong>
+        The 37 Tier 1 findings require no structural site changes. All are copy, CSS, or simple component changes deliverable in a single sprint. Prioritised order: (1) trust signal bar, (2) scenario CTA copy, (3) calculator-to-eligibility CTA, (4) eligibility checklist reformat, (5) mobile CSS hotfixes, (6) solution page cross-links.
+      </div>
+    </div>
+
+    <div class="callout callout-warning">
+      <div class="callout-icon">🚧</div>
+      <div class="callout-body">
+        <strong>Two personas fully blocked — fix before any paid traffic scaling</strong>
+        P02 (Downsizer) on mobile and P08 (Regional) site-wide have conversion paths that are completely broken. These should be resolved before increasing paid traffic spend, as budget directed at these segments is currently wasted.
+      </div>
+    </div>
+
+    <p class="section-body" style="margin-top:1.5rem">
+      <a href="recommendations.html">Browse the full filterable findings database →</a><br>
+      <a href="ab-tests.html" style="margin-top:0.5rem;display:block">View the complete A/B test priority queue →</a>
+    </p>
+
+  </div>
+</div>
+
+<script src="assets/js/filters.js"></script>
+</body>
+</html>

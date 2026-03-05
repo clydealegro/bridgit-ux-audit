@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rates &amp; Fees Audit — Bridgit UX Audit</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <button class="mobile-nav-toggle" id="sidebarToggle" aria-label="Toggle navigation">☰</button>
+  <div class="sidebar-overlay"></div>
+  <nav class="sidebar">
+    <a href="../index.html" class="sidebar-brand">
+      <div class="sidebar-brand-icon">B</div>
+      <div class="sidebar-brand-text">
+        <span class="sidebar-brand-name">Bridgit UX Audit</span>
+        <span class="sidebar-brand-sub">Final Report 2026</span>
+      </div>
+    </a>
+    <div class="sidebar-health">
+      <div class="sidebar-health-label">Conversion Health</div>
+      <div class="sidebar-health-score">5.2<span style="font-size:14px;font-weight:400;color:#6B7280">/10</span></div>
+      <div class="sidebar-health-sub">71 findings across 3 phases</div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Overview</div>
+      <ul class="sidebar-nav">
+        <li><a href="../index.html"><span class="nav-icon">📊</span> Executive Summary</a></li>
+        <li><a href="../navigation.html"><span class="nav-icon">🗺️</span> Navigation &amp; IA</a></li>
+        <li><a href="../recommendations.html"><span class="nav-icon">📋</span> All Findings <span class="nav-badge">71</span></a></li>
+        <li><a href="../ab-tests.html"><span class="nav-icon">🧪</span> A/B Tests <span class="nav-badge">10</span></a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Personas</div>
+      <ul class="sidebar-nav">
+        <li><a href="../personas/p01-upsizer.html"><span class="nav-icon">🏠</span> P01 — Upsizer</a></li>
+        <li><a href="../personas/p02-downsizer.html"><span class="nav-icon">🌿</span> P02 — Downsizer</a></li>
+        <li><a href="../personas/p03-renovator.html"><span class="nav-icon">🔨</span> P03 — Renovator</a></li>
+        <li><a href="../personas/p04-separating.html"><span class="nav-icon">💙</span> P04 — Separating</a></li>
+        <li><a href="../personas/p05-house-land.html"><span class="nav-icon">🏗️</span> P05 — Builder</a></li>
+        <li><a href="../personas/p06-investor.html"><span class="nav-icon">📈</span> P06 — Investor</a></li>
+        <li><a href="../personas/p07-broker.html"><span class="nav-icon">🤝</span> P07 — Broker</a></li>
+        <li><a href="../personas/p08-regional.html"><span class="nav-icon">🌏</span> P08 — Regional</a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="./homepage.html"><span class="nav-icon">🏡</span> Homepage</a></li>
+        <li><a href="./bridging-loan.html"><span class="nav-icon">🔗</span> Bridging Loan</a></li>
+        <li><a href="./eligibility.html"><span class="nav-icon">✅</span> Eligibility</a></li>
+        <li><a href="./calculator.html"><span class="nav-icon">🧮</span> Calculator</a></li>
+        <li><a href="./rates-and-fees.html" class="active"><span class="nav-icon">💰</span> Rates &amp; Fees</a></li>
+        <li><a href="./partners.html"><span class="nav-icon">🤝</span> Partners</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Solution Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="./solutions/upsize.html">↳ Upsize</a></li>
+        <li><a href="./solutions/downsize.html">↳ Downsize</a></li>
+        <li><a href="./solutions/renovate.html">↳ Renovate</a></li>
+        <li><a href="./solutions/retire.html">↳ Retire</a></li>
+        <li><a href="./solutions/separate.html">↳ Separate</a></li>
+        <li><a href="./solutions/invest.html">↳ Invest</a></li>
+        <li><a href="./solutions/house-and-land.html">↳ House &amp; Land</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="page-header">
+      <div class="page-header-eyebrow">Page Audit</div>
+      <h1>Rates &amp; Fees</h1>
+      <div class="page-header-meta">
+        <span>Personas: All consumer personas</span>
+        <span>4 desktop findings · 1 mobile finding</span>
+      </div>
+    </div>
+    <div class="content">
+
+      <div class="severity-bar">
+        <span class="severity-pill critical">● 1 Critical</span>
+        <span class="severity-pill high">● 3 High</span>
+        <span class="severity-pill medium">● 1 Medium</span>
+      </div>
+
+      <div data-tabs>
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="desktop">Desktop Findings</button>
+          <button class="tab-btn" data-tab="mobile">Mobile Findings</button>
+        </div>
+
+        <div class="tab-panel active" data-panel="desktop">
+
+          <!-- F-RF-01 -->
+          <div class="finding-card severity-critical">
+            <div class="finding-card-header">
+              <span class="finding-id">F-RF-01</span>
+              <span class="finding-title">Comparison rate disclosure not confirmed; potential ACL compliance gap</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-critical">Critical</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">All Personas</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The comparison rate / AAPR disclosure was not found in structured data or meta content for the Rates &amp; Fees page. Under the National Consumer Credit Protection Act (NCCP), a comparison rate must be displayed alongside advertised interest rates for consumer credit products. If this disclosure is absent from the page, it is an ACL compliance risk (ACL 532542). Note: the disclosure may exist in the page HTML body not captured by schema extraction — this finding requires visual verification in Phase 4.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Immediately verify that a comparison rate is present on the Rates &amp; Fees page and that it follows NCCP formatting requirements (correct calculation basis, warning text). If absent, add it as an urgent fix before any other CRO work.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Regulatory trust — eliminates compliance risk and prevents all-persona abandonment triggered by missing comparison rate disclosure.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-RF-02 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-RF-02</span>
+              <span class="finding-title">LVR not explained in plain language</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">All Personas</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The meta description references "up to 85% LVR" without a plain-language definition. For P02 (Downsizing Empty Nester) and P04 (Separating Homeowner) — who are less financially sophisticated — LVR is jargon. A user who doesn't know their LVR cannot determine if they qualify or how much they can borrow.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add a plain-language explanation wherever LVR first appears: "LVR (Loan-to-Value Ratio) — this means you can borrow up to 85% of your property's market value." Consider a tooltip or callout box.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — increases apply rate from cost-researching personas by making total cost scannable.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-RF-03 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-RF-03</span>
+              <span class="finding-title">No worked cost example with real dollar amounts</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">All Personas</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The Rates &amp; Fees page lists percentage rates and dollar fees but provides no worked example showing total cost for a typical scenario. Analytical personas (P01 Upsizer, P03 Renovator, P06 Investor) want to understand the total cost of borrowing — not just isolated line items. Without an example, users cannot self-assess value vs. alternatives (refinancing, bank bridging).</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add a worked example in the following format: "Example: $700,000 loan over 12 months at 7.04% p.a.: Interest = $49,280. Plus set-up fee ($5,530 at 0.79%) + valuation ($220) + discharge ($450) = total approx. $55,480. No monthly repayments — all costs settled when your property sells."</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — reduces rate-related drop-off by contextualising cost against bridging loan norms.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">A/B Hypothesis</div>
+                  <div class="finding-field-value">Adding a worked dollar example on the Rates &amp; Fees page will increase the rate of Eligibility and Apply CTAs from this page because users who can self-calculate total cost convert at a higher rate than those left to estimate. Test: Rates &amp; Fees with vs. without worked example. Primary metric: CTA click-through rate from Rates &amp; Fees. Secondary metric: Time on page (engagement with detail).</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-RF-04 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-RF-04</span>
+              <span class="finding-title">No cost framing vs. alternatives</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">P02 — Downsizer</span>
+              <span class="badge badge-persona">P04 — Separating</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The page lists costs without framing them against alternatives. For cost-anxious personas (P02 Downsizer, P04 Separating), a cost without context feels large. A bridging loan's total cost vs. "moving twice + storage + short-term rental" or "missing the ideal property and waiting 6 months" reframes the decision.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add a brief comparison callout: "Compared to renting interim accommodation for 6 months ($X), Bridgit's bridging costs are often competitive — and you only pay at settlement, not month to month."</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Emotional Arc → CTA — increases expert CTA clicks from anxiety-driven personas by reframing cost as certainty.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /desktop panel -->
+
+        <div class="tab-panel" data-panel="mobile">
+
+          <!-- F-RF-M01 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-RF-M01</span>
+              <span class="finding-title">Rates/fees table likely overflows or becomes unreadable at 390px</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-medium">Effort: Medium</span>
+              <span class="badge badge-persona">P01 — Upsizer</span>
+              <span class="badge badge-persona">P02 — Downsizer</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">HTML contains <code>overflow: hidden</code> declarations (lines 79, 212, 220 of the stylesheet). The rates/fees table contains multiple columns (loan type, interest rate, setup fee, valuation, discharge fee) which cannot fit within a 390px viewport without horizontal scrolling or truncation. P02 (Downsizer) needs to read this table in plain, legible format to make a decision; P01 will check rates quickly on mobile before applying. Both are blocked by an unreadable table.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Implement a responsive table transformation for mobile: convert the multi-column table into stacked card/list rows (label:value pairs per fee item) below 768px. Alternatively, use a horizontally scrollable container with a visible scroll affordance ("← swipe to see more"). Test at 390px to confirm all fee data is accessible.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Trust — increases trust and engagement by making fee table scannable at 390px.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">A/B Hypothesis</div>
+                  <div class="finding-field-value">A mobile-friendly stacked fee layout will increase Rates &amp; Fees page engagement and reduce drop-off before reaching the Apply CTA.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /mobile panel -->
+      </div><!-- /tabs -->
+
+    </div>
+  </div>
+  <script src="../assets/js/filters.js"></script>
+</body>
+</html>

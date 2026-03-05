@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P07 Mortgage Broker — Bridgit UX Audit</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <button class="mobile-nav-toggle" id="sidebarToggle" aria-label="Toggle navigation">☰</button>
+  <div class="sidebar-overlay"></div>
+  <nav class="sidebar">
+    <a href="../index.html" class="sidebar-brand">
+      <div class="sidebar-brand-icon">B</div>
+      <div class="sidebar-brand-text">
+        <span class="sidebar-brand-name">Bridgit UX Audit</span>
+        <span class="sidebar-brand-sub">Final Report 2026</span>
+      </div>
+    </a>
+    <div class="sidebar-health">
+      <div class="sidebar-health-label">Conversion Health</div>
+      <div class="sidebar-health-score">5.2<span style="font-size:14px;font-weight:400;color:#6B7280">/10</span></div>
+      <div class="sidebar-health-sub">71 findings across 3 phases</div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Overview</div>
+      <ul class="sidebar-nav">
+        <li><a href="../index.html"><span class="nav-icon">📊</span> Executive Summary</a></li>
+        <li><a href="../navigation.html"><span class="nav-icon">🗺️</span> Navigation &amp; IA</a></li>
+        <li><a href="../recommendations.html"><span class="nav-icon">📋</span> All Findings <span class="nav-badge">71</span></a></li>
+        <li><a href="../ab-tests.html"><span class="nav-icon">🧪</span> A/B Tests <span class="nav-badge">10</span></a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Personas</div>
+      <ul class="sidebar-nav">
+        <li><a href="../personas/p01-upsizer.html"><span class="nav-icon">🏠</span> P01 — Upsizer</a></li>
+        <li><a href="../personas/p02-downsizer.html"><span class="nav-icon">🌿</span> P02 — Downsizer</a></li>
+        <li><a href="../personas/p03-renovator.html"><span class="nav-icon">🔨</span> P03 — Renovator</a></li>
+        <li><a href="../personas/p04-separating.html"><span class="nav-icon">💙</span> P04 — Separating</a></li>
+        <li><a href="../personas/p05-house-land.html"><span class="nav-icon">🏗️</span> P05 — Builder</a></li>
+        <li><a href="../personas/p06-investor.html"><span class="nav-icon">📈</span> P06 — Investor</a></li>
+        <li><a href="../personas/p07-broker.html" class="active"><span class="nav-icon">🤝</span> P07 — Broker</a></li>
+        <li><a href="../personas/p08-regional.html"><span class="nav-icon">🌏</span> P08 — Regional</a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="../pages/homepage.html"><span class="nav-icon">🏡</span> Homepage</a></li>
+        <li><a href="../pages/bridging-loan.html"><span class="nav-icon">🔗</span> Bridging Loan</a></li>
+        <li><a href="../pages/eligibility.html"><span class="nav-icon">✅</span> Eligibility</a></li>
+        <li><a href="../pages/calculator.html"><span class="nav-icon">🧮</span> Calculator</a></li>
+        <li><a href="../pages/rates-and-fees.html"><span class="nav-icon">💰</span> Rates &amp; Fees</a></li>
+        <li><a href="../pages/partners.html"><span class="nav-icon">🤝</span> Partners</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Solution Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="../pages/solutions/upsize.html">↳ Upsize</a></li>
+        <li><a href="../pages/solutions/downsize.html">↳ Downsize</a></li>
+        <li><a href="../pages/solutions/renovate.html">↳ Renovate</a></li>
+        <li><a href="../pages/solutions/retire.html">↳ Retire</a></li>
+        <li><a href="../pages/solutions/separate.html">↳ Separate</a></li>
+        <li><a href="../pages/solutions/invest.html">↳ Invest</a></li>
+        <li><a href="../pages/solutions/house-and-land.html">↳ House &amp; Land</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="page-header">
+      <div class="page-header-eyebrow">Persona Analysis</div>
+      <h1>🤝 P07 — The Mortgage Broker</h1>
+      <div class="page-header-meta">
+        <span>39M, accredited broker, needs BDM contact and fast accreditation</span>
+        <span>6 findings · Conversion path: Partial</span>
+      </div>
+    </div>
+    <div class="content">
+
+      <div class="persona-header">
+        <div class="persona-avatar">🤝</div>
+        <div class="persona-info">
+          <div class="persona-id">P07</div>
+          <div class="persona-name">The Mortgage Broker</div>
+          <div class="persona-desc">39M, accredited mortgage broker. Evaluating Bridgit as a new panel lender. Needs to find a state-based BDM, confirm the value proposition, and accredit quickly. Efficiency is paramount — any extra navigation step may prompt a competitor comparison.</div>
+          <div>
+            <span class="persona-conversion-badge conversion-partial">
+              ● Conversion Path: Partial
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-grid card-grid-2">
+          <div>
+            <div class="finding-field-label">Primary Pages</div>
+            <div class="finding-field-value">Partners → Find your BDM → Accreditation (Journey J5)</div>
+          </div>
+          <div>
+            <div class="finding-field-label">Conversion Goal</div>
+            <div class="finding-field-value">Accredit with Bridgit; establish BDM relationship; position Bridgit in client toolkit for bridging scenarios</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-heading">Critical Gaps</h2>
+
+      <div class="callout callout-critical">
+        <div class="callout-icon">👤</div>
+        <div class="callout-body">
+          <strong>BDM discovery is fragmented</strong>
+          The Find your BDM tool is a separate page. High-converting broker-facing sites embed a state selector on the Partners page itself, surfacing the BDM name, photo, phone, and email immediately. One extra navigation step signals the company is not broker-first. Finding: <span class="badge badge-medium">F-PTR-02</span>
+        </div>
+      </div>
+
+      <div class="callout callout-high">
+        <div class="callout-icon">💬</div>
+        <div class="callout-body">
+          <strong>Broker-specific social proof absent</strong>
+          The Partners page shows customer testimonials. P07 needs broker peer validation: "As a broker, I refer to Bridgit because..." Customer testimonials carry no weight in the broker evaluation context. Finding: <span class="badge badge-medium">F-PTR-01</span>
+        </div>
+      </div>
+
+      <div class="callout callout-high">
+        <div class="callout-icon">✉️</div>
+        <div class="callout-body">
+          <strong>BDM contact is phone-only</strong>
+          No email option means P07, who may be in client meetings, cannot send a quick async inquiry to a BDM. The absence of email or a contact form on the Partners page creates unnecessary friction. Finding: <span class="badge badge-high">F-PTR-M01</span>
+        </div>
+      </div>
+
+      <div class="callout callout-high">
+        <div class="callout-icon">📢</div>
+        <div class="callout-body">
+          <strong>H1 misses the broker value proposition</strong>
+          "Partner with Bridgit" is transactional. A benefit-led H1 ("Earn better commissions" or "Fast client approvals — no clawbacks") would immediately communicate the broker-specific value proposition that differentiates Bridgit on the partner panel. Finding: <span class="badge badge-medium">F-PTR-03</span>
+        </div>
+      </div>
+
+      <h2 class="section-heading">What the Site Does Well</h2>
+      <div class="card">
+        <ul style="font-size:14px;line-height:1.7;color:#374151">
+          <li>A dedicated Partners section exists in the main nav, signalling broker engagement is a priority.</li>
+          <li>A separate Find your BDM page exists with state-based filtering.</li>
+          <li>Accreditation flow is documented in the Partners dropdown.</li>
+          <li>Schema data confirms broker benefits: 24-hour approval, no clawbacks, upfront broker fees, trail available.</li>
+        </ul>
+      </div>
+
+      <h2 class="section-heading">Findings Affecting This Persona</h2>
+      <div class="flex flex-wrap gap-sm" style="margin-bottom:1rem">
+        <span class="badge badge-medium">F-NAV-07</span>
+        <span class="badge badge-medium">F-PTR-01</span>
+        <span class="badge badge-medium">F-PTR-02</span>
+        <span class="badge badge-medium">F-PTR-03</span>
+        <span class="badge badge-high">F-PTR-M01</span>
+        <span class="badge badge-medium">F-PTR-M02</span>
+      </div>
+      <p class="section-body">
+        <a href="../recommendations.html?persona=P07" style="font-size:13px">
+          → View all findings for this persona in the filterable database
+        </a>
+      </p>
+
+      <h2 class="section-heading">Emotional Journey Map — J5: Broker Quick-Reference</h2>
+      <div class="journey-steps">
+        <div class="journey-step">
+          <div class="journey-step-num">Step 1</div>
+          <div class="journey-step-page">Partners Page</div>
+          <div class="journey-step-emotion emotion-3">😐 3/5</div>
+          <div class="journey-step-findings">F-PTR-01, F-PTR-02, F-PTR-03, F-PTR-M01</div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-step-num">Step 2</div>
+          <div class="journey-step-page">BDM Contact</div>
+          <div class="journey-step-emotion emotion-4">🙂 4/5</div>
+          <div class="journey-step-findings">F-PTR-M01, F-PTR-M02</div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-step-num">Step 3</div>
+          <div class="journey-step-page">Accreditation</div>
+          <div class="journey-step-emotion emotion-4">🙂 4/5</div>
+          <div class="journey-step-findings">Not evaluated in audit scope</div>
+        </div>
+      </div>
+      <div class="card section-body">
+        <p>P07 is researching new panel lenders. He navigates to Partners looking for two signals: (1) Is Bridgit a credible lender other brokers trust? and (2) Who's my state-based contact? If Partners shows customer testimonials instead of broker validation, he is less confident. If he cannot find a BDM contact card on the Partners page and must navigate separately, he feels friction — one extra step suggests the company is not broker-focused.</p>
+        <p>Overall arc: Starts curious (3/5), drops to frustration (2/5) if BDM contact requires a separate page, recovers to efficiency mindset (3/5–4/5) once BDM is contacted, climbs to confidence (4/5) if BDM is responsive. The entire journey should take 2–3 minutes; any longer and P07 may move on to a competing lender. Estimated impact: 20–30% increase in broker accreditations and deal submissions if BDM discovery is embedded and email contact is added.</p>
+      </div>
+
+      <h2 class="section-heading">Highest-ROI Quick Win</h2>
+      <div class="callout callout-success">
+        <div class="callout-icon">⚡</div>
+        <div class="callout-body">
+          <strong>Embed state-based BDM finder card directly on the Partners page</strong>
+          <span class="badge badge-medium">F-PTR-02</span> — Expected impact: +20–25% BDM contact rate; reduces friction; signals broker-first design thinking. Card should include: BDM photo, name, state, phone number, and email address. Eliminates the additional page visit currently required to find this information.
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="../assets/js/filters.js"></script>
+</body>
+</html>

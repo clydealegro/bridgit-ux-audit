@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eligibility Audit — Bridgit UX Audit</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <button class="mobile-nav-toggle" id="sidebarToggle" aria-label="Toggle navigation">☰</button>
+  <div class="sidebar-overlay"></div>
+  <nav class="sidebar">
+    <a href="../index.html" class="sidebar-brand">
+      <div class="sidebar-brand-icon">B</div>
+      <div class="sidebar-brand-text">
+        <span class="sidebar-brand-name">Bridgit UX Audit</span>
+        <span class="sidebar-brand-sub">Final Report 2026</span>
+      </div>
+    </a>
+    <div class="sidebar-health">
+      <div class="sidebar-health-label">Conversion Health</div>
+      <div class="sidebar-health-score">5.2<span style="font-size:14px;font-weight:400;color:#6B7280">/10</span></div>
+      <div class="sidebar-health-sub">71 findings across 3 phases</div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Overview</div>
+      <ul class="sidebar-nav">
+        <li><a href="../index.html"><span class="nav-icon">📊</span> Executive Summary</a></li>
+        <li><a href="../navigation.html"><span class="nav-icon">🗺️</span> Navigation &amp; IA</a></li>
+        <li><a href="../recommendations.html"><span class="nav-icon">📋</span> All Findings <span class="nav-badge">71</span></a></li>
+        <li><a href="../ab-tests.html"><span class="nav-icon">🧪</span> A/B Tests <span class="nav-badge">10</span></a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Personas</div>
+      <ul class="sidebar-nav">
+        <li><a href="../personas/p01-upsizer.html"><span class="nav-icon">🏠</span> P01 — Upsizer</a></li>
+        <li><a href="../personas/p02-downsizer.html"><span class="nav-icon">🌿</span> P02 — Downsizer</a></li>
+        <li><a href="../personas/p03-renovator.html"><span class="nav-icon">🔨</span> P03 — Renovator</a></li>
+        <li><a href="../personas/p04-separating.html"><span class="nav-icon">💙</span> P04 — Separating</a></li>
+        <li><a href="../personas/p05-house-land.html"><span class="nav-icon">🏗️</span> P05 — Builder</a></li>
+        <li><a href="../personas/p06-investor.html"><span class="nav-icon">📈</span> P06 — Investor</a></li>
+        <li><a href="../personas/p07-broker.html"><span class="nav-icon">🤝</span> P07 — Broker</a></li>
+        <li><a href="../personas/p08-regional.html"><span class="nav-icon">🌏</span> P08 — Regional</a></li>
+      </ul>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="./homepage.html"><span class="nav-icon">🏡</span> Homepage</a></li>
+        <li><a href="./bridging-loan.html"><span class="nav-icon">🔗</span> Bridging Loan</a></li>
+        <li><a href="./eligibility.html" class="active"><span class="nav-icon">✅</span> Eligibility</a></li>
+        <li><a href="./calculator.html"><span class="nav-icon">🧮</span> Calculator</a></li>
+        <li><a href="./rates-and-fees.html"><span class="nav-icon">💰</span> Rates &amp; Fees</a></li>
+        <li><a href="./partners.html"><span class="nav-icon">🤝</span> Partners</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Solution Pages</div>
+      <ul class="sidebar-nav">
+        <li><a href="./solutions/upsize.html">↳ Upsize</a></li>
+        <li><a href="./solutions/downsize.html">↳ Downsize</a></li>
+        <li><a href="./solutions/renovate.html">↳ Renovate</a></li>
+        <li><a href="./solutions/retire.html">↳ Retire</a></li>
+        <li><a href="./solutions/separate.html">↳ Separate</a></li>
+        <li><a href="./solutions/invest.html">↳ Invest</a></li>
+        <li><a href="./solutions/house-and-land.html">↳ House &amp; Land</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="page-header">
+      <div class="page-header-eyebrow">Page Audit</div>
+      <h1>Eligibility</h1>
+      <div class="page-header-meta">
+        <span>Personas: All (P02, P04, P06, P08 primary)</span>
+        <span>5 desktop findings · 2 mobile findings</span>
+      </div>
+    </div>
+    <div class="content">
+
+      <div class="severity-bar">
+        <span class="severity-pill critical">● 1 Critical</span>
+        <span class="severity-pill high">● 2 High</span>
+        <span class="severity-pill medium">● 4 Medium</span>
+      </div>
+
+      <div data-tabs>
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="desktop">Desktop Findings</button>
+          <button class="tab-btn" data-tab="mobile">Mobile Findings</button>
+        </div>
+
+        <div class="tab-panel active" data-panel="desktop">
+
+          <!-- F-ELG-01 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-ELG-01</span>
+              <span class="finding-title">No self-serve eligibility checker; page is purely informational</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-strategic">Strategic</span>
+              <span class="badge badge-effort-high">Effort: High</span>
+              <span class="badge badge-persona">All Personas</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The Eligibility page is a static informational page listing criteria. There is no interactive "Do I qualify?" form or self-serve checker. Users who are uncertain about their eligibility must read all criteria, make their own assessment, and either proceed to Apply or call. This creates friction for every persona — particularly P02 (Downsizer, lower digital confidence) and P08 (Regional Relocator, prefers async).</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Build a 4–6 question eligibility pre-screener with conditional logic that gives a directional answer ("Based on what you've told us, you're likely eligible. Here's your next step."). This should capture a lead even on uncertain outcomes. This is a strategic investment but one of the highest-converting additions available for a regulated lending product.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — increases qualified apply rate by filtering out ineligible visitors before form submission.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-ELG-02 -->
+          <div class="finding-card severity-high">
+            <div class="finding-card-header">
+              <span class="finding-id">F-ELG-02</span>
+              <span class="finding-title">Separation/divorce scenario absent from eligibility criteria</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-high">High</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">P04 — Separating</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The Eligibility page lists PAYG, self-employed, retirees, and company/trust applicants but does not address the separation scenario. P04 (Separating Homeowner) has unique eligibility questions: Can I apply if my income has changed due to separation? Can I apply if my partner is still on the mortgage? Will the settlement process affect the application? This absence could cause P04 to self-exclude and not apply.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add an FAQ or eligibility note addressing separation: "Going through separation? You can still access your equity. Call us or connect with an expert to understand your options — we handle this sensitively."</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → CTA — increases expert CTA clicks from highest-anxiety separation persona by validating their scenario.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">A/B Hypothesis</div>
+                  <div class="finding-field-value">Adding separation-specific eligibility guidance to the Eligibility page will increase "Connect with an expert" clicks from users in the separation scenario because P04 currently has no signal that they qualify. Test: Eligibility page with vs. without separation FAQ entry. Primary metric: "Connect with an expert" click-through rate on Eligibility page. Secondary metric: Applications sourced from Separate solution page.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-ELG-03 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-ELG-03</span>
+              <span class="finding-title">No plain-language summary before formal criteria</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">All Personas</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The reassurance opening ("every situation is unique") is good, but the page then moves directly into formal eligibility criteria without a plain-language summary of who typically qualifies. For P02 (lower digital confidence) and P08 (prefers async self-service), a 4-bullet quick summary ("You'll likely qualify if: you own Australian property, you're 18+, you have a good credit history, your property is residential") would reduce cognitive load before the detail.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add a "Quick answer" or "Who typically qualifies" summary section before the detailed criteria list.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — reduces pre-application drop-off by clarifying criteria legibility.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-ELG-04 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-ELG-04</span>
+              <span class="finding-title">Self-employed criteria use accounting jargon (ABN, YTD, BAS) without definitions</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">P03 — Renovator</span>
+              <span class="badge badge-persona">P06 — Investor</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The self-employed eligibility requirements reference ABN, YTD income, and BAS without defining these terms. While P03 (Equity-Unlock Renovator, Architect/SBO) and P06 (Property Investor) likely know these terms, they are jargon for anyone else who is self-employed without accounting experience.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add inline plain-language clarifications: "ABN (Australian Business Number)", "YTD income (your earnings so far this financial year)", "BAS (Business Activity Statement, your regular ATO reporting)". These can be tooltips to avoid cluttering the layout.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Apply — reduces abandonment for non-standard borrowers by explicitly addressing renovation and investment scenarios.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-ELG-05 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-ELG-05</span>
+              <span class="finding-title">Regional property exclusions are vague ("some regional areas excluded")</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">P08 — Regional</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">The Eligibility page states "most metro and non-metro locations (some regional areas excluded)" without specifying which regions are excluded. For P08 (Regional Relocator), this vagueness creates anxiety — they cannot self-serve to confirm their area is covered and must contact Bridgit to find out. This is a friction point that may cause abandonment for the regional persona.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Either list the specific exclusions (e.g., "excludes properties in remote/rural areas below X population threshold") or reframe as "available in all major metro and regional centres — contact us if your area is not listed."</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → CTA — recovers interstate/interstate-adjacent P08 abandonment by confirming geographic eligibility.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /desktop panel -->
+
+        <div class="tab-panel" data-panel="mobile">
+
+          <!-- F-ELG-M01 -->
+          <div class="finding-card severity-critical">
+            <div class="finding-card-header">
+              <span class="finding-id">F-ELG-M01</span>
+              <span class="finding-title">No email contact path blocks P08 from async eligibility check</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-critical">Critical</span>
+              <span class="badge badge-quickwin">Quick Win</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">P08 — Regional</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">Eligibility page is the primary destination for P08 (Regional Relocator) to verify whether their property location and situation qualifies. The page has only <code>tel:</code> contact options. P08's explicit digital behaviour is email-over-phone, and they may be in a regional area with patchy voice connectivity. Without an email CTA, P08's only next step is a phone call — their least preferred action — or application submission without having confirmed eligibility. Either outcome leads to abandonment or unqualified applications. Cross-reference: F-NAV-04 (Phase 2), F-ELG-05 (Phase 3).</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Add a prominent email CTA at the bottom of the eligibility criteria section: "Not sure if you qualify? Email us — hello@bridgit.com.au". Consider a pre-filled subject line: <code>?subject=Eligibility%20question</code>.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Consideration → Contact — removes P08's only barrier to async eligibility check; critical mobile conversion path.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">A/B Hypothesis</div>
+                  <div class="finding-field-value">Adding an email CTA on the Eligibility page will directly increase contact rate from P08 and reduce page abandonment without phone commitment.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-ELG-M02 -->
+          <div class="finding-card severity-medium">
+            <div class="finding-card-header">
+              <span class="finding-id">F-ELG-M02</span>
+              <span class="finding-title">Accordion toggles may have insufficient tap target size for P02</span>
+              <span class="expand-icon" style="color:#9CA3AF;font-size:11px;flex-shrink:0">▼</span>
+            </div>
+            <div class="finding-meta">
+              <span class="badge badge-medium">Medium</span>
+              <span class="badge badge-med-effort">Medium Effort</span>
+              <span class="badge badge-effort-low">Effort: Low</span>
+              <span class="badge badge-persona">P02 — Downsizer</span>
+              <span class="badge badge-persona">P08 — Regional</span>
+            </div>
+            <div class="finding-body">
+              <div class="finding-body-grid">
+                <div>
+                  <div class="finding-field-label">Finding</div>
+                  <div class="finding-field-value">Eligibility accordions stack correctly on mobile but accordion toggle areas appear to have minimal padding from screenshot inspection. P02 (62F, Downsizer) may use Eligibility to check their retiree eligibility, and older users require larger touch targets for accurate tapping. WCAG 2.5.5 recommends 44×44px minimum; Apple HIG recommends 44px.</div>
+                </div>
+                <div>
+                  <div class="finding-field-label">Recommendation</div>
+                  <div class="finding-field-value">Ensure accordion toggle buttons have <code>min-height: 48px</code> and <code>padding: 12px 16px</code> minimum. Test on a 390px device for accurate tap registration.</div>
+                </div>
+                <div class="finding-field-full">
+                  <div class="finding-field-label">Impact of Change</div>
+                  <div class="finding-field-value">Usability — reduces mis-taps on accordion toggles for older and motor-impaired users.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /mobile panel -->
+      </div><!-- /tabs -->
+
+    </div>
+  </div>
+  <script src="../assets/js/filters.js"></script>
+</body>
+</html>

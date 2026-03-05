@@ -57,14 +57,14 @@
   <div class="sidebar-health">
     <div class="sidebar-health-label">Conversion Health</div>
     <div class="sidebar-health-score">5.2<span style="font-size:14px;font-weight:400;color:#6B7280">/10</span></div>
-    <div class="sidebar-health-sub">71 findings across 3 phases</div>
+    <div class="sidebar-health-sub">86 findings across 4 phases</div>
   </div>
   <div class="sidebar-section">
     <div class="sidebar-section-label">Overview</div>
     <ul class="sidebar-nav">
       <li><a href="index.html"><span class="nav-icon">📊</span> Executive Summary</a></li>
       <li><a href="navigation.html"><span class="nav-icon">🗺️</span> Navigation &amp; IA</a></li>
-      <li><a href="recommendations.html" class="active"><span class="nav-icon">📋</span> All Findings <span class="nav-badge">71</span></a></li>
+      <li><a href="recommendations.html" class="active"><span class="nav-icon">📋</span> All Findings <span class="nav-badge">86</span></a></li>
       <li><a href="ab-tests.html"><span class="nav-icon">🧪</span> A/B Tests <span class="nav-badge">10</span></a></li>
     </ul>
   </div>
@@ -105,6 +105,12 @@
       <li><a href="pages/solutions/invest.html">↳ Invest</a></li>
       <li><a href="pages/solutions/house-and-land.html">↳ House &amp; Land</a></li>
     </ul>
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">SEO Pages</div>
+    <ul class="sidebar-nav">
+      <li><a href="pages/seo/head-and-shoulders.html"><span class="nav-icon">🔍</span> H&amp;S — What is BL</a></li>
+      <li><a href="pages/seo/programmatic.html"><span class="nav-icon">🤖</span> Prog. — Who Can Get</a></li>
+    </ul>
   </div>
 </nav>
 
@@ -113,9 +119,9 @@
     <div class="page-header-eyebrow">Filterable Database</div>
     <h1>All Findings</h1>
     <div class="page-header-meta">
-      <span>71 findings · Phases 2, 3, 4</span>
-      <span>4 Critical · 32 High · 28 Medium · 7 Low</span>
-      <span>37 Quick Wins · 24 Medium Effort · 10 Strategic</span>
+      <span>86 findings · Phases 2, 3, 4, 5</span>
+      <span>5 Critical · 38 High · 36 Medium · 7 Low</span>
+      <span>46 Quick Wins · 29 Medium Effort · 11 Strategic</span>
     </div>
   </div>
 
@@ -127,9 +133,9 @@
         <label>Severity</label>
         <select class="filter-select" id="fSeverity">
           <option value="">All</option>
-          <option value="critical">Critical (4)</option>
-          <option value="high">High (32)</option>
-          <option value="medium">Medium (28)</option>
+          <option value="critical">Critical (5)</option>
+          <option value="high">High (38)</option>
+          <option value="medium">Medium (36)</option>
           <option value="low">Low (7)</option>
         </select>
       </div>
@@ -137,9 +143,9 @@
         <label>Priority</label>
         <select class="filter-select" id="fPriority">
           <option value="">All</option>
-          <option value="quick-win">Quick Win (37)</option>
-          <option value="medium-effort">Medium Effort (24)</option>
-          <option value="strategic">Strategic (10)</option>
+          <option value="quick-win">Quick Win (46)</option>
+          <option value="medium-effort">Medium Effort (29)</option>
+          <option value="strategic">Strategic (11)</option>
         </select>
       </div>
       <div class="filter-group">
@@ -149,6 +155,7 @@
           <option value="2">Phase 2 — IA (10)</option>
           <option value="3">Phase 3 — Desktop (28)</option>
           <option value="4">Phase 4 — Mobile (33)</option>
+          <option value="5">Phase 5 — SEO Pages (15)</option>
         </select>
       </div>
       <div class="filter-group">
@@ -166,7 +173,7 @@
         </select>
       </div>
       <input type="search" class="filter-search" id="fSearch" placeholder="Search ID, finding, page…">
-      <span class="filter-count" id="filterCount">71 findings</span>
+      <span class="filter-count" id="filterCount">86 findings</span>
       <button class="filter-reset" id="filterReset">Reset</button>
     </div>
 
@@ -919,6 +926,163 @@
             <td class="desc-cell">Solutions sub-menu category labels ("Buy now, sell later" / "Unlock equity, sell later") may add cognitive load for first-time mobile users</td>
             <td class="rec-cell">A/B test flat list vs. categorised sub-menu for Solutions; validate whether grouping aids or impedes discoverability</td>
             <td><span class="badge badge-low">Low</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+
+          <!-- ============ PHASE 5 — SEO PAGES (15) ============ -->
+
+          <!-- H&S SEO Page — Desktop (6) -->
+          <tr data-severity="high" data-priority="quick-win" data-phase="5" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="seo-hs">
+            <td class="id-cell">F-SEO-HS-01</td>
+            <td class="page-cell">H&amp;S SEO</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">"Apply now" CTA misaligned with TOFU informational search intent; campaign UTMs hardcoded into permanent organic page URL corrupting attribution</td>
+            <td class="rec-cell">Replace hero CTA with mid-funnel "Check if I qualify" or "See my options"; remove hardcoded ScenarioSpotlight/March UTMs from CTA URL</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="medium-effort" data-phase="5" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="seo-hs">
+            <td class="id-cell">F-SEO-HS-02</td>
+            <td class="page-cell">H&amp;S SEO</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">No guided journey for educational visitors — "What's next for you?" presents 7 equal-weight scenario options creating Hick's Law choice paralysis</td>
+            <td class="rec-cell">Add a 2-question scenario selector above the grid; reduce to 3–4 visible options with "See all" expansion; add "not sure?" calculator fallback</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="quick-win" data-phase="5" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="seo-hs">
+            <td class="id-cell">F-SEO-HS-03</td>
+            <td class="page-cell">H&amp;S SEO</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">H1 "What is Bridging Loan" is grammatically incomplete (missing article "a") — inconsistent with target query and sub-heading copy</td>
+            <td class="rec-cell">Correct to "What is a Bridging Loan" in H1, meta title, and sub-heading; single Webflow CMS edit</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="medium-effort" data-phase="5" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="seo-hs">
+            <td class="id-cell">F-SEO-HS-04</td>
+            <td class="page-cell">H&amp;S SEO</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">Loan calculator positioned below 4+ scroll depths — highest-intent conversion tool buried at ~75% scroll depth on educational SEO page</td>
+            <td class="rec-cell">Surface calculator widget or "Calculate my bridging loan" CTA within first 2 scroll depths; add sticky floating CTA after 50% scroll</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="quick-win" data-phase="5" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="seo-hs">
+            <td class="id-cell">F-SEO-HS-05</td>
+            <td class="page-cell">H&amp;S SEO</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">FAQ answers hidden in accordion — no visible Q&amp;A content available for Google FAQ rich snippet extraction or People Also Ask coverage</td>
+            <td class="rec-cell">Implement FAQPage JSON-LD schema; default-expand first 2–3 FAQ items; verify with Rich Results Test</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="5" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="seo-hs">
+            <td class="id-cell">F-SEO-HS-06</td>
+            <td class="page-cell">H&amp;S SEO</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">"From what is, to what's next" section heading is ambiguous wordplay — fails as navigation landmark, has no keyword relevance, and provides zero orientation for screen reader users</td>
+            <td class="rec-cell">Replace with descriptive heading: "Understanding Bridging Loans" or "Start Here: What Is a Bridging Loan?"</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <!-- H&S SEO Page — Mobile (2) -->
+          <tr data-severity="medium" data-priority="quick-win" data-phase="5" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="seo-hs">
+            <td class="id-cell">F-SEO-HS-M01</td>
+            <td class="page-cell">H&amp;S SEO (M)</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">Hero Apply CTA below fold at 390px — process-step trust badges interrupt the headline-to-CTA flow before value proposition is read</td>
+            <td class="rec-cell">On mobile, move CTA immediately below headline; reduce or remove trust badge strip from hero to tighten conversion path</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="medium-effort" data-phase="5" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="seo-hs">
+            <td class="id-cell">F-SEO-HS-M02</td>
+            <td class="page-cell">H&amp;S SEO (M)</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">"What's next for you?" 7-card grid creates excessive vertical scroll length on mobile — full card stack mid-page increases abandonment before conversion</td>
+            <td class="rec-cell">On mobile show 3 most common scenarios with "Show all 7" toggle; or use horizontal carousel to reduce vertical length</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <!-- Programmatic SEO Page — Desktop (5) -->
+          <tr data-severity="critical" data-priority="quick-win" data-phase="5" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="seo-prog">
+            <td class="id-cell">F-SEO-PROG-01</td>
+            <td class="page-cell">Prog. SEO</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">Eligibility query intent completely unanswered above fold — "Who Can Get A Bridging Loan" H1 restates the question but provides no criteria checklist before first scroll</td>
+            <td class="rec-cell">Add 4–5 item eligibility checklist immediately below H1 (before trust badges); follow with "Check my eligibility →" CTA. Estimated impact: 25–40% bounce rate reduction</td>
+            <td><span class="badge badge-critical">Critical</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="medium-effort" data-phase="5" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="seo-prog">
+            <td class="id-cell">F-SEO-PROG-02</td>
+            <td class="page-cell">Prog. SEO</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">No interactive eligibility check on page — "Apply now" skips the qualification step users are explicitly searching for; calculator assumes user already qualifies</td>
+            <td class="rec-cell">Add 3-question eligibility pre-screener widget: property owner? / buying before selling? / property $500K+? — Yes/Yes/Yes → "Check your rate →"</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-med-effort">Med. Effort</span></td>
+          </tr>
+
+          <tr data-severity="high" data-priority="quick-win" data-phase="5" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="seo-prog">
+            <td class="id-cell">F-SEO-PROG-03</td>
+            <td class="page-cell">Prog. SEO</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">Hero badges show process steps (Apply→Buy→Sell), not eligibility criteria — Webflow template reused without customisation for eligibility-intent query</td>
+            <td class="rec-cell">Replace hero badges with eligibility-matched qualifiers: "✓ Property owners · ✓ Buy before you sell · ✓ $500K+ property · ✓ No income proof required"</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="strategic" data-phase="5" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="seo-prog">
+            <td class="id-cell">F-SEO-PROG-04</td>
+            <td class="page-cell">Prog. SEO</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">Identical template sections to H&amp;S page (same "How it works", scenarios, trust modules) — thin content ratio creates SEO page quality signal risk</td>
+            <td class="rec-cell">Add substantive unique content: eligibility criteria section with specific thresholds; page-specific FAQ section; differentiate from H&amp;S content profile</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-strategic">Strategic</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="quick-win" data-phase="5" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="seo-prog">
+            <td class="id-cell">F-SEO-PROG-05</td>
+            <td class="page-cell">Prog. SEO</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">Campaign UTMs hardcoded in Apply CTA (utm_campaign=ScenarioSpotlight, utm_content=March) — organic SEO traffic incorrectly attributed to March email campaign</td>
+            <td class="rec-cell">Remove campaign UTMs from permanent CTA URLs on both SEO pages; use dynamic UTM injection via GTM for campaign sends; audit all other landing pages</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <!-- Programmatic SEO Page — Mobile (2) -->
+          <tr data-severity="high" data-priority="quick-win" data-phase="5" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="seo-prog">
+            <td class="id-cell">F-SEO-PROG-M01</td>
+            <td class="page-cell">Prog. SEO (M)</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">Mobile hero shows no eligibility criteria — users searching eligibility query on mobile see question restated as H1, then Apply CTA, with nothing qualifying in between</td>
+            <td class="rec-cell">Add compact 3-item eligibility checklist to mobile hero in place of process-step badges; implement as part of F-SEO-PROG-01/03 template fix</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td><span class="badge badge-quickwin">Quick Win</span></td>
+          </tr>
+
+          <tr data-severity="medium" data-priority="medium-effort" data-phase="5" data-personas="P01,P02,P03,P04,P05,P06,P07,P08" data-page="seo-prog">
+            <td class="id-cell">F-SEO-PROG-M02</td>
+            <td class="page-cell">Prog. SEO (M)</td>
+            <td class="persona-cell">All</td>
+            <td class="desc-cell">Long programmatic page on mobile lacks sticky eligibility CTA — deep scroll required before meaningful conversion point is reached</td>
+            <td class="rec-cell">Add sticky bottom bar on mobile: "Think you qualify? Check eligibility →" appearing after 20% scroll depth; or add inline conversion prompts at 2–3 content breakpoints</td>
+            <td><span class="badge badge-medium">Medium</span></td>
             <td><span class="badge badge-med-effort">Med. Effort</span></td>
           </tr>
 

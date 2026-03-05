@@ -96,11 +96,22 @@
         <span class="severity-pill medium">● 5 Medium</span>
       </div>
 
+      <!-- Template scope banner -->
+      <div style="background:#FFF7ED;border:1px solid #FED7AA;border-radius:8px;padding:0.875rem 1.1rem;margin-bottom:1.25rem;display:flex;gap:0.75rem;align-items:flex-start">
+        <span style="font-size:18px;flex-shrink:0">🧩</span>
+        <div>
+          <div style="font-size:12px;font-weight:700;color:#C2410C;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem">Webflow CMS Template — Findings Apply Site-Wide</div>
+          <div style="font-size:12px;line-height:1.6;color:#7C2D12">
+            This page is one of <strong>multiple topic pages</strong> built on the same Webflow CMS collection template. The sections audited here — hero layout, CTA copy, "How it works", "What's next for you?", calculator placement, FAQ accordion, and trust modules — are <strong>shared across every page in this template set</strong>. Any template-level fix resolves the issue across all instances simultaneously. Findings marked <strong>🧩 Template scope</strong> have this multiplied impact.
+          </div>
+        </div>
+      </div>
+
       <!-- Page context -->
       <div class="card" style="margin-bottom:1.5rem">
         <div class="finding-field-label" style="margin-bottom:0.5rem">Page Context</div>
         <div style="font-size:13px;line-height:1.7;color:#374151">
-          This is Bridgit's <strong>head-and-shoulders keyword page</strong> targeting high-volume educational queries such as "what is a bridging loan" and "bridging loan Australia". It is the primary organic SEO entry point for users in the <em>awareness</em> and <em>research</em> phase of the decision funnel. The page sits at <code>/bridgit/what-is-bridging-loan</code> — a content/blog-style URL pattern within the Webflow CMS collection (<code>data-wf-collection</code>). Traffic intent is informational (TOFU), with a minority of commercial-intent visitors. The page contains: educational rich-text content, scenario-matching cards, an embedded loan calculator, a "What's next for you?" solution grid, trust signals (Trustpilot, "Tech first. People first."), and a lead-gen CTA section.
+          This is Bridgit's <strong>head-and-shoulders keyword page</strong> — the highest-traffic, highest-authority page in the SEO content template set, targeting high-volume educational queries such as "what is a bridging loan" and "bridging loan Australia". It is the primary organic SEO entry point for users in the <em>awareness</em> and <em>research</em> phase of the decision funnel. The page sits at <code>/bridgit/what-is-bridging-loan</code> within the Webflow CMS collection (<code>data-wf-collection</code>), indicating it is one of multiple CMS-generated content pages sharing the same underlying template. Additional topic pages in the same collection likely target adjacent queries (e.g., "how does a bridging loan work", "bridging loan costs", etc.). Traffic intent is informational (TOFU), with a minority of commercial-intent visitors. The page contains: educational rich-text content (unique per page), scenario-matching cards, an embedded loan calculator, a "What's next for you?" solution grid, trust signals, and a lead-gen CTA section — the majority of which are <strong>template components shared with all other collection pages</strong>.
         </div>
       </div>
 
@@ -124,6 +135,7 @@
               <span class="badge badge-quickwin">Quick Win</span>
               <span class="badge badge-effort-low">Effort: Low</span>
               <span class="badge badge-persona">All Personas</span>
+              <span class="badge" style="background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA">🧩 Template scope</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">
@@ -159,6 +171,7 @@
               <span class="badge badge-med-effort">Med. Effort</span>
               <span class="badge badge-effort-medium">Effort: Medium</span>
               <span class="badge badge-persona">All Personas</span>
+              <span class="badge" style="background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA">🧩 Template scope</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">
@@ -172,7 +185,7 @@
                 </div>
                 <div class="finding-field-full">
                   <div class="finding-field-label">Impact of Change</div>
-                  <div class="finding-field-value">Consideration → conversion — reduces drop-off at the scenario selection stage by simplifying the decision tree. Estimated improvement: 15–25% increase in scenario card CTR.</div>
+                  <div class="finding-field-value">Consideration → conversion — reduces drop-off at the scenario selection stage by simplifying the decision tree. Estimated improvement: 15–25% increase in scenario card CTR. <strong>🧩 Template scope:</strong> the "What's next for you?" component is shared across all CMS collection pages — one template edit resolves the choice paralysis issue simultaneously for every topic page.</div>
                 </div>
               </div>
             </div>
@@ -221,6 +234,7 @@
               <span class="badge badge-med-effort">Med. Effort</span>
               <span class="badge badge-effort-medium">Effort: Medium</span>
               <span class="badge badge-persona">All Personas</span>
+              <span class="badge" style="background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA">🧩 Template scope</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">
@@ -234,7 +248,7 @@
                 </div>
                 <div class="finding-field-full">
                   <div class="finding-field-label">Impact of Change</div>
-                  <div class="finding-field-value">Consideration → lead gen — surfaces the calculator at the moment of maximum educational engagement, estimated to increase calculator usage by 20–30% from organic SEO traffic.</div>
+                  <div class="finding-field-value">Consideration → lead gen — surfaces the calculator at the moment of maximum educational engagement, estimated to increase calculator usage by 20–30% from organic SEO traffic. <strong>🧩 Template scope:</strong> calculator placement is defined in the template section order — surfacing a calculator widget earlier applies across all CMS collection pages simultaneously.</div>
                 </div>
               </div>
             </div>
@@ -252,6 +266,7 @@
               <span class="badge badge-quickwin">Quick Win</span>
               <span class="badge badge-effort-low">Effort: Low</span>
               <span class="badge badge-persona">All Personas</span>
+              <span class="badge" style="background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA">🧩 Template scope</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">
@@ -265,7 +280,7 @@
                 </div>
                 <div class="finding-field-full">
                   <div class="finding-field-label">Impact of Change</div>
-                  <div class="finding-field-value">SEO organic visibility — enables FAQ rich snippet coverage in SERP, potentially increasing click-through rate by 20–30% for informational queries where PAA (People Also Ask) boxes are present.</div>
+                  <div class="finding-field-value">SEO organic visibility — enables FAQ rich snippet coverage in SERP, potentially increasing click-through rate by 20–30% for informational queries where PAA (People Also Ask) boxes are present. <strong>🧩 Template scope:</strong> the FAQ accordion component is shared across all collection pages — implementing FAQPage schema and default-open state once resolves the rich snippet gap for every topic page in the collection.</div>
                 </div>
               </div>
             </div>
@@ -283,6 +298,7 @@
               <span class="badge badge-quickwin">Quick Win</span>
               <span class="badge badge-effort-low">Effort: Low</span>
               <span class="badge badge-persona">All Personas</span>
+              <span class="badge" style="background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA">🧩 Template scope</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">
@@ -296,7 +312,7 @@
                 </div>
                 <div class="finding-field-full">
                   <div class="finding-field-label">Impact of Change</div>
-                  <div class="finding-field-value">UX clarity + SEO — improves section scan-ability for all visitors, accessibility for screen reader users, and keyword relevance for the target query cluster.</div>
+                  <div class="finding-field-value">UX clarity + SEO — improves section scan-ability for all visitors, accessibility for screen reader users, and keyword relevance for the target query cluster. <strong>🧩 Template scope:</strong> this section heading is a template-level string — one Webflow edit clears the ambiguous wordplay across every SEO collection page simultaneously.</div>
                 </div>
               </div>
             </div>
@@ -318,6 +334,7 @@
               <span class="badge badge-quickwin">Quick Win</span>
               <span class="badge badge-effort-low">Effort: Low</span>
               <span class="badge badge-persona">All Personas</span>
+              <span class="badge" style="background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA">🧩 Template scope</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">
@@ -331,7 +348,7 @@
                 </div>
                 <div class="finding-field-full">
                   <div class="finding-field-label">Impact of Change</div>
-                  <div class="finding-field-value">Mobile conversion — tightens the headline-to-CTA distance, estimated to improve mobile hero engagement rate by 10–15% for organic SEO visitors.</div>
+                  <div class="finding-field-value">Mobile conversion — tightens the headline-to-CTA distance, estimated to improve mobile hero engagement rate by 10–15% for organic SEO visitors. <strong>🧩 Template scope:</strong> the mobile hero badge strip layout is a shared template component — reordering it once improves the headline-to-CTA flow across all SEO collection pages.</div>
                 </div>
               </div>
             </div>
@@ -349,6 +366,7 @@
               <span class="badge badge-med-effort">Med. Effort</span>
               <span class="badge badge-effort-medium">Effort: Medium</span>
               <span class="badge badge-persona">All Personas</span>
+              <span class="badge" style="background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA">🧩 Template scope</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">
@@ -362,7 +380,7 @@
                 </div>
                 <div class="finding-field-full">
                   <div class="finding-field-label">Impact of Change</div>
-                  <div class="finding-field-value">Mobile UX — reduces total page length, improves scroll-to-conversion rate, and keeps the most relevant options visible without overwhelming the layout.</div>
+                  <div class="finding-field-value">Mobile UX — reduces total page length, improves scroll-to-conversion rate, and keeps the most relevant options visible without overwhelming the layout. <strong>🧩 Template scope:</strong> the "What's next for you?" card grid is a shared template component — collapsing it to 3 visible cards on mobile reduces scroll length across every SEO collection page at once.</div>
                 </div>
               </div>
             </div>

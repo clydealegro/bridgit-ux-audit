@@ -97,11 +97,22 @@
         <span class="severity-pill medium">● 3 Medium</span>
       </div>
 
+      <!-- Template scope banner -->
+      <div style="background:#FFF7ED;border:1px solid #FED7AA;border-radius:8px;padding:0.875rem 1.1rem;margin-bottom:1.25rem;display:flex;gap:0.75rem;align-items:flex-start">
+        <span style="font-size:18px;flex-shrink:0">🧩</span>
+        <div>
+          <div style="font-size:12px;font-weight:700;color:#C2410C;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem">Webflow CMS Template — Findings Apply to All Programmatic Pages</div>
+          <div style="font-size:12px;line-height:1.6;color:#7C2D12">
+            This is one of <strong>multiple programmatic SEO pages</strong> generated from the same Webflow CMS collection template (URL pattern: <code>/bridging/bi-*</code>). Each page targets a different bridging loan query but shares the <strong>same hero layout, hero badges, CTA logic, section order, and conversion components</strong>. Every UX or CRO issue found here exists identically across every page in the collection. Conversely, a single template fix resolves the issue at scale — for every topic page simultaneously. Findings marked <strong>🧩 Template scope</strong> carry this multiplied impact.
+          </div>
+        </div>
+      </div>
+
       <!-- Page context -->
       <div class="card" style="margin-bottom:1.5rem">
         <div class="finding-field-label" style="margin-bottom:0.5rem">Page Context</div>
         <div style="font-size:13px;line-height:1.7;color:#374151">
-          This is a <strong>programmatic SEO page</strong> targeting eligibility-intent queries: "who can get a bridging loan", "bridging loan eligibility criteria", "can I get a bridging loan". It sits at <code>/bridging/bi-who-can-get-a-bridging-loan</code> — the <code>bi-</code> prefix and <code>/bridging/</code> collection path indicate this is a CMS-generated programmatic template page. Traffic intent is <em>consideration/qualification</em> (MOFU) — visitors are actively asking whether they personally qualify, not just researching what bridging loans are. This creates a distinct and important UX requirement: the page must <strong>answer the eligibility question quickly and directly</strong>. The page shares a Webflow template with the H&amp;S page, reusing sections ("How it works", "What's next for you?", trust modules) with largely identical content.
+          This is a <strong>programmatic SEO page</strong> in the <code>/bridging/bi-*</code> Webflow CMS collection, targeting eligibility-intent queries: "who can get a bridging loan", "bridging loan eligibility criteria", "can I get a bridging loan". The <code>bi-</code> slug prefix confirms this is a CMS-generated template instance — there are multiple pages in this collection, each targeting a different question or keyword cluster but built from the same Webflow template. The page audited here is representative of the entire collection. Traffic intent is <em>consideration/qualification</em> (MOFU) — visitors are actively asking whether they personally qualify, not just researching what bridging loans are. This creates a distinct UX requirement: the page must <strong>answer the eligibility question directly and fast</strong>. Each programmatic page changes only the H1, meta description, URL slug, and potentially a small intro paragraph — all hero components, section structure, CTAs, badges, calculator, trust modules, and footer are <strong>identical across every page in the collection</strong>. This means UX findings here represent a systemic issue across Bridgit's entire programmatic SEO programme, not a single-page problem.
         </div>
       </div>
 
@@ -125,6 +136,7 @@
               <span class="badge badge-quickwin">Quick Win</span>
               <span class="badge badge-effort-low">Effort: Low</span>
               <span class="badge badge-persona">All Personas</span>
+              <span class="badge" style="background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA">🧩 Template scope</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">
@@ -138,7 +150,7 @@
                 </div>
                 <div class="finding-field-full">
                   <div class="finding-field-label">Impact of Change</div>
-                  <div class="finding-field-value">Critical conversion fix — closes the gap between query intent and page response. Estimated improvement: 25–40% reduction in bounce rate from eligibility-intent organic traffic, with a corresponding increase in time-on-page and downstream eligibility page visits.</div>
+                  <div class="finding-field-value">Critical conversion fix — closes the gap between query intent and page response. Estimated improvement: 25–40% reduction in bounce rate from eligibility-intent organic traffic, with a corresponding increase in time-on-page and downstream eligibility page visits. <strong>🧩 Template scope:</strong> this hero layout is the core template design — adding eligibility criteria to the hero resolves the intent mismatch across every page in the /bridging/bi-* collection simultaneously.</div>
                 </div>
                 <div class="finding-field-full">
                   <div class="finding-field-label">A/B Hypothesis</div>
@@ -160,6 +172,7 @@
               <span class="badge badge-med-effort">Med. Effort</span>
               <span class="badge badge-effort-medium">Effort: Medium</span>
               <span class="badge badge-persona">All Personas</span>
+              <span class="badge" style="background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA">🧩 Template scope</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">
@@ -173,7 +186,7 @@
                 </div>
                 <div class="finding-field-full">
                   <div class="finding-field-label">Impact of Change</div>
-                  <div class="finding-field-value">Lead generation — bridges the intent-action gap with a low-friction qualification step, estimated to increase eligibility page conversion by 20–35% from this traffic source.</div>
+                  <div class="finding-field-value">Lead generation — bridges the intent-action gap with a low-friction qualification step, estimated to increase eligibility page conversion by 20–35% from this traffic source. <strong>🧩 Template scope:</strong> an eligibility pre-screener widget added to the template deploys automatically across every page in the /bridging/bi-* collection — built once, collection-wide impact.</div>
                 </div>
               </div>
             </div>
@@ -191,6 +204,7 @@
               <span class="badge badge-quickwin">Quick Win</span>
               <span class="badge badge-effort-low">Effort: Low</span>
               <span class="badge badge-persona">All Personas</span>
+              <span class="badge" style="background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA">🧩 Template scope</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">
@@ -204,7 +218,7 @@
                 </div>
                 <div class="finding-field-full">
                   <div class="finding-field-label">Impact of Change</div>
-                  <div class="finding-field-value">First impression relevance — aligns the first content users see with their specific question, reducing the cognitive friction that drives immediate bounces. Quick-win implementation requiring only Webflow CMS content edit.</div>
+                  <div class="finding-field-value">First impression relevance — aligns the first content users see with their specific question, reducing the cognitive friction that drives immediate bounces. Quick-win implementation requiring only Webflow CMS content edit. <strong>🧩 Template scope:</strong> if hero badge copy is a CMS field, this update should be systematically applied across every page in the collection — the fix is identical for each page and the intent mismatch exists on all of them.</div>
                 </div>
               </div>
             </div>
@@ -222,6 +236,7 @@
               <span class="badge badge-strategic">Strategic</span>
               <span class="badge badge-effort-high">Effort: High</span>
               <span class="badge badge-persona">All Personas</span>
+              <span class="badge" style="background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA">🧩 Template scope</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">
@@ -235,7 +250,7 @@
                 </div>
                 <div class="finding-field-full">
                   <div class="finding-field-label">Impact of Change</div>
-                  <div class="finding-field-value">SEO content quality — improves page quality signal and reduces thin-content risk, supporting ranking stability for eligibility-intent queries. Long-term strategic investment in the programmatic SEO content architecture.</div>
+                  <div class="finding-field-value">SEO content quality — improves page quality signal and reduces thin-content risk, supporting ranking stability for eligibility-intent queries. Long-term strategic investment in the programmatic SEO content architecture. <strong>🧩 Template scope:</strong> adding a unique content block to the template (e.g., an eligibility criteria section) gives every page in the collection a differentiated, query-matched content layer — but meaningful SEO differentiation ultimately requires unique body copy per page.</div>
                 </div>
               </div>
             </div>
@@ -253,6 +268,7 @@
               <span class="badge badge-quickwin">Quick Win</span>
               <span class="badge badge-effort-low">Effort: Low</span>
               <span class="badge badge-persona">All Personas</span>
+              <span class="badge" style="background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA">🧩 Template scope</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">
@@ -266,7 +282,7 @@
                 </div>
                 <div class="finding-field-full">
                   <div class="finding-field-label">Impact of Change</div>
-                  <div class="finding-field-value">Analytics data integrity — restores accurate channel attribution for organic search traffic from this page. Affects conversion data quality for all downstream reporting and campaign optimisation decisions.</div>
+                  <div class="finding-field-value">Analytics data integrity — restores accurate channel attribution for organic search traffic from this page. Affects conversion data quality for all downstream reporting and campaign optimisation decisions. <strong>🧩 Template scope:</strong> the Apply CTA URL is a template-level component — removing the hardcoded campaign UTMs once cleans attribution data across every page in the /bridging/bi-* collection with a single Webflow edit.</div>
                 </div>
               </div>
             </div>
@@ -288,6 +304,7 @@
               <span class="badge badge-quickwin">Quick Win</span>
               <span class="badge badge-effort-low">Effort: Low</span>
               <span class="badge badge-persona">All Personas</span>
+              <span class="badge" style="background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA">🧩 Template scope</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">
@@ -301,7 +318,7 @@
                 </div>
                 <div class="finding-field-full">
                   <div class="finding-field-label">Impact of Change</div>
-                  <div class="finding-field-value">Mobile conversion — most urgent fix in the mobile set. Organic mobile traffic to eligibility queries has a particularly high bounce rate when the page provides no immediate qualification signal. Estimated improvement: 30–45% reduction in mobile bounce rate from this traffic segment.</div>
+                  <div class="finding-field-value">Mobile conversion — most urgent fix in the mobile set. Organic mobile traffic to eligibility queries has a particularly high bounce rate when the page provides no immediate qualification signal. Estimated improvement: 30–45% reduction in mobile bounce rate from this traffic segment. <strong>🧩 Template scope:</strong> the mobile hero layout is a shared template component — adding eligibility criteria to the mobile hero fixes the intent gap across every programmatic page in the collection simultaneously.</div>
                 </div>
               </div>
             </div>
@@ -319,6 +336,7 @@
               <span class="badge badge-med-effort">Med. Effort</span>
               <span class="badge badge-effort-medium">Effort: Medium</span>
               <span class="badge badge-persona">All Personas</span>
+              <span class="badge" style="background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA">🧩 Template scope</span>
             </div>
             <div class="finding-body">
               <div class="finding-body-grid">
@@ -332,7 +350,7 @@
                 </div>
                 <div class="finding-field-full">
                   <div class="finding-field-label">Impact of Change</div>
-                  <div class="finding-field-value">Mobile conversion rate — reduces the conversion drop-off caused by scroll depth on long programmatic pages. Most impactful for mobile users who have read content but didn't convert at the hero stage.</div>
+                  <div class="finding-field-value">Mobile conversion rate — reduces the conversion drop-off caused by scroll depth on long programmatic pages. Most impactful for mobile users who have read content but didn't convert at the hero stage. <strong>🧩 Template scope:</strong> a sticky mobile CTA implemented in the template deploys across every page in the /bridging/bi-* collection at once — single implementation, collection-wide conversion lift.</div>
                 </div>
               </div>
             </div>

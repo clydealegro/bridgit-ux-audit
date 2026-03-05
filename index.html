@@ -85,7 +85,7 @@
     <div class="page-header-eyebrow">UX/CRO Audit — March 2026</div>
     <h1>Executive Summary</h1>
     <div class="page-header-meta">
-      <span>71 findings · 3 phases · 8 personas · 13 pages</span>
+      <span>69 findings · 3 phases · 8 personas · 13 pages</span>
       <span>Conversion Health Score: 5.2 / 10</span>
     </div>
   </div>
@@ -97,7 +97,7 @@
       <div class="health-score-big">5.2<span class="denominator">/10</span></div>
       <div class="health-score-details">
         <div class="health-score-label">Overall Conversion Health</div>
-        <div class="health-score-description">The site communicates what Bridgit does, but consistently fails to guide high-intent visitors to action. Mobile experience, trust signals, and cross-page linking are the three dominant failure modes. 4 findings are conversion-critical. 37 are quick wins deliverable in one sprint.</div>
+        <div class="health-score-description">The site communicates what Bridgit does, but consistently fails to guide high-intent visitors to action. Mobile experience, trust signals, and cross-page linking are the three dominant failure modes. 2 findings are conversion-critical. 35 are quick wins deliverable in one sprint.</div>
       </div>
     </div>
 
@@ -135,7 +135,7 @@
     <h2 class="section-heading">Finding Distribution</h2>
     <div class="stat-grid" style="margin-bottom:1.5rem">
       <div class="stat-card stat-card--critical">
-        <span class="stat-number">4</span>
+        <span class="stat-number">2</span>
         <span class="stat-label">Critical</span>
       </div>
       <div class="stat-card stat-card--high">
@@ -151,7 +151,7 @@
         <span class="stat-label">Low</span>
       </div>
       <div class="stat-card">
-        <span class="stat-number">71</span>
+        <span class="stat-number">69</span>
         <span class="stat-label">Total Findings</span>
       </div>
     </div>
@@ -160,7 +160,7 @@
     <h2 class="section-heading">Priority Tiers</h2>
     <div class="tier-grid" style="margin-bottom:2rem">
       <div class="tier-card tier-card--1">
-        <div class="tier-number">37</div>
+        <div class="tier-number">35</div>
         <div class="tier-label">Tier 1 — Quick Wins</div>
         <div class="card-subtitle">Low effort, high impact. Deliverable in one sprint. Estimated +15–25% conversion uplift.</div>
         <a href="recommendations.html?priority=quick-win" class="tier-link">View all →</a>
@@ -216,27 +216,27 @@
           <tr>
             <td>Phase 4 — Mobile</td>
             <td style="text-align:left">390px viewport, same 13 pages</td>
-            <td>3</td>
+            <td>1</td>
             <td>12</td>
             <td>13</td>
             <td>5</td>
-            <td><strong>33</strong></td>
+            <td><strong>31</strong></td>
           </tr>
           <tr>
             <td><strong>Total</strong></td>
             <td style="text-align:left"></td>
-            <td><strong>4</strong></td>
+            <td><strong>2</strong></td>
             <td><strong>32</strong></td>
             <td><strong>28</strong></td>
             <td><strong>7</strong></td>
-            <td><strong>71</strong></td>
+            <td><strong>69</strong></td>
           </tr>
         </tbody>
       </table>
     </div>
 
     <!-- Top 10 findings -->
-    <h2 class="section-heading">Top 10 Findings by Conversion Impact</h2>
+    <h2 class="section-heading">Top 8 Findings by Conversion Impact</h2>
     <div class="table-wrapper" style="margin-bottom:1.5rem">
       <table class="findings-table">
         <thead>
@@ -249,20 +249,6 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td><span class="finding-id">F-MOB-CRIT-01</span></td>
-            <td class="finding-text">Eligibility page mobile layout broken — criteria list overflows, primary CTA not visible without horizontal scroll</td>
-            <td><span class="badge badge-critical">Critical</span></td>
-            <td><span class="badge badge-quickwin">Quick Win</span></td>
-            <td>Eligibility (M)</td>
-          </tr>
-          <tr>
-            <td><span class="finding-id">F-MOB-CRIT-02</span></td>
-            <td class="finding-text">Calculator on mobile: result section collapses to 0px height due to flex overflow bug; conversion path completely broken</td>
-            <td><span class="badge badge-critical">Critical</span></td>
-            <td><span class="badge badge-quickwin">Quick Win</span></td>
-            <td>Calculator (M)</td>
-          </tr>
           <tr>
             <td><span class="finding-id">F-MOB-CRIT-03</span></td>
             <td class="finding-text">P02 (Downsizer) mobile flow: no dedicated downsize scenario pathway on mobile — "Simplify your next move" CTA routes to generic apply</td>
@@ -324,7 +310,7 @@
     </div>
 
     <!-- Systemic patterns -->
-    <h2 class="section-heading">8 Systemic Cross-Phase Patterns</h2>
+    <h2 class="section-heading">7 Systemic Cross-Phase Patterns</h2>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem">
       <div class="pattern-card">
         <div class="pattern-card-title">P1 — Trust Signal Deficit</div>
@@ -364,19 +350,6 @@
           <span class="pattern-finding-id">F-CALC-01</span>
         </div>
         <div class="pattern-fix">Calculator result has no "Check my eligibility" secondary CTA. Fix: add button — 1 day dev, estimated +15–20% calculator completion rate.</div>
-      </div>
-      <div class="pattern-card">
-        <div class="pattern-card-title">P4 — Mobile Rendering Failures</div>
-        <div class="pattern-personas">
-          <span class="badge badge-persona">P01</span>
-          <span class="badge badge-persona">P02</span>
-          <span class="badge badge-persona">P08</span>
-        </div>
-        <div class="pattern-finding-ids">
-          <span class="pattern-finding-id">F-MOB-CRIT-01</span>
-          <span class="pattern-finding-id">F-MOB-CRIT-02</span>
-        </div>
-        <div class="pattern-fix">Calculator and Eligibility have broken mobile layouts at 390px. Fix: CSS hotfixes — 1 sprint, estimated prevention of 30–40% mobile drop-off at these steps.</div>
       </div>
       <div class="pattern-card">
         <div class="pattern-card-title">P5 — Solution Page Isolation</div>

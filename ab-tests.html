@@ -221,7 +221,7 @@
     <div class="page-header-eyebrow">CRO Testing</div>
     <h1>A/B Test Priority Queue</h1>
     <div class="page-header-meta">
-      <span>10 tests &middot; 6-week sequence</span>
+      <span>10 priority tests &middot; 6-week sequence &middot; 23 backlog hypotheses</span>
       <span>Ordered by impact &times; ease</span>
     </div>
   </div>
@@ -1003,6 +1003,242 @@
         <strong>Implementation note</strong>
         Tests 1, 2, 4a, 4b, 5, 9, and 10 require only copy edits or single-line link additions — no design or development sprint needed. These 7 tests can be queued in GA4 Experiments or a third-party CRO tool (e.g. VWO, Optimizely) within one sprint. Tests 3 and 6 require a design pass; test 7 and 8 require development work and should be scoped in a dedicated sprint.
       </div>
+    </div>
+
+    <!-- Secondary Test Backlog -->
+    <h2 class="section-heading" style="margin-top:2.5rem">Secondary Test Backlog — 23 Additional Hypotheses</h2>
+    <p class="section-body">These hypotheses are documented across the Phase 3 and Phase 4 findings but were not promoted to the priority queue. They share the same evidential basis as the top 10 but target lower-traffic pages, narrower personas, or require the primary tests to run first to establish baseline data. Run after the 6-week primary sequence.</p>
+
+    <div style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:12px;margin-bottom:2rem">
+        <thead>
+          <tr style="background:#F9FAFB;border-bottom:2px solid #E5E7EB">
+            <th style="text-align:left;padding:9px 12px;color:#374151;font-weight:600;white-space:nowrap">Finding</th>
+            <th style="text-align:left;padding:9px 12px;color:#374151;font-weight:600">Page</th>
+            <th style="text-align:left;padding:9px 12px;color:#374151;font-weight:600">Hypothesis</th>
+            <th style="text-align:left;padding:9px 12px;color:#374151;font-weight:600">Persona</th>
+            <th style="text-align:left;padding:9px 12px;color:#374151;font-weight:600;white-space:nowrap">Effort</th>
+            <th style="text-align:left;padding:9px 12px;color:#374151;font-weight:600">Note</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- Group 1 -->
+          <tr style="background:#EFF6FF">
+            <td colspan="6" style="padding:7px 12px;font-size:11px;font-weight:700;color:#1D4ED8;letter-spacing:0.05em;text-transform:uppercase">Group A — Mobile CTA Above Fold</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-SOL-UP-M01">F-SOL-UP-M01</a></td>
+            <td style="padding:8px 12px;color:#374151">Upsize (mobile)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">Reducing hero height to fit the Apply CTA above fold will increase immediate click-through for high-urgency P01.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">P01</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-effort-low">Low</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Run after Test #1 baseline is set</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-SOL-UP-M02">F-SOL-UP-M02</a></td>
+            <td style="padding:8px 12px;color:#374151">Upsize (mobile)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">Phone CTA alongside Apply in the above-fold zone will capture hesitant P01 users who prefer to call before committing.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">P01</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-effort-low">Low</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Companion to F-SOL-UP-M01</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-SOL-RET-M02">F-SOL-RET-M02</a></td>
+            <td style="padding:8px 12px;color:#374151">Retire (mobile)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">Prominent sticky phone CTA will significantly increase phone contact rate from P02 — phone is P02's primary conversion path.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">P02</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-effort-low">Low</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Parallel to Test #8 (Downsize)</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-SOL-DN-M02">F-SOL-DN-M02</a></td>
+            <td style="padding:8px 12px;color:#374151">Downsize (mobile)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">Surfacing plain-language benefits in the first viewport will reduce bounce and increase scroll depth for P02 on mobile.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">P02</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-effort-low">Low</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Content reorder — no redesign</td>
+          </tr>
+
+          <!-- Group 2 -->
+          <tr style="background:#F0FDF4">
+            <td colspan="6" style="padding:7px 12px;font-size:11px;font-weight:700;color:#15803D;letter-spacing:0.05em;text-transform:uppercase">Group B — Page-Specific CTA Copy</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-SOL-UP-M03">F-SOL-UP-M03</a></td>
+            <td style="padding:8px 12px;color:#374151">Upsize (mobile)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">"Apply to upsize" will increase CTA CTR vs generic "Apply Now" for first-visit mobile P01 users.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">P01</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-effort-low">Low</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Extends Test #1 per-page; copy only</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-SOL-INV-M03">F-SOL-INV-M03</a></td>
+            <td style="padding:8px 12px;color:#374151">Invest (mobile)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">"Apply as an investor" will increase CTA CTR vs "Apply Now" for P06 on the Invest page.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">P06</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-effort-low">Low</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Extends Test #1 per-page; copy only</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-SOL-SEP-M01">F-SOL-SEP-M01</a></td>
+            <td style="padding:8px 12px;color:#374151">Separate (mobile)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">"Speak to an expert" as primary sticky CTA vs "Apply Now" will reveal which approach generates higher intent from high-anxiety P04.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">P04</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-effort-low">Low</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Related to Test #5; consolidate if possible</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-SOL-SEP-M03">F-SOL-SEP-M03</a></td>
+            <td style="padding:8px 12px;color:#374151">Separate (mobile)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">Sticky "Speak to an expert" CTA will generate higher engagement from P04 than sticky "Apply Now" due to lower friction for a high-anxiety persona.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">P04</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-effort-low">Low</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Consolidate with F-SOL-SEP-M01</td>
+          </tr>
+
+          <!-- Group 3 -->
+          <tr style="background:#FFF7ED">
+            <td colspan="6" style="padding:7px 12px;font-size:11px;font-weight:700;color:#C2410C;letter-spacing:0.05em;text-transform:uppercase">Group C — Async / Email Contact (P08 Recovery)</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-BL-M01">F-BL-M01</a></td>
+            <td style="padding:8px 12px;color:#374151">Bridging Loan (mobile)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">Email CTA alongside phone will increase contact initiation from P08 and async-preferring users who won't call.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">P08</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-effort-low">Low</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Extends Test #3 to a second page</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-ELG-M01">F-ELG-M01</a></td>
+            <td style="padding:8px 12px;color:#374151">Eligibility (mobile)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">Email CTA on the Eligibility page will increase contact rate from P08 and reduce abandonment from users unwilling to call.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">P08</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-effort-low">Low</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Extends Test #3; high-intent page</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-PTR-M01">F-PTR-M01</a></td>
+            <td style="padding:8px 12px;color:#374151">Partners (mobile)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">Email contact in BDM cards will increase broker inquiry rate from mobile P07 in client meetings who prefer async communication.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">P07</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-effort-low">Low</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Extends Test #3 to broker channel</td>
+          </tr>
+
+          <!-- Group 4 -->
+          <tr style="background:#F5F3FF">
+            <td colspan="6" style="padding:7px 12px;font-size:11px;font-weight:700;color:#5B21B6;letter-spacing:0.05em;text-transform:uppercase">Group D — Content Hierarchy &amp; Scroll Depth (see Pattern P4)</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-SOL-REN-M01">F-SOL-REN-M01</a></td>
+            <td style="padding:8px 12px;color:#374151">Renovate (mobile)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">A visible Rates &amp; Fees link above fold will increase engagement from cost-focused P03 and reduce navigation abandonment.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">P03</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-effort-low">Low</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Content reorder only</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-SOL-REN-M02">F-SOL-REN-M02</a></td>
+            <td style="padding:8px 12px;color:#374151">Renovate (mobile)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">Process timeline visible in the post-hero zone will increase P03 confidence and reduce application form abandonment on mobile.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">P03</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-effort-low">Low</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Content reorder only</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-SOL-INV-M01">F-SOL-INV-M01</a></td>
+            <td style="padding:8px 12px;color:#374151">Invest (mobile)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">Surfacing investor LVR and rate info above fold will reduce scroll depth and increase time-to-apply velocity for P06.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">P06</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-effort-low">Low</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Content reorder only</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-SOL-INV-M02">F-SOL-INV-M02</a></td>
+            <td style="padding:8px 12px;color:#374151">Invest (mobile)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">Investor-specific Rates &amp; Fees link above fold will increase click-through and downstream application rate for P06.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">P06</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-effort-low">Low</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Content reorder only</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-SOL-HL-M01">F-SOL-HL-M01</a></td>
+            <td style="padding:8px 12px;color:#374151">House &amp; Land (mobile)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">Build delay FAQ accordion above fold will reduce bounce and increase engagement from P05 who arrive with a specific delay-risk concern.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">P05</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-effort-low">Low</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Content reorder only</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-SOL-HL-M03">F-SOL-HL-M03</a></td>
+            <td style="padding:8px 12px;color:#374151">House &amp; Land (mobile)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">Above-fold access to a cost calculator or worked example will reduce cost-anxiety abandonment for P05 on mobile.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">P05</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-effort-low">Low</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Content reorder only</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-RF-M01">F-RF-M01</a></td>
+            <td style="padding:8px 12px;color:#374151">Rates &amp; Fees (mobile)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">Mobile-friendly stacked fee layout will increase Rates &amp; Fees page engagement and reduce drop-off before reaching the Apply CTA.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">All</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-med-effort">Medium</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Design pass needed</td>
+          </tr>
+
+          <!-- Group 5 -->
+          <tr style="background:#FDF2F8">
+            <td colspan="6" style="padding:7px 12px;font-size:11px;font-weight:700;color:#9D174D;letter-spacing:0.05em;text-transform:uppercase">Group E — Persona-Specific Messaging</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-SOL-SEP-M02">F-SOL-SEP-M02</a></td>
+            <td style="padding:8px 12px;color:#374151">Separate (mobile)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">"Private &amp; confidential review process" in the Separate page hero will increase scroll depth and expert CTA engagement from P04.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">P04</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-effort-low">Low</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Copy only; companion to Test #5</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-SOL-RET-M03">F-SOL-RET-M03</a></td>
+            <td style="padding:8px 12px;color:#374151">Retire (mobile)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">Surfacing both retirement and aged-care scenarios above the second fold will reduce bounce from the aged-care P02 sub-segment.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">P02</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-effort-low">Low</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Content reorder only</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-SOL-SEP-01">F-SOL-SEP-01</a></td>
+            <td style="padding:8px 12px;color:#374151">Separate (desktop)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">Confidentiality language near the CTA will increase "Connect with an expert" clicks from P04 — privacy hesitation is P04's primary barrier.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">P04</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-effort-low">Low</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Copy only; desktop companion to Test #5</td>
+          </tr>
+
+          <!-- Group 6 -->
+          <tr style="background:#F0F9FF">
+            <td colspan="6" style="padding:7px 12px;font-size:11px;font-weight:700;color:#0369A1;letter-spacing:0.05em;text-transform:uppercase">Group F — Navigation &amp; Desktop</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-NAV-M07">F-NAV-M07</a></td>
+            <td style="padding:8px 12px;color:#374151">Mobile nav</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">A flat, icon-labelled solutions list will improve time-to-find for first-time mobile users vs. the categorised sub-menu which may add cognitive load.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">All</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-med-effort">Medium</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Validate with usability test first</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F3F4F6">
+            <td style="padding:8px 12px;white-space:nowrap"><a class="finding-id" href="recommendations.html#F-SOL-REN-01">F-SOL-REN-01</a></td>
+            <td style="padding:8px 12px;color:#374151">Renovate (desktop)</td>
+            <td style="padding:8px 12px;color:#374151;line-height:1.5">"Why Bridgit vs. refinancing" comparison section will increase conversion for evidence-driven P03 who currently has no reason to choose Bridgit over alternatives.</td>
+            <td style="padding:8px 12px"><span class="badge badge-persona" style="font-size:10px">P03</span></td>
+            <td style="padding:8px 12px"><span class="badge badge-med-effort">Medium</span></td>
+            <td style="padding:8px 12px;color:#6B7280;font-size:11px">Requires content creation</td>
+          </tr>
+
+        </tbody>
+      </table>
     </div>
 
   </div><!-- /content -->

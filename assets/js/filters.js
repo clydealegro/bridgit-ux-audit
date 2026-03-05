@@ -4,6 +4,32 @@
    finding card expand/collapse, mobile nav
    ========================================= */
 
+/* ---- Auto-link finding badges on persona pages ---- */
+(function() {
+  if (!window.location.pathname.match(/\/personas\//)) return;
+  function linkBadges() {
+    document.querySelectorAll('.badge').forEach(function(badge) {
+      var text = badge.textContent.trim();
+      if (!text.match(/^F-/)) return;       // only finding IDs
+      if (badge.closest('a')) return;        // already inside a link
+      var a = document.createElement('a');
+      a.href = '../recommendations.html?search=' + encodeURIComponent(text);
+      a.className = badge.className;
+      a.textContent = badge.textContent;
+      a.style.textDecoration = 'none';
+      a.title = 'View finding ' + text + ' in All Findings';
+      badge.parentNode.replaceChild(a, badge);
+    });
+  }
+  // Script is at end of body — DOM is already built; run immediately.
+  // Fall back to DOMContentLoaded in case script is ever moved to <head>.
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', linkBadges);
+  } else {
+    linkBadges();
+  }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ---- Mobile sidebar toggle (supports both #menuBtn and legacy #sidebarToggle) ---- */

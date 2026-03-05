@@ -990,6 +990,15 @@
     fPers.value = params.get('persona').toUpperCase();
     applyFilters();
   }
+  if (params.get('search')) {
+    fSearch.value = params.get('search');
+    applyFilters();
+    // Scroll to the first visible result after a brief paint delay
+    setTimeout(function() {
+      var first = document.querySelector('#recBody tr:not(.hidden)');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 80);
+  }
 })();
 </script>
 </body>

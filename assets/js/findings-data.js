@@ -196,12 +196,12 @@ const FINDINGS_DATA = [
     pageSlug: 'homepage',
     personas: ['P01','P02','P03','P04','P05','P06','P07','P08'],
     dimension: 'Regulatory Trust',
-    finding: 'ACL 532542 is present only in the footer ("Australian Credit Licence Number 532542, ABN 16 644 588 161"). For a high-consideration financial product in a regulated category, relegating the licence number to the footer reduces immediate trust credibility — especially for first-time visitors who land mid-page via paid search.',
+    finding: 'The homepage hero contains no Trustpilot star rating, review count, or social proof signal above the fold. ACL/ABN correctly appear in the footer — consistent with industry standard across Australian fintechs — but peer-validation is absent at the highest-impact page location, leaving first-time visitors with no immediate trust cue before the CTA.',
     severity: 'High',
     effort: 'Low',
     priority: 'Quick Win',
-    recommendation: 'Add ACL 532542 to the hero section or the trust signal bar (alongside Trustpilot), with a link to the ASIC register. A small badge or one-line format is sufficient: "ACL 532542 | Regulated by ASIC".',
-    abHypothesis: 'Adding ACL 532542 as a visible trust badge in the hero section will increase hero-to-CTA click rate because first-time visitors to a financial product site need to see regulatory legitimacy before engaging. Test: With ACL badge in hero vs. footer-only. Primary metric: Hero "Apply now" + "Connect with an expert" click-through rate. Secondary metric: Time on page, bounce rate.',
+    recommendation: 'Add a Trustpilot star rating widget and a short social proof line (e.g., "Trusted by 5,000+ Australians") to the hero. Keep ACL/ABN in the footer — moving regulatory numbers into the hero violates user mental models and adds visual clutter at the most conversion-sensitive location.',
+    abHypothesis: 'Adding a Trustpilot star rating and social proof to the hero will increase hero-to-CTA click rate because peer validation is a more effective first-touch trust signal than regulatory numbers. Test: Trustpilot widget + social proof in hero vs. current hero. Primary metric: Hero "Apply now" + "Connect with an expert" click-through rate. Secondary metric: Time on page, bounce rate.',
     impactOfChange: 'Regulatory trust — reduces ACL-related abandonment at first touch for all personas',
     isTop10: true,
     top10Rank: 7,
@@ -1392,7 +1392,7 @@ const FINDINGS_DATA = [
  *   Rank 4:  F-SOL-DN-M01 — Phone CTA not prominent on Downsize mobile (Critical)
  *   Rank 5:  F-SOL-RET-M02 — Phone CTA not prominent on Retire mobile (Critical)
  *   Rank 6:  F-NAV-04    — No async email contact option (High)
- *   Rank 7:  F-HP-01     — ACL number footer-only (High)
+ *   Rank 7:  F-HP-01     — No social proof / Trustpilot above fold (High)
  *   Rank 8:  F-SOL-ALL-01 — Generic testimonials on all solution pages (High)
  *   Rank 9:  F-HP-02     — Testimonials not scenario-labelled (High)
  *   Rank 10: F-NAV-05/10 — Calculator bypasses Eligibility checker (High)

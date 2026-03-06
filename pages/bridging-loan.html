@@ -95,6 +95,64 @@
         <span class="severity-pill medium">● 1 Medium</span>
       </div>
 
+      <!-- Scroll Depth Impact -->
+      <div class="card" style="margin-bottom:1.5rem">
+        <div class="finding-field-label" style="margin-bottom:0.5rem">📏 Scroll Depth Impact</div>
+        <div style="font-size:12px;color:#6B7280;margin-bottom:1rem;line-height:1.5">The Bridging Loan page is the <strong>primary consideration-stage page</strong> — most journeys flow Homepage → Bridging Loan → Eligibility or Calculator. Users arriving here have intent but still need two critical questions answered before they'll convert: <em>"Can I get one?"</em> and <em>"What will it cost me?"</em> Neither answer is surfaced at the depth where analytics show most users still present. This is a <strong>content hierarchy problem</strong>, not a content quality problem. See <strong>Pattern P4</strong> in the Executive Summary for the cross-site view.</div>
+        <table style="width:100%;border-collapse:collapse;font-size:12px">
+          <thead>
+            <tr style="background:#F9FAFB;border-bottom:2px solid #E5E7EB">
+              <th style="text-align:left;padding:8px 10px;color:#374151;font-weight:600">Page Section</th>
+              <th style="text-align:left;padding:8px 10px;color:#374151;font-weight:600">Approx. Depth</th>
+              <th style="text-align:left;padding:8px 10px;color:#374151;font-weight:600">Conversion-Critical Element</th>
+              <th style="text-align:left;padding:8px 10px;color:#374151;font-weight:600">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #F3F4F6">
+              <td style="padding:8px 10px;color:#374151;font-weight:500">Hero</td>
+              <td style="padding:8px 10px;color:#6B7280">0–10%</td>
+              <td style="padding:8px 10px;color:#374151">Primary CTA + trust signals (Trustpilot, ACL)</td>
+              <td style="padding:8px 10px"><span style="background:#FFFBEB;color:#D97706;border:1px solid #FDE68A;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">⚠️ CTA present, trust signals absent</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #F3F4F6">
+              <td style="padding:8px 10px;color:#374151;font-weight:500">What is a bridging loan?</td>
+              <td style="padding:8px 10px;color:#6B7280">10–30%</td>
+              <td style="padding:8px 10px;color:#374151">Product clarity — sets expectation for consideration visitors</td>
+              <td style="padding:8px 10px"><span style="background:#F0FDF4;color:#16A34A;border:1px solid #BBF7D0;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">✅ Present</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #F3F4F6">
+              <td style="padding:8px 10px;color:#374151;font-weight:500">How it works</td>
+              <td style="padding:8px 10px;color:#6B7280">30–50%</td>
+              <td style="padding:8px 10px;color:#374151">Process clarity — reduces anxiety about "what happens after I apply?"</td>
+              <td style="padding:8px 10px"><span style="background:#FFFBEB;color:#D97706;border:1px solid #FDE68A;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">⚠️ Present but benefit framing unclear (F-BL-01)</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #F3F4F6">
+              <td style="padding:8px 10px;color:#374151;font-weight:500">Eligibility signal / quick qualifier</td>
+              <td style="padding:8px 10px;color:#6B7280">50–65%</td>
+              <td style="padding:8px 10px;color:#374151">"Can I get one?" — highest pre-conversion anxiety for all personas</td>
+              <td style="padding:8px 10px"><span style="background:#FEF2F2;color:#DC2626;border:1px solid #FECACA;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">❌ Absent — users must navigate away</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #F3F4F6">
+              <td style="padding:8px 10px;color:#374151;font-weight:500">Cost / rate indication</td>
+              <td style="padding:8px 10px;color:#6B7280">65–80%</td>
+              <td style="padding:8px 10px;color:#374151">"What will this cost me?" — decision-stage blocker if unanswered</td>
+              <td style="padding:8px 10px"><span style="background:#FEF2F2;color:#DC2626;border:1px solid #FECACA;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">❌ Not on page — forces navigation to Rates &amp; Fees</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #F3F4F6">
+              <td style="padding:8px 10px;color:#374151;font-weight:500">FAQ / objection handling</td>
+              <td style="padding:8px 10px;color:#6B7280">80–95%</td>
+              <td style="padding:8px 10px;color:#374151">Addresses final hesitations before applying</td>
+              <td style="padding:8px 10px"><span style="background:#FEF2F2;color:#DC2626;border:1px solid #FECACA;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">❌ Below typical exit point</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="margin-top:1rem;padding:0.75rem 1rem;background:#FEF2F2;border-left:3px solid #EF4444;border-radius:0 6px 6px 0;font-size:12px;line-height:1.6;color:#374151">
+          <strong>Core hierarchy problem:</strong> The two questions most likely to tip a consideration-stage visitor into action — "Can I qualify?" and "What will it cost?" — are both missing from this page. Users who don't get these answers here navigate away to find them, creating drop-off that isn't recovered. Adding a brief eligibility signal (3 key criteria) and an indicative rate or calculator link at ~50% depth would intercept the majority of exit-intent visitors before they leave. This is content addition, not a redesign.
+        </div>
+        <div style="margin-top:0.75rem;font-size:11px;color:#9CA3AF">Related findings: <a class="finding-id" href="../recommendations.html#F-BL-01" style="font-size:11px">F-BL-01</a> · <a class="finding-id" href="../recommendations.html#F-BL-M01" style="font-size:11px">F-BL-M01</a> · <a class="finding-id" href="../recommendations.html#F-RF-01" style="font-size:11px">F-RF-01</a> · See Pattern P4 in Executive Summary</div>
+      </div>
+
       <div data-tabs>
         <div class="tabs">
           <button class="tab-btn active" data-tab="desktop">Desktop Findings</button>

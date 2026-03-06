@@ -98,7 +98,24 @@
       <!-- Scroll Depth Impact -->
       <div class="card" style="margin-bottom:1.5rem">
         <div class="finding-field-label" style="margin-bottom:0.5rem">📏 Scroll Depth Impact</div>
-        <div style="font-size:12px;color:#6B7280;margin-bottom:1rem;line-height:1.5">The Bridging Loan page is the <strong>primary consideration-stage page</strong> — most journeys flow Homepage → Bridging Loan → Eligibility or Calculator. Users arriving here have intent but still need two critical questions answered before they'll convert: <em>"Can I get one?"</em> and <em>"What will it cost me?"</em> Neither answer is surfaced at the depth where analytics show most users still present. This is a <strong>content hierarchy problem</strong>, not a content quality problem. See <strong>Pattern P4</strong> in the Executive Summary for the cross-site view.</div>
+        <div style="font-size:12px;color:#6B7280;margin-bottom:0.75rem;line-height:1.5">The Bridging Loan page is the <strong>primary consideration-stage page</strong> — most journeys flow Homepage → Bridging Loan → Eligibility or Calculator. Users arriving here have intent but still need two binary questions answered before they'll convert: <em>"Am I allowed to get this?"</em> and <em>"Can I afford this?"</em> By forcing users to hunt for these answers on separate pages, the current structure is functioning as a <strong>static brochure rather than a conversion engine</strong>. See <strong>Pattern P4</strong> in the Executive Summary for the cross-site view.</div>
+
+        <!-- Why it's costing conversions -->
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.5rem;margin-bottom:1rem">
+          <div style="padding:0.6rem 0.75rem;background:#FFF7ED;border:1px solid #FED7AA;border-radius:6px;font-size:11px;line-height:1.5;color:#374151">
+            <div style="font-weight:700;color:#C2410C;margin-bottom:3px">⏳ Illusion of Intent</div>
+            Users scrolling past 30% are highly engaged — but engagement is not patience. Reach 50% with no numbers or criteria visible and they bounce to a competitor that offers immediate transparency.
+          </div>
+          <div style="padding:0.6rem 0.75rem;background:#FFF7ED;border:1px solid #FED7AA;border-radius:6px;font-size:11px;line-height:1.5;color:#374151">
+            <div style="font-weight:700;color:#C2410C;margin-bottom:3px">🚪 Navigation Penalty</div>
+            Forcing a click to a separate Rates &amp; Fees or Eligibility page breaks cognitive flow. Once users leave this page, the chance of returning to click "Apply Now" drops significantly.
+          </div>
+          <div style="padding:0.6rem 0.75rem;background:#FFF7ED;border:1px solid #FED7AA;border-radius:6px;font-size:11px;line-height:1.5;color:#374151">
+            <div style="font-weight:700;color:#C2410C;margin-bottom:3px">🔄 Process vs. Payoff</div>
+            "How it works" sits in prime real estate but frames internal steps, not user outcomes. Users care less about Bridgit's process and more about how fast their specific problem gets solved.
+          </div>
+        </div>
+
         <table style="width:100%;border-collapse:collapse;font-size:12px">
           <thead>
             <tr style="background:#F9FAFB;border-bottom:2px solid #E5E7EB">
@@ -112,44 +129,70 @@
             <tr style="border-bottom:1px solid #F3F4F6">
               <td style="padding:8px 10px;color:#374151;font-weight:500">Hero</td>
               <td style="padding:8px 10px;color:#6B7280">0–10%</td>
-              <td style="padding:8px 10px;color:#374151">Primary CTA + trust signals (Trustpilot, ACL)</td>
+              <td style="padding:8px 10px;color:#374151">CTA + trust signal (Trustpilot badge or "ASIC Registered Lender" icon) to substantiate claim before asking scroll</td>
               <td style="padding:8px 10px"><span style="background:#FFFBEB;color:#D97706;border:1px solid #FDE68A;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">⚠️ CTA present, trust signals absent</span></td>
             </tr>
             <tr style="border-bottom:1px solid #F3F4F6">
               <td style="padding:8px 10px;color:#374151;font-weight:500">What is a bridging loan?</td>
-              <td style="padding:8px 10px;color:#6B7280">10–30%</td>
+              <td style="padding:8px 10px;color:#6B7280">10–20%</td>
               <td style="padding:8px 10px;color:#374151">Product clarity — sets expectation for consideration visitors</td>
               <td style="padding:8px 10px"><span style="background:#F0FDF4;color:#16A34A;border:1px solid #BBF7D0;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">✅ Present</span></td>
             </tr>
             <tr style="border-bottom:1px solid #F3F4F6">
               <td style="padding:8px 10px;color:#374151;font-weight:500">How it works</td>
+              <td style="padding:8px 10px;color:#6B7280">20–30%</td>
+              <td style="padding:8px 10px;color:#374151">Outcome-led framing — "Get approved in 24 hours" not "Step 1: Application"</td>
+              <td style="padding:8px 10px"><span style="background:#FFFBEB;color:#D97706;border:1px solid #FDE68A;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">⚠️ Present but process-led, not outcome-led (F-BL-01)</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #F3F4F6;background:#FEF2F2">
+              <td style="padding:8px 10px;color:#DC2626;font-weight:700">⚠️ "Qualification &amp; Cost" block — MISSING MIDDLE</td>
               <td style="padding:8px 10px;color:#6B7280">30–50%</td>
-              <td style="padding:8px 10px;color:#374151">Process clarity — reduces anxiety about "what happens after I apply?"</td>
-              <td style="padding:8px 10px"><span style="background:#FFFBEB;color:#D97706;border:1px solid #FDE68A;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">⚠️ Present but benefit framing unclear (F-BL-01)</span></td>
+              <td style="padding:8px 10px;color:#374151">Two-column scannable block: (A) 3-bullet eligibility criteria + (B) starting rate / indicative cost — intercepts both anxieties at peak intent</td>
+              <td style="padding:8px 10px"><span style="background:#FEF2F2;color:#DC2626;border:1px solid #FECACA;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">❌ Does not exist — biggest conversion gap</span></td>
             </tr>
             <tr style="border-bottom:1px solid #F3F4F6">
-              <td style="padding:8px 10px;color:#374151;font-weight:500">Eligibility signal / quick qualifier</td>
-              <td style="padding:8px 10px;color:#6B7280">50–65%</td>
-              <td style="padding:8px 10px;color:#374151">"Can I get one?" — highest pre-conversion anxiety for all personas</td>
-              <td style="padding:8px 10px"><span style="background:#FEF2F2;color:#DC2626;border:1px solid #FECACA;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">❌ Absent — users must navigate away</span></td>
-            </tr>
-            <tr style="border-bottom:1px solid #F3F4F6">
-              <td style="padding:8px 10px;color:#374151;font-weight:500">Cost / rate indication</td>
-              <td style="padding:8px 10px;color:#6B7280">65–80%</td>
-              <td style="padding:8px 10px;color:#374151">"What will this cost me?" — decision-stage blocker if unanswered</td>
-              <td style="padding:8px 10px"><span style="background:#FEF2F2;color:#DC2626;border:1px solid #FECACA;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">❌ Not on page — forces navigation to Rates &amp; Fees</span></td>
+              <td style="padding:8px 10px;color:#374151;font-weight:500">Mini-calculator / interactive bridge</td>
+              <td style="padding:8px 10px;color:#6B7280">50–60%</td>
+              <td style="padding:8px 10px;color:#374151">2-slider embedded calculator (current home value + new home value) — transitions user from passive reading to active engagement</td>
+              <td style="padding:8px 10px"><span style="background:#FEF2F2;color:#DC2626;border:1px solid #FECACA;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">❌ Not on page — links out to separate Calculator</span></td>
             </tr>
             <tr style="border-bottom:1px solid #F3F4F6">
               <td style="padding:8px 10px;color:#374151;font-weight:500">FAQ / objection handling</td>
               <td style="padding:8px 10px;color:#6B7280">80–95%</td>
-              <td style="padding:8px 10px;color:#374151">Addresses final hesitations before applying</td>
-              <td style="padding:8px 10px"><span style="background:#FEF2F2;color:#DC2626;border:1px solid #FECACA;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">❌ Below typical exit point</span></td>
+              <td style="padding:8px 10px;color:#374151">Specific objection resolution for analytical visitors — not generic definitions</td>
+              <td style="padding:8px 10px"><span style="background:#FFFBEB;color:#D97706;border:1px solid #FDE68A;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:600">⚠️ Present but likely generic — needs objection audit</span></td>
             </tr>
           </tbody>
         </table>
-        <div style="margin-top:1rem;padding:0.75rem 1rem;background:#FEF2F2;border-left:3px solid #EF4444;border-radius:0 6px 6px 0;font-size:12px;line-height:1.6;color:#374151">
-          <strong>Core hierarchy problem:</strong> The two questions most likely to tip a consideration-stage visitor into action — "Can I qualify?" and "What will it cost?" — are both missing from this page. Users who don't get these answers here navigate away to find them, creating drop-off that isn't recovered. Adding a brief eligibility signal (3 key criteria) and an indicative rate or calculator link at ~50% depth would intercept the majority of exit-intent visitors before they leave. This is content addition, not a redesign.
+
+        <!-- Action plan -->
+        <div style="margin-top:1rem;padding:0.75rem 1rem;background:#FEF2F2;border-left:3px solid #EF4444;border-radius:0 6px 6px 0;font-size:12px;line-height:1.6;color:#374151;margin-bottom:0.75rem">
+          <strong>Core hierarchy problem:</strong> The page is missing its two highest-value conversational hooks — a qualification signal and a cost signal — at the exact depth (30–50%) where intent is peaking. Every click demanded to find these answers elsewhere is a conversion tax. This is content addition, not a redesign.
         </div>
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#6B7280;margin-bottom:0.5rem">Restructuring Action Plan</div>
+        <div style="display:grid;gap:0.4rem;font-size:11px">
+          <div style="display:grid;grid-template-columns:1.5rem 1fr;gap:0.5rem;padding:0.5rem 0.75rem;background:#F8FAFC;border-radius:6px;line-height:1.5;color:#374151">
+            <span style="font-weight:700;color:#2563EB">1</span>
+            <span><strong>Hero (0–10%):</strong> Add a Trustpilot star rating or "ASIC Registered Lender" icon beneath the primary CTA. Substantiates the claim before asking users to scroll.</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1.5rem 1fr;gap:0.5rem;padding:0.5rem 0.75rem;background:#F8FAFC;border-radius:6px;line-height:1.5;color:#374151">
+            <span style="font-weight:700;color:#2563EB">2</span>
+            <span><strong>How it works (20–30%):</strong> Rewrite step headers as outcomes, not processes. "Step 1: Get approved in 24 hours." "Step 2: Buy your new home before selling the old one." Users care about their goal, not Bridgit's workflow.</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1.5rem 1fr;gap:0.5rem;padding:0.5rem 0.75rem;background:#FEF2F2;border:1px solid #FECACA;border-radius:6px;line-height:1.5;color:#374151">
+            <span style="font-weight:700;color:#DC2626">3</span>
+            <span><strong>Qualification &amp; Cost block (30–50%) — highest priority:</strong> Insert a scannable two-column section immediately after "How it works." Column A — Eligibility: "To apply you need: (1) a property to sell, (2) a deposit for your new home, (3) Australian residency." Column B — Cost: "Rates starting from X.XX% p.a. No hidden exit fees." This single block intercepts both anxieties at peak intent without requiring navigation.</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1.5rem 1fr;gap:0.5rem;padding:0.5rem 0.75rem;background:#F8FAFC;border-radius:6px;line-height:1.5;color:#374151">
+            <span style="font-weight:700;color:#2563EB">4</span>
+            <span><strong>Mini-calculator (50–60%):</strong> Embed a 2-slider calculator directly on this page (current home value + new home value) rather than linking out. Active engagement with a tool dramatically increases likelihood of clicking the adjacent "Apply Now." A linked-out calculator breaks the cognitive flow established by the Qualification &amp; Cost block above it.</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1.5rem 1fr;gap:0.5rem;padding:0.5rem 0.75rem;background:#F8FAFC;border-radius:6px;line-height:1.5;color:#374151">
+            <span style="font-weight:700;color:#2563EB">5</span>
+            <span><strong>FAQ (80%+):</strong> Audit existing FAQ against real objections (credit score impact, what happens if my property doesn't sell, simultaneous settlement risk). Replace generic definitions with specific, anxiety-resolving answers that close for the analytical visitor.</span>
+          </div>
+        </div>
+
         <div style="margin-top:0.75rem;font-size:11px;color:#9CA3AF">Related findings: <a class="finding-id" href="../recommendations.html#F-BL-01" style="font-size:11px">F-BL-01</a> · <a class="finding-id" href="../recommendations.html#F-BL-M01" style="font-size:11px">F-BL-M01</a> · <a class="finding-id" href="../recommendations.html#F-RF-01" style="font-size:11px">F-RF-01</a> · See Pattern P4 in Executive Summary</div>
       </div>
 
